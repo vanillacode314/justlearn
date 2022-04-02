@@ -4,6 +4,7 @@
 	import IconAdd from '~icons/mdi/add';
 	import IconTrash from '~icons/mdi/trash';
 	import IconExport from '~icons/mdi/export';
+	import IconPencil from '~icons/mdi/pencil';
 
 	/// STATE
 	import { page } from '$app/stores';
@@ -24,6 +25,12 @@
 		$deletePaperModalOpen = true;
 	}
 
+	function renamePaper() {
+		const name = prompt('Enter a new name');
+		paper.name = name;
+		$papers = $papers;
+	}
+
 	function _export() {
 		exportToJsonFile(paper, paper.name);
 	}
@@ -32,6 +39,7 @@
 <div class="container">
 	<div class="toolbar">
 		<Button inverted on:click={addQuestion}><IconAdd /> Add</Button>
+		<Button inverted on:click={renamePaper}><IconPencil /> Rename</Button>
 		<Button inverted on:click={deletePaper}><IconTrash /> Delete</Button>
 		<Button inverted on:click={_export}><IconExport /> Export</Button>
 	</div>
