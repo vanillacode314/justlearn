@@ -94,7 +94,7 @@ export const subjects = writable<Subject[]>('subjects', [
 			'Human Reproduction',
 			'Reproductive Health',
 			'Principles of Inheritance and Variation',
-			'Moleculara Basis of Inheritance',
+			'Molecular Basis of Inheritance',
 			'Evolution',
 			'Human Health and Disease',
 			'Strategies for Enhancement in Food Production',
