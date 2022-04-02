@@ -149,17 +149,20 @@
 								<img src={option.image} alt="option {option.id}" />
 							{/if}
 						</label>
-						<Button on:click={() => (options = options.filter((o) => o.id !== option.id))}>
+						<Button
+							type="button"
+							on:click={() => (options = options.filter((o) => o.id !== option.id))}
+						>
 							<IconTrash />
 						</Button>
 					</li>
 				{/each}
-				<Button inverted on:click={addOption}>Add Option</Button>
+				<Button inverted type="button" on:click={addOption}>Add Option</Button>
 			</ul>
 		</div>
 		<div class="actions">
 			<Button type="submit" inverted>OK</Button>
-			<Button on:click={close}>Cancel</Button>
+			<Button type="button" on:click={close}>Cancel</Button>
 		</div>
 	</form>
 </Modal>
