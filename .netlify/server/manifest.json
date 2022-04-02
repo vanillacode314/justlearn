@@ -21,11 +21,13 @@
     "isEntry": true,
     "imports": [
       "_index-1696507a.js",
-      "_app-bcd30bb6.js",
+      "_app-ce4f8d58.js",
+      "_Button-cadf2420.js",
+      "_trash-d7eb86c4.js",
       "_user-ef559a82.js"
     ],
     "css": [
-      "assets/entries/pages/__layout.svelte-eb8b4d1e.css"
+      "assets/entries/pages/__layout.svelte-281bf723.css"
     ]
   },
   ".svelte-kit/runtime/components/error.svelte": {
@@ -42,11 +44,57 @@
     "isEntry": true,
     "imports": [
       "_index-1696507a.js",
-      "_add-19131305.js",
       "_user-ef559a82.js"
     ],
     "css": [
-      "assets/entries/pages/index.svelte-d6eda565.css"
+      "assets/entries/pages/index.svelte-71ccc24e.css"
+    ]
+  },
+  "src/routes/admin/index.svelte": {
+    "file": "entries/pages/admin/index.svelte.js",
+    "src": "src/routes/admin/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1696507a.js",
+      "_add-19131305.js",
+      "_user-ef559a82.js",
+      "_Button-cadf2420.js"
+    ],
+    "css": [
+      "assets/entries/pages/admin/index.svelte-a8cbcae1.css"
+    ]
+  },
+  "src/routes/admin/paper/[pid]/index.svelte": {
+    "file": "entries/pages/admin/paper/_pid_/index.svelte.js",
+    "src": "src/routes/admin/paper/[pid]/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1696507a.js",
+      "_Button-cadf2420.js",
+      "_add-19131305.js",
+      "_trash-d7eb86c4.js",
+      "_app-ce4f8d58.js",
+      "_user-ef559a82.js"
+    ],
+    "css": [
+      "assets/entries/pages/admin/paper/_pid_/index.svelte-bce00ee6.css"
+    ]
+  },
+  "src/routes/admin/paper/[pid]/question/[qid]/index.svelte": {
+    "file": "entries/pages/admin/paper/_pid_/question/_qid_/index.svelte.js",
+    "src": "src/routes/admin/paper/[pid]/question/[qid]/index.svelte",
+    "isEntry": true,
+    "imports": [
+      "_index-1696507a.js",
+      "_Question-cf03b059.js",
+      "_Button-cadf2420.js",
+      "_pencil-dd0cf3d2.js",
+      "_trash-d7eb86c4.js",
+      "_app-ce4f8d58.js",
+      "_user-ef559a82.js"
+    ],
+    "css": [
+      "assets/entries/pages/admin/paper/_pid_/question/_qid_/index.svelte-bb5a4063.css"
     ]
   },
   "src/routes/paper/[pid]/index.svelte": {
@@ -55,13 +103,13 @@
     "isEntry": true,
     "imports": [
       "_index-1696507a.js",
-      "_app-bcd30bb6.js",
-      "_add-19131305.js",
-      "_trash-d7eb86c4.js",
+      "_Button-cadf2420.js",
+      "_Question-cf03b059.js",
+      "_app-ce4f8d58.js",
       "_user-ef559a82.js"
     ],
     "css": [
-      "assets/entries/pages/paper/_pid_/index.svelte-5ef6e749.css"
+      "assets/entries/pages/paper/_pid_/index.svelte-27cf7989.css"
     ]
   },
   "src/routes/paper/[pid]/question/[qid]/index.svelte": {
@@ -70,25 +118,40 @@
     "isEntry": true,
     "imports": [
       "_index-1696507a.js",
-      "_app-bcd30bb6.js",
+      "_Question-cf03b059.js",
+      "_Button-cadf2420.js",
+      "_pencil-dd0cf3d2.js",
       "_trash-d7eb86c4.js",
+      "_app-ce4f8d58.js",
       "_user-ef559a82.js"
     ],
     "css": [
-      "assets/entries/pages/paper/_pid_/question/_qid_/index.svelte-54df15cc.css"
+      "assets/entries/pages/paper/_pid_/question/_qid_/index.svelte-7bd3b9c8.css"
     ]
   },
   "_index-1696507a.js": {
     "file": "chunks/index-1696507a.js"
   },
-  "_app-bcd30bb6.js": {
-    "file": "chunks/app-bcd30bb6.js",
+  "_app-ce4f8d58.js": {
+    "file": "chunks/app-ce4f8d58.js",
     "imports": [
       "_index-1696507a.js",
       "_user-ef559a82.js"
+    ]
+  },
+  "_Button-cadf2420.js": {
+    "file": "chunks/Button-cadf2420.js",
+    "imports": [
+      "_index-1696507a.js"
     ],
     "css": [
-      "assets/app-6f1263d1.css"
+      "assets/Button-e555de07.css"
+    ]
+  },
+  "_trash-d7eb86c4.js": {
+    "file": "chunks/trash-d7eb86c4.js",
+    "imports": [
+      "_index-1696507a.js"
     ]
   },
   "_user-ef559a82.js": {
@@ -103,8 +166,17 @@
       "_index-1696507a.js"
     ]
   },
-  "_trash-d7eb86c4.js": {
-    "file": "chunks/trash-d7eb86c4.js",
+  "_Question-cf03b059.js": {
+    "file": "chunks/Question-cf03b059.js",
+    "imports": [
+      "_index-1696507a.js"
+    ],
+    "css": [
+      "assets/Question-27bcd2bd.css"
+    ]
+  },
+  "_pencil-dd0cf3d2.js": {
+    "file": "chunks/pencil-dd0cf3d2.js",
     "imports": [
       "_index-1696507a.js"
     ]

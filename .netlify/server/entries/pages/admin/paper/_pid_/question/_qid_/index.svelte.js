@@ -20,16 +20,16 @@ __export(stdin_exports, {
   default: () => U5Bqidu5D
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_1696507a = require("../../../../../../chunks/index-1696507a.js");
-var import_Question_cf03b059 = require("../../../../../../chunks/Question-cf03b059.js");
-var import_Button_cadf2420 = require("../../../../../../chunks/Button-cadf2420.js");
-var import_pencil_dd0cf3d2 = require("../../../../../../chunks/pencil-dd0cf3d2.js");
-var import_trash_d7eb86c4 = require("../../../../../../chunks/trash-d7eb86c4.js");
-var import_app_ce4f8d58 = require("../../../../../../chunks/app-ce4f8d58.js");
-var import_user_ef559a82 = require("../../../../../../chunks/user-ef559a82.js");
+var import_index_1696507a = require("../../../../../../../chunks/index-1696507a.js");
+var import_Question_cf03b059 = require("../../../../../../../chunks/Question-cf03b059.js");
+var import_Button_cadf2420 = require("../../../../../../../chunks/Button-cadf2420.js");
+var import_pencil_dd0cf3d2 = require("../../../../../../../chunks/pencil-dd0cf3d2.js");
+var import_trash_d7eb86c4 = require("../../../../../../../chunks/trash-d7eb86c4.js");
+var import_app_ce4f8d58 = require("../../../../../../../chunks/app-ce4f8d58.js");
+var import_user_ef559a82 = require("../../../../../../../chunks/user-ef559a82.js");
 var index_svelte_svelte_type_style_lang = "";
 const css = {
-  code: '.container.svelte-25ygxz{display:grid;grid-template-columns:minmax(200px, auto) 1fr;grid-template-rows:1fr;grid-template-areas:"toolbar main";height:100%}main.svelte-25ygxz{grid-area:main;padding:1rem;display:flex;flex-direction:column;gap:1rem}.toolbar.svelte-25ygxz{display:flex;flex-direction:column;grid-area:toolbar;background-color:var(--foreground);height:100%}',
+  code: '.container.svelte-m4s11k{display:grid;grid-template-columns:minmax(200px, auto) 1fr;grid-template-rows:1fr;grid-template-areas:"toolbar main";height:100%}@media(max-width: 768px){.container.svelte-m4s11k{grid-template-rows:auto 1fr;grid-template-columns:1fr;grid-template-areas:"toolbar" "main"}}.toolbar.svelte-m4s11k{grid-area:toolbar;background-color:var(--foreground);height:100%;display:flex;flex-direction:column}@media(max-width: 768px){.toolbar.svelte-m4s11k{flex-direction:row;flex-wrap:wrap}}main.svelte-m4s11k{grid-area:main;padding:1rem;display:flex;flex-direction:column;gap:1rem}',
   map: null
 };
 const U5Bqidu5D = (0, import_index_1696507a.c)(($$result, $$props, $$bindings, slots) => {
@@ -62,7 +62,7 @@ const U5Bqidu5D = (0, import_index_1696507a.c)(($$result, $$props, $$bindings, s
   $$unsubscribe_page();
   $$unsubscribe_activePaper();
   $$unsubscribe_papers();
-  return `<div class="${"container svelte-25ygxz"}"><div class="${"toolbar svelte-25ygxz"}">${(0, import_index_1696507a.v)(import_Button_cadf2420.B, "Button").$$render($$result, { inverted: true }, {}, {
+  return `<div class="${"container svelte-m4s11k"}"><div class="${"toolbar svelte-m4s11k"}">${(0, import_index_1696507a.v)(import_Button_cadf2420.B, "Button").$$render($$result, { inverted: true }, {}, {
     default: () => {
       return `${(0, import_index_1696507a.v)(import_pencil_dd0cf3d2.P, "IconPencil").$$render($$result, {}, {}, {})} Edit`;
     }
@@ -72,6 +72,6 @@ const U5Bqidu5D = (0, import_index_1696507a.c)(($$result, $$props, $$bindings, s
       return `${(0, import_index_1696507a.v)(import_trash_d7eb86c4.T, "IconTrash").$$render($$result, {}, {}, {})} Delete`;
     }
   })}</div>
-	<main class="${"svelte-25ygxz"}">${paper ? `${(0, import_index_1696507a.v)(import_Question_cf03b059.Q, "Question").$$render($$result, { question, answer: question.answer }, {}, {})}` : `<p>No question with id ${(0, import_index_1696507a.h)(id)} found in paper with id ${(0, import_index_1696507a.h)(pid)} and name ${(0, import_index_1696507a.h)(paper == null ? void 0 : paper.name)}:(</p>`}</main>
+	<main class="${"svelte-m4s11k"}">${paper ? `${(0, import_index_1696507a.v)(import_Question_cf03b059.Q, "Question").$$render($$result, { question, answer: question.answer }, {}, {})}` : `<p>No question with id ${(0, import_index_1696507a.h)(id)} found in paper with id ${(0, import_index_1696507a.h)(pid)} and name ${(0, import_index_1696507a.h)(paper == null ? void 0 : paper.name)}:(</p>`}</main>
 </div>`;
 });

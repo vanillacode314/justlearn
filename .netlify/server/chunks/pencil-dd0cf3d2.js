@@ -1,8 +1,6 @@
-var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
-var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -16,17 +14,19 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
-var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target, mod));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
-  css: () => css,
-  entry: () => entry,
-  js: () => js,
-  module: () => module2
+  P: () => Pencil
 });
 module.exports = __toCommonJS(stdin_exports);
-var module2 = __toESM(require("../entries/pages/admin/index.svelte.js"));
-const entry = "pages/admin/index.svelte-0fc66b9f.js";
-const js = ["pages/admin/index.svelte-0fc66b9f.js", "chunks/index-c527663a.js", "chunks/add-88002483.js", "chunks/user-dae718b2.js", "chunks/index-48d9e608.js", "chunks/index-962aa2bd.js", "chunks/Button-908e5cd6.js"];
-const css = ["assets/pages/admin/index.svelte-b77e326d.css", "assets/Button-25f461c1.css"];
+var import_index_1696507a = require("./index-1696507a.js");
+const Pencil = (0, import_index_1696507a.c)(($$result, $$props, $$bindings, slots) => {
+  return `<svg${(0, import_index_1696507a.a)([
+    { preserveAspectRatio: "xMidYMid meet" },
+    { viewBox: "0 0 24 24" },
+    { width: "1.2em" },
+    { height: "1.2em" },
+    (0, import_index_1696507a.e)($$props)
+  ], {})}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83l3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/>`}<!-- HTML_TAG_END --></svg>`;
+});
