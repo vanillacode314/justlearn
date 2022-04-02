@@ -51,7 +51,23 @@
 		grid-template-columns: minmax(200px, auto) 1fr;
 		grid-template-rows: 1fr;
 		grid-template-areas: 'toolbar main';
+		@media (max-width: 768px) {
+			grid-template-rows: auto 1fr;
+			grid-template-columns: 1fr;
+			grid-template-areas: 'toolbar' 'main';
+		}
 		height: 100%;
+	}
+	.toolbar {
+		grid-area: toolbar;
+		background-color: var(--foreground);
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		@media (max-width: 768px) {
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
 	}
 	main {
 		grid-area: main;
@@ -59,12 +75,5 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-	}
-	.toolbar {
-		display: flex;
-		flex-direction: column;
-		grid-area: toolbar;
-		background-color: var(--foreground);
-		height: 100%;
 	}
 </style>

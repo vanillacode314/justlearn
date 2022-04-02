@@ -50,10 +50,6 @@
 				</li>
 			{/each}
 		</ul>
-		<!-- 	<List items={$papers.map((p) => ({ ...p, href: `/paper/${p.id}` }))} let:item> -->
-		<!-- 		{item.name} -->
-		<!-- 	</List> -->
-		<!-- </main> -->
 	</main>
 </div>
 
@@ -63,6 +59,11 @@
 		grid-template-columns: minmax(200px, auto) 1fr;
 		grid-template-rows: 1fr;
 		grid-template-areas: 'toolbar main';
+		@media (max-width: 768px) {
+			grid-template-rows: auto 1fr;
+			grid-template-columns: 1fr;
+			grid-template-areas: 'toolbar' 'main';
+		}
 		height: 100%;
 	}
 	.toolbar {
@@ -71,20 +72,9 @@
 		height: 100%;
 		display: flex;
 		flex-direction: column;
-		button {
-			display: flex;
-			align-items: center;
-			gap: 0.5rem;
-			padding: 0.5rem 1rem;
-			border: none;
-			background: var(--foreground);
-			color: var(--background);
-			cursor: pointer;
-			transition: all 0.3s ease-in-out;
-			&:hover {
-				background-color: var(--background);
-				color: var(--foreground);
-			}
+		@media (max-width: 768px) {
+			flex-direction: row;
+			flex-wrap: wrap;
 		}
 	}
 	main {

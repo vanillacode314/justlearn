@@ -46,7 +46,9 @@
 		grid-template-areas: 'heading image' 'options image';
 		align-content: start;
 		gap: 1rem;
-		gap: 1rem;
+		@media (max-width: 768px) {
+			grid-template-areas: 'heading heading' 'image image' 'options options';
+		}
 		img {
 			grid-area: image;
 			width: 100%;
