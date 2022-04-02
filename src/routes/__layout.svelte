@@ -23,8 +23,9 @@
 
 <style lang="scss">
 	.wrapper {
+		overflow: hidden;
 		height: 100%;
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-rows: auto 1fr;
 	}
 </style>

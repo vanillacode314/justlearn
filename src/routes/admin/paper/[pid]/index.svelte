@@ -72,12 +72,12 @@
 		grid-template-columns: minmax(200px, auto) 1fr;
 		grid-template-rows: 1fr;
 		grid-template-areas: 'toolbar main';
+		overflow-y: auto;
 		@media (max-width: 768px) {
 			grid-template-rows: auto 1fr;
 			grid-template-columns: 1fr;
 			grid-template-areas: 'toolbar' 'main';
 		}
-		height: 100%;
 	}
 	.toolbar {
 		grid-area: toolbar;
@@ -91,6 +91,7 @@
 		}
 	}
 	main {
+		overflow-y: scroll;
 		grid-area: main;
 		padding: 1rem;
 		display: flex;
