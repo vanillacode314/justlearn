@@ -1,0 +1,18 @@
+{
+	"short_name": "justlearn",
+	"name": "justlearn",
+	"start_url": "/",
+	"background_color": "#000000",
+	"display": "standalone",
+	"scope": "/",
+	"theme_color": "#ffffff",
+	"shortcuts": [
+		{
+			"name": "Admin",
+			"short_name": "Admin",
+			"description": "Admin Panel",
+			"url": "/admin"
+		}
+	],
+	"description": "JustLearn for NEET and JEE aspirants"
+}
