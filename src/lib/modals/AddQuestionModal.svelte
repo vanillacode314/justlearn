@@ -18,6 +18,14 @@
 	let selected = -1;
 
 	/// METHODS
+	function onOpen() {
+		text = '';
+		subject = '';
+		chapter = '';
+		options = [];
+		selected = -1;
+	}
+
 	async function addOption() {
 		const option = prompt('Enter option (type image to upload image)');
 		if (!option) return;
@@ -98,7 +106,7 @@
 	}
 </script>
 
-<Modal bind:open={$addQuestionModalOpen}>
+<Modal bind:open={$addQuestionModalOpen} on:open={onOpen}>
 	<form on:submit|preventDefault={addQuestion}>
 		<header>
 			<h3>Add Question</h3>
