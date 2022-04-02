@@ -15,7 +15,7 @@
 		$deleteQuestionModalOpen = false;
 	}
 	async function _delete() {
-		await goto(`/paper/${$activePaper.id}`);
+		await goto(`/admin/paper/${$activePaper.id}`);
 		$activePaper.questions = $activePaper.questions.filter((q) => q.id !== $activeQuestion.id);
 		const p = $papers.findIndex((x) => x.id === $activePaper.id);
 		$papers[p] = $activePaper;

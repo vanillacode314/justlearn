@@ -1,11 +1,14 @@
 <script lang="ts">
 	/// COMPONENTS
 	import IconAdd from '~icons/mdi/add';
+	import IconImport from '~icons/mdi/import';
 
 	/// STATE
 	import { papers } from '$lib/stores/user';
 	import { genRandomNumber } from '$lib/utils';
+	import Button from '$lib/components/Button.svelte';
 
+	/// METHODS
 	function addPaper() {
 		const name = prompt('Enter a name for the paper.');
 		if (!name) return;
@@ -17,11 +20,25 @@
 		$papers.push(paper);
 		$papers = $papers;
 	}
+	function _import() {
+		async function handleFiles() {
+			input.removeEventListener('change', handleFiles);
+			const file = this.files[0];
+			const data = await file.text();
+			$papers.push(JSON.parse(data));
+			$papers = $papers;
+		}
+		const input = document.createElement('input');
+		input.setAttribute('type', 'file');
+		input.addEventListener('change', handleFiles);
+		input.click();
+	}
 </script>
 
 <div class="container">
 	<div class="toolbar">
-		<button title="Add Paper" on:click={addPaper}><IconAdd /> Add</button>
+		<Button inverted on:click={addPaper}><IconAdd /> Add</Button>
+		<Button inverted on:click={_import}><IconImport /> Import</Button>
 	</div>
 	<main>
 		<ul class="paper-grid">
@@ -52,6 +69,8 @@
 		grid-area: toolbar;
 		background-color: var(--foreground);
 		height: 100%;
+		display: flex;
+		flex-direction: column;
 		button {
 			display: flex;
 			align-items: center;

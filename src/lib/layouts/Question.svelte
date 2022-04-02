@@ -27,8 +27,13 @@
 		{#each question.options as option}
 			<label>
 				<input type="radio" bind:group={answer} name={String(question.id)} value={option.id} />
-				{option.text}</label
-			>
+				{#if option?.text}
+					{option.text}
+				{/if}
+				{#if option?.image}
+					<img src={option.image} alt="option {option.id}" />
+				{/if}
+			</label>
 		{/each}
 	</div>
 </article>
@@ -54,6 +59,17 @@
 		grid-area: options;
 		display: flex;
 		flex-direction: column;
+		label {
+			display: flex;
+			justify-content: start;
+			align-items: center;
+			gap: 1rem;
+			width: auto;
+			img {
+				width: auto;
+				height: 5rem;
+			}
+		}
 	}
 	.options label {
 		margin: 0.5em;

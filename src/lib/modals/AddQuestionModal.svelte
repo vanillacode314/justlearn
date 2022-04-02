@@ -17,8 +17,6 @@
 	let options: Option[] = [];
 	let selected = -1;
 
-	$: console.log(options);
-
 	/// METHODS
 	async function addOption() {
 		const option = prompt('Enter option (type image to upload image)');

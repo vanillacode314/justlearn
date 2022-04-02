@@ -3,12 +3,14 @@
 	import Button from '$lib/components/Button.svelte';
 	import IconAdd from '~icons/mdi/add';
 	import IconTrash from '~icons/mdi/trash';
+	import IconExport from '~icons/mdi/export';
 
 	/// STATE
 	import { page } from '$app/stores';
 	import { papers } from '$lib/stores/user';
 	import List from '$lib/components/List.svelte';
 	import { activePaper, addQuestionModalOpen, deletePaperModalOpen } from '$lib/stores/app';
+	import { exportToJsonFile } from '$lib/utils';
 	$: id = $page.params.pid;
 	$: paper = $papers.find((p) => p.id === Number(id));
 	$: $activePaper = paper;
@@ -21,12 +23,17 @@
 	function deletePaper() {
 		$deletePaperModalOpen = true;
 	}
+
+	function _export() {
+		exportToJsonFile(paper, paper.name);
+	}
 </script>
 
 <div class="container">
 	<div class="toolbar">
 		<Button inverted on:click={addQuestion}><IconAdd /> Add</Button>
 		<Button inverted on:click={deletePaper}><IconTrash /> Delete</Button>
+		<Button inverted on:click={_export}><IconExport /> Export</Button>
 	</div>
 	<main>
 		{#if paper}
@@ -73,6 +80,7 @@
 		grid-area: toolbar;
 		display: flex;
 		flex-direction: column;
+
 		background-color: var(--foreground);
 		height: 100%;
 	}

@@ -15,7 +15,7 @@
 		$deletePaperModalOpen = false;
 	}
 	async function _delete() {
-		await goto('/');
+		await goto('/admin');
 		$papers = $papers.filter((p) => p.id !== $activePaper.id);
 		close();
 	}
