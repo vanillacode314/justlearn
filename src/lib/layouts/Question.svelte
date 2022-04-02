@@ -2,7 +2,6 @@
 	export let question: Question;
 	export let index: number = -1;
 	export let answer: Option['id'];
-	console.log({ answer });
 	$: questionNo = index + 1;
 
 	import { afterUpdate } from 'svelte';

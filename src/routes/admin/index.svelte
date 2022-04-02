@@ -25,7 +25,8 @@
 			input.removeEventListener('change', handleFiles);
 			const file = this.files[0];
 			const data = await file.text();
-			$papers.push(JSON.parse(data));
+			const paper = JSON.parse(data);
+			$papers.push(paper);
 			$papers = $papers;
 		}
 		const input = document.createElement('input');
