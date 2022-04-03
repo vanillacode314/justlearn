@@ -1,0 +1,612 @@
+[
+	{
+		"id": 397257541576,
+		"name": "NEET 2017 A Biology",
+		"questions": [
+			{
+				"id": 176890982949,
+				"answer": 865842951413,
+				"options": [
+					{ "id": 213991968086, "text": "Apoenzyme = Holoenzyme + Coenzyme" },
+					{ "id": 865842951413, "text": "Holoenzyme = Apoenzyme + Coenzyme" },
+					{ "id": 638187961567, "text": "Coenzyme = Apoenzyme + Holoenzyme" },
+					{ "id": 477799028594, "text": "Holoenzyme = Coenzyme + Co-factor" }
+				],
+				"subject": "Biology",
+				"chapter": "Biomolecules",
+				"text": "Which one of the following statements is correct with reference to enzymes?"
+			},
+			{
+				"id": 671521863249,
+				"answer": 728021423428,
+				"options": [
+					{ "id": 993660361572, "text": "Argentaffin cells" },
+					{ "id": 728021423428, "text": "Paneth cells" },
+					{ "id": 553788652717, "text": "Zymogen cells" },
+					{ "id": 126070986487, "text": "Kupffer cells" }
+				],
+				"subject": "Biology",
+				"chapter": "Biomolecules",
+				"text": "Which cells of 'Crypts of Lieberkuhn' secrete antibacterial lysozyme?"
+			},
+			{
+				"id": 573808719737,
+				"answer": 452217491069,
+				"options": [
+					{ "id": 808032667383, "text": "\\(C_3\\) plants" },
+					{ "id": 452217491069, "text": "\\(C_4\\) plants" },
+					{ "id": 469230507625, "text": "\\(C_2\\) plants" },
+					{ "id": 739453834254, "text": "\\(C_3\\) and \\(C_4\\) plants" }
+				],
+				"subject": "Biology",
+				"chapter": "Photosynthesis in Higher Plants",
+				"text": "Phosphoenol pyruvate (PEP) is the primary \\(CO_2\\) acceptor in:"
+			},
+			{
+				"id": 526137550480,
+				"answer": 642998530775,
+				"options": [
+					{ "id": 642998530775, "text": "1" },
+					{ "id": 358037464818, "text": "2" },
+					{ "id": 226694031810, "text": "3" },
+					{ "id": 392884053999, "text": "4" }
+				],
+				"subject": "Biology",
+				"chapter": "Reproductive Health",
+				"text": "Match the following.",
+				"image": "https://i.ibb.co/27RkFhC/Screenshot-2022-04-02-20-42-04-195-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 233390517395,
+				"answer": 835971135142,
+				"options": [
+					{ "id": 282425685737, "text": "Bacillus" },
+					{ "id": 808539340691, "text": "Pseudomonas" },
+					{ "id": 835971135142, "text": "Mycoplasma" },
+					{ "id": 355661759691, "text": "Nostoc" }
+				],
+				"subject": "Biology",
+				"chapter": "Biological Classification",
+				"text": "Which among the following are the smallest living cells, known without a definite cell wall, pathogenic to plants as well as animals and can survive without oxygen?"
+			},
+			{
+				"id": 979829154230,
+				"answer": 976763441669,
+				"options": [
+					{ "id": 976763441669, "text": "1856 - 1863" },
+					{ "id": 810442504786, "text": "1840 - 1850" },
+					{ "id": 398611338611, "text": "1857 - 1869" },
+					{ "id": 753782026453, "text": "1870 - 1877" }
+				],
+				"subject": "Biology",
+				"chapter": "Principles of Inheritance and Variation",
+				"text": "Which one from those given below is the periods for Mendel's hybridization experiments?"
+			},
+			{
+				"id": 490614795392,
+				"answer": 472720679834,
+				"options": [
+					{ "id": 768524288131, "text": "Water" },
+					{ "id": 394406674360, "text": "Bee" },
+					{ "id": 472720679834, "text": "Wind" },
+					{ "id": 787175617421, "text": "Bat" }
+				],
+				"subject": "Biology",
+				"chapter": "Sexual Reproduction in Flowering Plants",
+				"text": "Flowers which have single ovule in the ovary and are packed into inflorescence are usually pollinated by:"
+			},
+			{
+				"id": 318661400613,
+				"answer": 422037599363,
+				"options": [
+					{ "id": 825886374092, "text": "The value of 'r' approaches zero" },
+					{ "id": 422037599363, "text": "K = N" },
+					{ "id": 510174042737, "text": "K > N" },
+					{ "id": 726281082077, "text": "K < N" }
+				],
+				"subject": "Biology",
+				"chapter": "Organisms and Populations",
+				"text": "Asymptote in a logistic growth curve is obtained when:"
+			},
+			{
+				"id": 421488016149,
+				"answer": 698533777495,
+				"options": [
+					{ "id": 698533777495, "text": "1" },
+					{ "id": 708445942494, "text": "2" },
+					{ "id": 581549275599, "text": "3" },
+					{ "id": 711236331324, "text": "4" }
+				],
+				"subject": "Biology",
+				"chapter": "Locomotion and Movement",
+				"text": "Out of 'X' pairs of ribs in humans only 'Y' pairs are true ribs. Select the option that correctly represents values of X and Y and provides their explanation:",
+				"image": "https://i.ibb.co/h82pSc6/Screenshot-2022-04-02-21-10-59-922-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 296594826542,
+				"answer": 832111390962,
+				"options": [
+					{ "id": 832111390962, "text": "50%" },
+					{ "id": 634113630479, "text": "20%" },
+					{ "id": 110107880028, "text": "70%" },
+					{ "id": 708600330007, "text": "10%" }
+				],
+				"subject": "Biology",
+				"chapter": "Human Health and Disease",
+				"text": "MALT constitutes about _______ percent of the lymphoid tissue in human body."
+			},
+			{
+				"id": 228383768761,
+				"answer": 276275061791,
+				"options": [
+					{ "id": 276275061791, "text": "mating of related individuals of same breed" },
+					{ "id": 603099428183, "text": "mating of unrelated individuals of same breed" },
+					{ "id": 573965884519, "text": "mating of individuals of different breed" },
+					{ "id": 855366371191, "text": "mating of individuals of different species" }
+				],
+				"subject": "Biology",
+				"chapter": "Principles of Inheritance and Variation",
+				"text": "Homozygous purelines in cattle can be obtained by:"
+			},
+			{
+				"id": 919010869726,
+				"answer": 815267361757,
+				"options": [
+					{ "id": 930567599035, "text": "Stem - Tall of Dwarf" },
+					{ "id": 815267361757, "text": "Trichomes - Glandular or non-glandular" },
+					{ "id": 209531998294, "text": "Seed - Green or Yellow" },
+					{ "id": 437648026232, "text": "Pod - Inflated or Constricted" }
+				],
+				"subject": "Biology",
+				"chapter": "Principles of Inheritance and Variation",
+				"text": "Among the following characters, which one was not considered by Mendel in his experiments on pea?"
+			},
+			{
+				"id": 982233580467,
+				"answer": 806133480671,
+				"options": [
+					{ "id": 522986179128, "text": "Lysosome" },
+					{ "id": 209686637494, "text": "Ribosome" },
+					{ "id": 794653901206, "text": "Chloroplast" },
+					{ "id": 806133480671, "text": "Mitochondrion" }
+				],
+				"subject": "Biology",
+				"chapter": "Cell",
+				"text": "Which of the following cell organelles is responsible for extracting energy from carbohydrates to form ATP?"
+			},
+			{
+				"id": 208065402710,
+				"answer": 161532413097,
+				"options": [
+					{ "id": 408394728898, "text": "1" },
+					{ "id": 938976329699, "text": "11" },
+					{ "id": 161532413097, "text": "33" },
+					{ "id": 555399232548, "text": "333" }
+				],
+				"subject": "Biology",
+				"chapter": "Molecular Basis of Inheritance",
+				"text": "If there are 999 bases in RNA that codes for a protein with 333 amino acids, and the base at position 901 is deleted such that the length of the RNA becomes 998 bases, how many codons will be altered?"
+			},
+			{
+				"id": 116451432855,
+				"answer": 302938578789,
+				"options": [
+					{ "id": 302938578789, "text": "Archaebacteria" },
+					{ "id": 114407554084, "text": "Eubacteria" },
+					{ "id": 824932105102, "text": "Cyanobacteria" },
+					{ "id": 765514149640, "text": "Mycobacteria" }
+				],
+				"subject": "Biology",
+				"chapter": "Biological Classification",
+				"text": "Which of the following are found in extreme saline conditions?"
+			},
+			{
+				"id": 386123835091,
+				"answer": 920315970412,
+				"options": [
+					{ "id": 572152927383, "text": "membranes of synaptic vesicles" },
+					{ "id": 316292771443, "text": "pre-synaptic membrane" },
+					{ "id": 858343682455, "text": "tips of axons" },
+					{ "id": 920315970412, "text": "post-synaptic membrane" }
+				],
+				"subject": "Biology",
+				"chapter": "Neural Control and Coordination",
+				"text": "Receptor sites for neurotransmitters are present on:"
+			},
+			{
+				"id": 541627816082,
+				"answer": 519885737991,
+				"options": [
+					{
+						"id": 655413619624,
+						"text": "stabilizing selection as it stabilizes this character in the population"
+					},
+					{
+						"id": 519885737991,
+						"text": "directional as it pushes the mean of the character in one direction"
+					},
+					{
+						"id": 704197296075,
+						"text": "disruptive as it splits the population into two, one yielding higher output and the other lower output"
+					},
+					{
+						"id": 176363133157,
+						"text": "stabilizing followed by disruptive as it stabilizes the population to produce higher yielding cows."
+					}
+				],
+				"subject": "Biology",
+				"chapter": "Evolution",
+				"text": "Artificial selection to obtain cows yielding higher milk output represents:"
+			},
+			{
+				"id": 681873483594,
+				"answer": 749987775149,
+				"options": [
+					{ "id": 382032453800, "text": "Heart" },
+					{ "id": 533000531291, "text": "Stomach" },
+					{ "id": 919475553295, "text": "Kidneys" },
+					{ "id": 749987775149, "text": "Intestine" }
+				],
+				"subject": "Biology",
+				"chapter": "Body Fluids and Circulation",
+				"text": "The hepatic portal vein drains blood to liver from"
+			},
+			{
+				"id": 809862191713,
+				"answer": 534270981666,
+				"options": [
+					{ "id": 534270981666, "text": "Zero" },
+					{ "id": 885256007483, "text": "Less than zero" },
+					{ "id": 594412398427, "text": "More than zero but less than one" },
+					{ "id": 468506039151, "text": "More than one" }
+				],
+				"subject": "Biology",
+				"chapter": "Transport in Plants",
+				"text": "The water potential of pure water is:"
+			},
+			{
+				"id": 570812397442,
+				"answer": 585377290500,
+				"options": [
+					{ "id": 538895854973, "text": "Equidae" },
+					{ "id": 585377290500, "text": "Perissodactyla" },
+					{ "id": 719003337505, "text": "Caballus" },
+					{ "id": 716549900187, "text": "Ferus" }
+				],
+				"subject": "Biology",
+				"chapter": "Biological Classification",
+				"text": "Which of the following represents order of 'Horse'"
+			},
+			{
+				"id": 299729994786,
+				"answer": 727779355898,
+				"options": [
+					{ "id": 811192964435, "text": "Ecological Biodiversity" },
+					{ "id": 142419593091, "text": "Laws of limiting factor" },
+					{ "id": 727779355898, "text": "Species area relationship" },
+					{ "id": 946272918814, "text": "Population Growth equation" }
+				],
+				"subject": "Biology",
+				"chapter": "Biodiversity and Conservation",
+				"text": "Alexander Von Humbolt described for the first time:"
+			},
+			{
+				"id": 834165206170,
+				"answer": 109787858047,
+				"options": [
+					{ "id": 356735414893, "text": "Positively charged" },
+					{ "id": 109787858047, "text": "Negatively charged" },
+					{ "id": 851392705091, "text": "Neutral" },
+					{
+						"id": 738754278088,
+						"text": "Either positively or negatively charged depending on their size"
+					}
+				],
+				"subject": "Biology",
+				"chapter": "Biotechnology - Principles and Processes",
+				"text": "DNA fragments are:"
+			},
+			{
+				"id": 532964995907,
+				"answer": 420073385114,
+				"options": [
+					{ "id": 887434417736, "text": "Incisors" },
+					{ "id": 696869574404, "text": "Canines" },
+					{ "id": 420073385114, "text": "Premolars" },
+					{ "id": 440494479371, "text": "Molars" }
+				],
+				"subject": "Biology",
+				"chapter": "Digestion and Absorption",
+				"text": "A baby boy aged two years is admitted to play school and passes through a dental check up. The dentist observed that boy had twenty teeth. Which teeth are absent?"
+			},
+			{
+				"id": 774516235933,
+				"answer": 356972889910,
+				"options": [
+					{ "id": 895550373422, "text": "Chromosomes will not condense" },
+					{ "id": 142264438746, "text": "Chromosomes will be fragmented" },
+					{ "id": 356972889910, "text": "Chromosomes will not segregate" },
+					{ "id": 139513972039, "text": "Recombination of chromosome arms will occur" }
+				],
+				"subject": "Biology",
+				"chapter": "Cell Cycle and Cell Division",
+				"text": "Anaphase promoting Complex (APC) is a protein degradation machinery necessary for proper mitosis of animal cells. If APC is defective in a human cell, which of the following is expected to occur?"
+			},
+			{
+				"id": 734785962474,
+				"answer": 658618463073,
+				"options": [
+					{ "id": 665106425710, "text": "Absence of notochord" },
+					{ "id": 361835131943, "text": "Ventral tubular nerve cord" },
+					{ "id": 658618463073, "text": "Pharynx with gill slits" },
+					{ "id": 249569844394, "text": "Pharynx without gill slits" }
+				],
+				"subject": "Biology",
+				"chapter": "Animal Kingdom",
+				"text": "An important characteristic that hemichordates share with Chordates is"
+			},
+			{
+				"id": 293398205132,
+				"answer": 935052458759,
+				"options": [
+					{ "id": 658663905053, "text": "3 genotypes : 3 phenotypes" },
+					{ "id": 526561283169, "text": "3 genotypes : 4 phenotypes" },
+					{ "id": 935052458759, "text": "4 genotypes : 3 phenotypes" },
+					{ "id": 292614969001, "text": "4 genotypes : 4 phenotypes" }
+				],
+				"subject": "Biology",
+				"chapter": "Principles of Inheritance and Variation",
+				"text": "The genotypes of a Husband and Wife are \\(I^AI^B\\) and \\(I^Ai\\). Among the blood types of their children how many different genotypes and phenotypes are possible"
+			},
+			{
+				"id": 402160104656,
+				"answer": 566203162180,
+				"options": [
+					{ "id": 864467640152, "text": "Autoimmune response" },
+					{ "id": 566203162180, "text": "Cell mediated immune response" },
+					{ "id": 613794068162, "text": "Hormonal immune response" },
+					{ "id": 588500600993, "text": "Physiological immune response" }
+				],
+				"subject": "Biology",
+				"chapter": "Human Health and Disease",
+				"text": "Transplantation of tissues / organs fails often due to non-acceptance by the patient's body. Which type of immune responses is responsible for such rejection"
+			},
+			{
+				"id": 534964279090,
+				"answer": 838819888358,
+				"options": [
+					{ "id": 838819888358, "text": "only (d)" },
+					{ "id": 185482532648, "text": "only (a)" },
+					{ "id": 113807881923, "text": "(a), (c), and (d)" },
+					{ "id": 620764136897, "text": "(b) and (c)" }
+				],
+				"subject": "Biology",
+				"chapter": "Body Fluids and Circulation",
+				"text": "Adult human RBCs are enucleate. Which of the following statement(s) is / are not most appropriate explanation for this feature?",
+				"image": "https://i.ibb.co/ykwwyXW/Screenshot-2022-04-03-17-07-58-027-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 814439433444,
+				"answer": 236200325918,
+				"options": [
+					{ "id": 236200325918, "text": "Residual Volume" },
+					{ "id": 661442600541, "text": "Inspiratory Reserve Volume" },
+					{ "id": 331417772164, "text": "Tidal Volume" },
+					{ "id": 673670165600, "text": "Expiratory Reserve Volume" }
+				],
+				"subject": "Biology",
+				"chapter": "Breathing and Exchange of Gases",
+				"text": "Lungs are made up of air filled sacs, the alveoli. They do not collapse even after forceful expiration because of"
+			},
+			{
+				"id": 794686301498,
+				"answer": 310217308779,
+				"options": [
+					{ "id": 130793411451, "text": "Marchantia" },
+					{ "id": 269984185217, "text": "Fucus" },
+					{ "id": 434896691453, "text": "Funnaria" },
+					{ "id": 310217308779, "text": "Chlamydomonas" }
+				],
+				"subject": "Biology",
+				"chapter": "Plant Kingdom",
+				"text": "Zygotic meiosis is characteristic of"
+			},
+			{
+				"id": 664573920696,
+				"answer": 189666030346,
+				"options": [
+					{
+						"id": 646934537766,
+						"text": "Testes -> Bidder's canal -> Kidney -> Vasa efferentia -> Urinogenital duct -> Cloaca"
+					},
+					{
+						"id": 146429339181,
+						"text": "Testes -> Vasa efferentia -> Kidney -> Seminal vesicle -> Urinogenital duct -> Cloaca"
+					},
+					{
+						"id": 938902333099,
+						"text": "Testes -> Vasa efferentia -> Bider's canal -> Ureter  -> Cloaca"
+					},
+					{
+						"id": 189666030346,
+						"text": "Testes -> Vasa efferentia -> Kidney -> Bider's canal  -> Urinogenital duct -> Cloaca"
+					}
+				],
+				"subject": "Biology",
+				"chapter": "Structural Organisation in Animals",
+				"text": "Select the correct route for the passage of sperms in male frogs"
+			},
+			{
+				"id": 645243395394,
+				"answer": 813698463207,
+				"options": [
+					{ "id": 693758578669, "text": "They are harmful to human health" },
+					{ "id": 725925738284, "text": "They alter rainfall and monsoon patterns" },
+					{ "id": 813698463207, "text": "They cause increased agricultural productivity" },
+					{ "id": 640054510780, "text": "They have negative impact on agricultural land" }
+				],
+				"subject": "Biology",
+				"chapter": "Enviromental Issues",
+				"text": "Which one of the following statements is not valid for aerosols"
+			},
+			{
+				"id": 632533250593,
+				"answer": 489440746520,
+				"options": [
+					{ "id": 107118988039, "text": "The leading strand towards replication fork" },
+					{ "id": 628273935242, "text": "The lagging strand towards replication fork" },
+					{ "id": 920617930899, "text": "The leading strand away from replication fork" },
+					{ "id": 489440746520, "text": "The lagging strand away from the replication fork" }
+				],
+				"subject": "Biology",
+				"chapter": "Molecular Basis of Inheritance",
+				"text": "During DNA replication, Okazaki fragments are used to elongate"
+			},
+			{
+				"id": 918062488322,
+				"answer": 985872839400,
+				"options": [
+					{ "id": 315529738948, "text": "Mesophytes" },
+					{ "id": 985872839400, "text": "Halophytes" },
+					{ "id": 950525497742, "text": "Psammophytes" },
+					{ "id": 159584104365, "text": "Hydrophytes" }
+				],
+				"subject": "Biology",
+				"chapter": "Organisms and Populations",
+				"text": "Plants which produce characteristic Pneumatophores and show vivipary belong to"
+			},
+			{
+				"id": 722759921881,
+				"answer": 851170668820,
+				"options": [
+					{ "id": 248928885306, "text": "Upstream processing" },
+					{ "id": 851170668820, "text": "Downstream processing" },
+					{ "id": 768885556577, "text": "Bioprocessing" },
+					{ "id": 216644151552, "text": "Postproduction processing" }
+				],
+				"subject": "Biology",
+				"chapter": "Biotechnology - Principles and Processes",
+				"text": "The process of seperation and purification of expressed protein before marketing is called"
+			},
+			{
+				"id": 652244020912,
+				"answer": 902441815082,
+				"options": [
+					{ "id": 337952154161, "text": "DNA molecules with protein coat" },
+					{ "id": 135939773842, "text": "DNA molecules without protein coat" },
+					{ "id": 219455011739, "text": "RNA molecules with protein coat" },
+					{ "id": 902441815082, "text": "RNA molecules without protein coat" }
+				],
+				"subject": "Biology",
+				"chapter": "Biological Classification",
+				"text": "Viroids differ from viruses in having"
+			},
+			{
+				"id": 844188067325,
+				"answer": 790249294979,
+				"options": [
+					{ "id": 183050464332, "text": "Organic compounds are deposited in it" },
+					{ "id": 468570589518, "text": "It is highly durable" },
+					{ "id": 790249294979, "text": "It conducts water and minerals efficiently" },
+					{ "id": 609230174084, "text": "It comprises dead elements with highly lignified walls" }
+				],
+				"subject": "Biology",
+				"chapter": "Anatomy of Flowering Plants",
+				"text": "Identify the wrong statement in context of heartwood"
+			},
+			{
+				"id": 289810707840,
+				"answer": 490270806031,
+				"options": [
+					{ "id": 619514254773, "text": "Plants" },
+					{ "id": 762586091305, "text": "Fungi" },
+					{ "id": 425763559887, "text": "Animals" },
+					{ "id": 490270806031, "text": "Bacteria" }
+				],
+				"subject": "Biology",
+				"chapter": "Molecular Basis of Inheritance",
+				"text": "Spliceosomes are not found in cells of"
+			},
+			{
+				"id": 300973140495,
+				"answer": 971858013657,
+				"options": [
+					{
+						"id": 971858013657,
+						"text": "The ascending limb of loop of henle is impermeable to water"
+					},
+					{
+						"id": 195048029783,
+						"text": "The descending limb of loop of henle is impermeable to water"
+					},
+					{
+						"id": 605705767715,
+						"text": "The ascending limb of loop of henle is permeable to water"
+					},
+					{
+						"id": 799374984402,
+						"text": "The descending limb of loop of henle is permeable to electrolytes"
+					}
+				],
+				"subject": "Biology",
+				"chapter": "Excretory Products and their Elimination",
+				"text": "Which of the following statements is correct"
+			},
+			{
+				"id": 618252253442,
+				"answer": 388380349980,
+				"options": [
+					{ "id": 388380349980, "text": "Forest ecosystem" },
+					{ "id": 432792316454, "text": "Grassland ecosystem" },
+					{ "id": 796714283461, "text": "Pond ecosystem" },
+					{ "id": 358376209521, "text": "Lake ecosystem" }
+				],
+				"subject": "Biology",
+				"chapter": "Ecosystem",
+				"text": "Which ecosystem has the maximum biomass"
+			},
+			{
+				"id": 755937181177,
+				"answer": 506819932851,
+				"options": [
+					{ "id": 530092819142, "text": "Griffith" },
+					{ "id": 506819932851, "text": "Hershey and Chase" },
+					{ "id": 522960483988, "text": "Avery, MacLeod and McCarty" },
+					{ "id": 452666007584, "text": "Hargobind Khorana" }
+				],
+				"subject": "Biology",
+				"chapter": "Molecular Basis of Inheritance",
+				"text": "The final proof for DNA as the genetic material came from the experiments of"
+			},
+			{
+				"id": 394659585774,
+				"answer": 894672681535,
+				"options": [
+					{
+						"id": 894672681535,
+						"text": "They suppress sperm motility and fertilizing capacity of sperms"
+					},
+					{ "id": 802558369645, "text": "They inhibit gametogenesis" },
+					{ "id": 346827966124, "text": "They make uterus unsuitable for implantation" },
+					{ "id": 835342870237, "text": "They inhibit ovulation" }
+				],
+				"subject": "Biology",
+				"chapter": "Reproductive Health",
+				"text": "The function of copper ions in copper releasing IUD's is"
+			},
+			{
+				"id": 998227272393,
+				"answer": 361770873333,
+				"options": [
+					{ "id": 525206861548, "text": "Chlorella" },
+					{ "id": 361770873333, "text": "Volvox" },
+					{ "id": 534023077486, "text": "Ulothrix" },
+					{ "id": 546938559372, "text": "Spirogyra" }
+				],
+				"subject": "Biology",
+				"chapter": "Plant Kingdom",
+				"text": "An example of colonial alga is"
+			}
+		]
+	}
+]

@@ -4,11 +4,13 @@
 
 	/// STATE
 	import { page } from '$app/stores';
+	import { sharedPapers } from '$lib/stores/app';
 	import { papers, results } from '$lib/stores/user';
 	import { afterUpdate } from 'svelte';
+	$: allPapers = $sharedPapers.concat($papers);
 	$: id = $page.params.id;
 	$: result = $results.find((r) => r.id === Number(id));
-	$: paper = result && $papers.find((p) => p.id === result.paper);
+	$: paper = result && allPapers.find((p) => p.id === result.paper);
 
 	$: correct = paper ? result.answers.filter((a, i) => a === paper.questions[i].answer) : [];
 	$: skipped = paper ? result.answers.filter((a) => a === null || a < 0) : [];
@@ -159,12 +161,5 @@
 	}
 	footer {
 		grid-area: footer;
-	}
-	.buttons {
-		display: flex;
-		gap: 1rem;
-		.spacer {
-			flex-grow: 1;
-		}
 	}
 </style>

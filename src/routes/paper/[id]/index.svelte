@@ -6,17 +6,17 @@
 	/// STATE
 	import { page } from '$app/stores';
 	import { papers, results } from '$lib/stores/user';
-	import { activePaper } from '$lib/stores/app';
+	import { sharedPapers } from '$lib/stores/app';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
+	$: allPapers = $sharedPapers.concat($papers);
 	$: id = $page.params.id;
 	$: result = $results.find((r) => r.id === Number(id));
-	$: paper = result && $papers.find((p) => p.id === result.paper);
+	$: paper = result && allPapers.find((p) => p.id === result.paper);
 	let currentQuestion: number = 0;
 	let answers = new Array(paper?.questions?.length ?? 0).map(() => -1);
 	let marks = new Array(paper?.questions?.length ?? 0).map(() => false);
 	let start_time: number = Date.now();
-	$: console.log(answers);
 
 	/// METHODS
 	function next() {
@@ -113,8 +113,14 @@
 	.buttons {
 		display: flex;
 		gap: 1rem;
+		flex-wrap: wrap;
 		.spacer {
 			flex-grow: 1;
+			height: 0;
+			@media (max-width: 768px) {
+				flex-grow: initial;
+				flex-basis: 100%;
+			}
 		}
 	}
 </style>

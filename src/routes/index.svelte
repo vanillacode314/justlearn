@@ -6,7 +6,7 @@
 	import { papers } from '$lib/stores/user';
 	import { genRandomNumber } from '$lib/utils';
 	import Button from '$lib/components/Button.svelte';
-	import { activePaper, startPaperModalOpen } from '$lib/stores/app';
+	import { activePaper, sharedPapers, startPaperModalOpen } from '$lib/stores/app';
 
 	function addPaper() {
 		const name = prompt('Enter a name for the paper.');
@@ -27,10 +27,8 @@
 </script>
 
 <div class="container">
-	<!-- <div class="toolbar"> -->
-	<!-- 	<button title="Add Paper" on:click={addPaper}><IconAdd /> Add</button> -->
-	<!-- </div> -->
 	<main>
+		<h3>Local Papers</h3>
 		<ul class="paper-grid">
 			{#each $papers as paper}
 				<li>
@@ -40,10 +38,16 @@
 				</li>
 			{/each}
 		</ul>
-		<!-- 	<List items={$papers.map((p) => ({ ...p, href: `/paper/${p.id}` }))} let:item> -->
-		<!-- 		{item.name} -->
-		<!-- 	</List> -->
-		<!-- </main> -->
+		<h3>Shared Papers</h3>
+		<ul class="paper-grid">
+			{#each $sharedPapers as paper}
+				<li>
+					<Button type="button" large outlined on:click={() => startPaper(paper)}>
+						{paper.name}
+					</Button>
+				</li>
+			{/each}
+		</ul>
 	</main>
 </div>
 

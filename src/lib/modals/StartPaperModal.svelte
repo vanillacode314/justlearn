@@ -2,16 +2,15 @@
 	/// COMPONENTS
 	import Modal from '$lib/components/Modal.svelte';
 	import Button from '$lib/components/Button.svelte';
-	import IconTrash from '~icons/mdi/trash';
 
 	/// UTILS
 	import { genRandomNumber } from '$lib/utils';
-	import { activePaper, startPaperModalOpen } from '$lib/stores/app';
-	import { papers, results, subjects } from '$lib/stores/user';
 	import { tick } from 'svelte';
 	import { goto } from '$app/navigation';
 
 	/// STATE
+	import { activePaper, startPaperModalOpen } from '$lib/stores/app';
+	import { results } from '$lib/stores/user';
 	let qInput: HTMLInputElement;
 	let time: number = 180;
 	let cmarks: number = 4;
