@@ -11,6 +11,7 @@
 	import { tick } from 'svelte';
 
 	/// STATE
+	let qInput: HTMLInputElement;
 	let text: string = $activeQuestion?.text || '';
 	let subject: string = $activeQuestion?.subject || '';
 	let chapter: string = $activeQuestion?.chapter || '';
@@ -20,6 +21,7 @@
 
 	/// METHODS
 	function onOpen() {
+		tick().then(() => qInput.focus());
 		text = $activeQuestion?.text || '';
 		subject = $activeQuestion?.subject || '';
 		chapter = $activeQuestion?.chapter || '';
@@ -124,7 +126,13 @@
 		<div class="form">
 			<label
 				>Question:
-				<input type="text" bind:value={text} placeholder="Write the question here" required />
+				<input
+					type="text"
+					bind:this={qInput}
+					bind:value={text}
+					placeholder="Write the question here"
+					required
+				/>
 			</label>
 			<label
 				>Subject:
