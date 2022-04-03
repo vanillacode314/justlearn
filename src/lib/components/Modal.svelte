@@ -19,10 +19,16 @@
 <style lang="scss">
 	.modal {
 		position: fixed;
-		inset: 0 0 0 0;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
 		backdrop-filter: brightness(50%) blur(2px);
 		z-index: 10000;
 		display: grid;
 		place-items: center;
+		width: 100%;
+		height: 100%;
+		overflow: auto;
 	}
 </style>
