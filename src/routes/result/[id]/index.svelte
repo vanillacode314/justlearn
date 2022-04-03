@@ -15,7 +15,7 @@
 	$: incorrect = paper
 		? result.answers.filter((a, i) => a !== null && a !== paper.questions[i].answer && a > -1)
 		: [];
-	$: score = result ? correct.length * result.cmarks - incorrect.length * result.imarks : 0;
+	$: score = result ? correct.length * result.cmarks + incorrect.length * result.imarks : 0;
 
 	/// METHODS
 
