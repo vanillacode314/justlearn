@@ -6,3 +6,4 @@ export const addQuestionModalOpen = writable<boolean>(false);
 export const editQuestionModalOpen = writable<boolean>(false);
 export const deletePaperModalOpen = writable<boolean>(false);
 export const deleteQuestionModalOpen = writable<boolean>(false);
+export const startPaperModalOpen = writable<boolean>(false);

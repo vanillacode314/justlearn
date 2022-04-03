@@ -1,9 +1,20 @@
 <script lang="ts">
 	export let inverted: boolean = false;
+	export let outlined: boolean = false;
+	export let success: boolean = false;
 	export let danger: boolean = false;
+	export let large: boolean = false;
 </script>
 
-<button {...$$restProps} on:click class:inverted class:danger>
+<button
+	{...$$restProps}
+	on:click
+	class:success
+	class:inverted
+	class:danger
+	class:outlined
+	class:large
+>
 	<slot />
 </button>
 
@@ -24,6 +35,9 @@
 			background: var(--foreground);
 			color: var(--background);
 		}
+		&.large {
+			font-size: xx-large;
+		}
 	}
 
 	button.inverted {
@@ -36,7 +50,31 @@
 			color: var(--foreground);
 		}
 	}
+
+	button.outlined {
+		border: 0.1rem solid var(--foreground);
+		&.inverted {
+			border: 0.1rem solid var(--background);
+		}
+	}
+
 	button.danger {
 		background-color: red;
+		color: var(--background);
+		&:hover {
+			background-color: var(--background);
+			color: var(--foreground);
+			border: 0.1rem solid red;
+		}
+	}
+
+	button.success {
+		background-color: green;
+		color: var(--background);
+		&:hover {
+			background-color: var(--background);
+			color: var(--foreground);
+			border: 0.1rem solid green;
+		}
 	}
 </style>

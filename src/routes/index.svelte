@@ -5,6 +5,8 @@
 	/// STATE
 	import { papers } from '$lib/stores/user';
 	import { genRandomNumber } from '$lib/utils';
+	import Button from '$lib/components/Button.svelte';
+	import { activePaper, startPaperModalOpen } from '$lib/stores/app';
 
 	function addPaper() {
 		const name = prompt('Enter a name for the paper.');
@@ -17,6 +19,11 @@
 		$papers.push(paper);
 		$papers = $papers;
 	}
+
+	function startPaper(paper: Paper) {
+		$activePaper = paper;
+		$startPaperModalOpen = true;
+	}
 </script>
 
 <div class="container">
@@ -27,9 +34,9 @@
 		<ul class="paper-grid">
 			{#each $papers as paper}
 				<li>
-					<a href="/paper/{paper.id}">
+					<Button type="button" large outlined on:click={() => startPaper(paper)}>
 						{paper.name}
-					</a>
+					</Button>
 				</li>
 			{/each}
 		</ul>
@@ -53,20 +60,7 @@
 		grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 		gap: 1rem;
 		li {
-			a {
-				display: block;
-				border: 2px solid var(--foreground);
-				padding: 1rem;
-				transition: all 0.3s ease-in-out;
-				text-decoration: none;
-				color: var(--foreground);
-				font-size: x-large;
-				&:hover {
-					font-weight: bold;
-					background-color: var(--foreground);
-					color: var(--background);
-				}
-			}
+			display: contents;
 		}
 	}
 </style>

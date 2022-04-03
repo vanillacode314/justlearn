@@ -1,11 +1,13 @@
 <script lang="ts">
+	import { goto } from '$app/navigation';
+
 	import { page } from '$app/stores';
 
 	import IconBack from '~icons/mdi/arrow-back';
 	import IconCog from '~icons/mdi/cog';
 
 	function goBack() {
-		history.go(-1);
+		goto('/');
 	}
 </script>
 
@@ -19,6 +21,7 @@
 		<h1 class="brand">JustLearn</h1>
 	</header>
 	<footer>
+		<a href="/results"> Results </a>
 		<a href="/admin">
 			<IconCog /> Admin
 		</a>
@@ -33,6 +36,10 @@
 		}
 	}
 	a {
+		text-decoration: none;
+		&:hover {
+			text-decoration: underline;
+		}
 		color: var(--background);
 		display: flex;
 		gap: 0.3rem;
@@ -56,6 +63,10 @@
 			letter-spacing: 0.1rem;
 			margin: 0;
 			padding: 0;
+		}
+		footer {
+			display: flex;
+			gap: 1rem;
 		}
 	}
 </style>

@@ -5,6 +5,7 @@
 	import DeletePaperModal from '$lib/modals/DeletePaperModal.svelte';
 	import DeleteQuestionModal from '$lib/modals/DeleteQuestionModal.svelte';
 	import EditQuestionModal from '$lib/modals/EditQuestionModal.svelte';
+	import StartPaperModal from '$lib/modals/StartPaperModal.svelte';
 
 	/// STYLES
 	import 'normalize.css';
@@ -20,6 +21,7 @@
 <EditQuestionModal />
 <DeletePaperModal />
 <DeleteQuestionModal />
+<StartPaperModal />
 
 <style lang="scss">
 	.wrapper {

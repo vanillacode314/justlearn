@@ -11,7 +11,7 @@ interface Question {
 	id: number;
 	text?: string;
 	image?: string;
-	answer: number;
+	answer: Option['id'];
 	options: Option[];
 	subject: string;
 	chapter: string;
@@ -26,4 +26,18 @@ interface Option {
 interface Subject {
 	name: string;
 	chapters: string[];
+}
+
+interface TestResult {
+	id: number;
+	done: boolean;
+	cmarks: number;
+	imarks: number;
+	paper: Paper['id'];
+	date_given: number;
+	seconds_taken: number;
+	total_time_available: number;
+	answers: Array<Question['answer']>;
+	timings: Array<number>;
+	notes: string;
 }

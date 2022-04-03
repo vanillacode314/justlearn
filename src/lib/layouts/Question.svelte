@@ -1,7 +1,7 @@
 <script lang="ts">
 	export let question: Question;
 	export let index: number = -1;
-	export let answer: Option['id'];
+	export let answer: Question['answer'];
 	$: questionNo = index + 1;
 
 	import { afterUpdate } from 'svelte';
@@ -24,15 +24,17 @@
 	</h2>
 	<div class="options">
 		{#each question.options as option}
-			<label>
-				<input type="radio" bind:group={answer} name={String(question.id)} value={option.id} />
-				{#if option?.text}
-					{option.text}
-				{/if}
-				{#if option?.image}
-					<img src={option.image} alt="option {option.id}" />
-				{/if}
-			</label>
+			{#key option}
+				<label>
+					<input type="radio" bind:group={answer} name={String(question.id)} value={option.id} />
+					{#if option?.text}
+						{option.text}
+					{/if}
+					{#if option?.image}
+						<img src={option.image} alt="option {option.id}" />
+					{/if}
+				</label>
+			{/key}
 		{/each}
 	</div>
 </article>

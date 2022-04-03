@@ -12,6 +12,7 @@ specifiers:
   sass: ^1.49.10
   svelte: ^3.44.0
   svelte-check: ^2.2.6
+  svelte-frappe-charts: ^1.9.1
   svelte-local-storage-store: ^0.2.6
   svelte-preprocess: ^4.10.1
   tslib: ^2.3.1
@@ -21,6 +22,7 @@ specifiers:
 dependencies:
   dotenv: 16.0.0
   normalize.css: 8.0.1
+  svelte-frappe-charts: 1.9.1
   svelte-local-storage-store: 0.2.6_svelte@3.46.6
 
 devDependencies:
@@ -545,6 +547,10 @@ packages:
       path-exists: 4.0.0
     dev: true
 
+  /frappe-charts/1.6.2:
+    resolution: {integrity: sha512-9TC3/+YVUi84yYoEbxFiSqu+1FQ5If/ydUNj6i8FRpwynd08t6a7RkS+IRJozAk6NfdL8/LVTTE1DUOjjKZZxg==}
+    dev: false
+
   /fs.realpath/1.0.0:
     resolution: {integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=}
     dev: true
@@ -1043,6 +1049,13 @@ packages:
       - sugarss
     dev: true
 
+  /svelte-frappe-charts/1.9.1:
+    resolution: {integrity: sha512-cp2Sv+EXxdH5nIJ9I6ant9XP73Sc8CGXLzb0h8vpV0viH+zCCE+CEmo/cOiWL4JWNZrxRJ5UBdDGVk5nnORyKA==}
+    dependencies:
+      frappe-charts: 1.6.2
+      svelte: 3.46.6
+    dev: false
+
   /svelte-hmr/0.14.11_svelte@3.46.6:
     resolution: {integrity: sha512-R9CVfX6DXxW1Kn45Jtmx+yUe+sPhrbYSUp7TkzbW0jI5fVPn6lsNG9NEs5dFg5qRhFNAoVdRw5qQDLALNKhwbQ==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
@@ -1116,7 +1129,6 @@ packages:
   /svelte/3.46.6:
     resolution: {integrity: sha512-o9nNft/OzCz/9kJpmWa1S52GAM+huCjPIsNWydYmgei74ZWlOA9/hN9+Z12INdklghu31seEXZMRHhS1+8DETw==}
     engines: {node: '>= 8'}
-    dev: true
 
   /tiny-glob/0.2.9:
     resolution: {integrity: sha512-g/55ssRPUjShh+xkfx9UPDXqhckHEsHr4Vd9zX55oSdGZc/MD0m3sferOkwWtp98bv+kcVfEHtRJgBVJzelrzg==}
