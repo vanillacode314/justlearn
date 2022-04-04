@@ -36,7 +36,7 @@
 			paper: $activePaper.id,
 			done: false,
 			seconds_taken: -1,
-			answers: [],
+			answers: new Array($activePaper.questions.length).map(() => null),
 			date_given: Date.now(),
 			total_time_available: time,
 			timings: [],

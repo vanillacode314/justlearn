@@ -51,7 +51,7 @@
 		}
 	}
 
-	button.outlined {
+	button.outlined:not(.success) {
 		border: 0.1rem solid var(--foreground);
 		&.inverted {
 			border: 0.1rem solid var(--background);

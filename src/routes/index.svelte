@@ -26,8 +26,8 @@
 	}
 </script>
 
-<div class="container">
-	<main>
+<main>
+	<section>
 		<h3>Local Papers</h3>
 		<ul class="paper-grid">
 			{#each $papers as paper}
@@ -38,6 +38,8 @@
 				</li>
 			{/each}
 		</ul>
+	</section>
+	<section>
 		<h3>Shared Papers</h3>
 		<ul class="paper-grid">
 			{#each $sharedPapers as paper}
@@ -48,23 +50,27 @@
 				</li>
 			{/each}
 		</ul>
-	</main>
-</div>
+	</section>
+</main>
 
 <style lang="scss">
-	.container {
-		height: 100%;
-	}
 	main {
+		height: 100%;
 		padding: 1rem;
-	}
-	ul.paper-grid {
-		list-style-type: none;
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+		display: flex;
+		flex-direction: column;
 		gap: 1rem;
-		li {
-			display: contents;
+		h3 {
+			margin-bottom: 0.3rem;
+		}
+		ul.paper-grid {
+			list-style-type: none;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+			gap: 1rem;
+			li {
+				display: contents;
+			}
 		}
 	}
 </style>

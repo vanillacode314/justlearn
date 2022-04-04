@@ -4,18 +4,17 @@
 
 	/// STATE
 	import { page } from '$app/stores';
-	import { sharedPapers } from '$lib/stores/app';
-	import { papers, results } from '$lib/stores/user';
+	import { allPapers } from '$lib/stores/app';
+	import { results } from '$lib/stores/user';
 	import { afterUpdate } from 'svelte';
-	$: allPapers = $sharedPapers.concat($papers);
 	$: id = $page.params.id;
 	$: result = $results.find((r) => r.id === Number(id));
-	$: paper = result && allPapers.find((p) => p.id === result.paper);
+	$: paper = result && $allPapers.find((p) => p.id === result.paper);
 
 	$: correct = paper ? result.answers.filter((a, i) => a === paper.questions[i].answer) : [];
-	$: skipped = paper ? result.answers.filter((a) => a === null || a < 0) : [];
+	$: skipped = paper ? result.answers.filter((a) => a === null) : [];
 	$: incorrect = paper
-		? result.answers.filter((a, i) => a !== null && a !== paper.questions[i].answer && a > -1)
+		? result.answers.filter((a, i) => a !== null && a !== paper.questions[i].answer)
 		: [];
 	$: score = result ? correct.length * result.cmarks + incorrect.length * result.imarks : 0;
 
@@ -68,10 +67,8 @@
 				<tbody>
 					{#each paper?.questions ?? [] as { answer, options }, index}
 						{@const isCorrect = result.answers[index] === answer}
-						{@const isSkipped = result.answers[index] === null || result.answers[index] < 0}
-						{@const chosenOption = options.find(
-							(o) => result.answers ?? o.id === result.answers[index]
-						)}
+						{@const isSkipped = result.answers[index] === null}
+						{@const chosenOption = options.find((o) => o['id'] === result.answers[index])}
 						{@const correctOption = options.find((o) => o['id'] === answer)}
 						<tr>
 							<td>

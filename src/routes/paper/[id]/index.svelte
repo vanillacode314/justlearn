@@ -2,21 +2,76 @@
 	/// COMPONENTS
 	import Button from '$lib/components/Button.svelte';
 	import Question from '$lib/layouts/Question.svelte';
+	import Questions from '$lib/layouts/Questions.svelte';
+	import Accordion, { type AccordionItem } from '$lib/components/Accordion.svelte';
+
+	/// UTILS
+	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 
 	/// STATE
 	import { page } from '$app/stores';
-	import { papers, results } from '$lib/stores/user';
-	import { sharedPapers } from '$lib/stores/app';
-	import { goto } from '$app/navigation';
-	import { onMount } from 'svelte';
-	$: allPapers = $sharedPapers.concat($papers);
-	$: id = $page.params.id;
-	$: result = $results.find((r) => r.id === Number(id));
-	$: paper = result && allPapers.find((p) => p.id === result.paper);
+	import { results, subjects } from '$lib/stores/user';
+	import { allPapers } from '$lib/stores/app';
+
+	const id = $page.params.id;
+
+	let result: TestResult,
+		paper: Paper,
+		answers: Option['id'][] = [],
+		marks: boolean[] = [];
 	let currentQuestion: number = 0;
-	let answers = new Array(paper?.questions?.length ?? 0).map(() => -1);
-	let marks = new Array(paper?.questions?.length ?? 0).map(() => false);
 	let start_time: number = Date.now();
+	let accordionItems: AccordionItem[] = [];
+
+	$: {
+		for (const item of accordionItems) {
+			const offset = item.props.offset;
+			const questions = item.props.questions;
+			item.props.answers = answers.slice(offset, questions.length);
+			item.props.marks = marks.slice(offset, questions.length);
+		}
+		accordionItems = accordionItems;
+	}
+
+	/// LIFECYCLE HOOKS
+	onMount(() => {
+		result = $results.find((r) => r.id === Number(id));
+		if (result.done) {
+			goto('/result/' + result.id);
+		}
+
+		paper = $allPapers.find((p) => p.id === result.paper);
+		paper.questions.sort((a, b) => {
+			if (a.subject > b.subject) {
+				return 1;
+			} else if (a.subject < b.subject) {
+				return -1;
+			}
+			return 0;
+		});
+		answers = new Array(paper?.questions?.length ?? 0).fill(null);
+		marks = new Array(paper?.questions?.length ?? 0).fill(false);
+		const filteredSubjects = $subjects.filter((s) =>
+			paper?.questions.some((p) => p.subject === s.name)
+		);
+		let offset: number = 0;
+		filteredSubjects.forEach((s) => {
+			const questions = paper.questions.filter((p) => p.subject === s.name);
+			accordionItems.push({
+				heading: s.name,
+				component: Questions,
+				props: {
+					questions,
+					offset,
+					answers: answers.slice(offset, questions.length),
+					marks: marks.slice(offset, questions.length)
+				}
+			});
+			offset += questions.length;
+		});
+		accordionItems = accordionItems;
+	});
 
 	/// METHODS
 	function next() {
@@ -29,14 +84,6 @@
 			currentQuestion--;
 		}
 	}
-
-	onMount(() => {
-		answers = new Array(paper?.questions?.length ?? 0).map(() => -1);
-		marks = new Array(paper?.questions?.length ?? 0).map(() => false);
-		if (result.done) {
-			goto('/result/' + result.id);
-		}
-	});
 
 	function submit() {
 		const c = confirm("Are you sure you'd like to submit the paper before the time is up?");
@@ -72,6 +119,9 @@
 			<p>No paper with id {id} found :(</p>
 		{/if}
 	</main>
+	<aside>
+		<Accordion items={accordionItems} on:select={(e) => (currentQuestion = e.detail)} />
+	</aside>
 	<footer>
 		<div class="buttons">
 			<Button type="button" on:click={prev}>Prev</Button>
@@ -91,11 +141,16 @@
 <style lang="scss">
 	.container {
 		height: 100%;
+		overflow-y: hidden;
 		display: grid;
 		grid-template-columns: 3fr 1fr;
 		grid-template-rows: 1fr auto;
-		grid-template-areas: 'main main' 'footer footer';
+		grid-template-areas: 'main sidebar' 'footer sidebar';
 		padding: 1rem;
+		gap: 1rem;
+		@media (max-width: 768px) {
+			grid-template-areas: 'main main' 'footer footer' 'sidebar sidebar';
+		}
 	}
 	main {
 		grid-area: main;
@@ -106,6 +161,10 @@
 			font-size: large;
 			margin: 0;
 		}
+	}
+	aside {
+		grid-area: sidebar;
+		overflow-y: auto;
 	}
 	footer {
 		grid-area: footer;

@@ -3,12 +3,10 @@
 	import IconAdd from '~icons/mdi/add';
 
 	/// STATE
-	import { papers, results } from '$lib/stores/user';
+	import { results } from '$lib/stores/user';
 	import Button from '$lib/components/Button.svelte';
 	import { goto } from '$app/navigation';
-	import { sharedPapers } from '$lib/stores/app';
-
-	$: allPapers = $sharedPapers.concat($papers);
+	import { allPapers } from '$lib/stores/app';
 
 	function gotoResult(result: TestResult) {
 		goto('/result/' + result.id);
@@ -21,7 +19,7 @@
 			{#each $results as result}
 				<li>
 					<Button type="button" outlined on:click={() => gotoResult(result)}>
-						{@const paper = allPapers.find((p) => p['id'] === result['paper'])}
+						{@const paper = $allPapers.find((p) => p['id'] === result['paper'])}
 						{paper.name} <strong>({new Date(result.date_given).toLocaleString()})</strong>
 					</Button>
 				</li>
