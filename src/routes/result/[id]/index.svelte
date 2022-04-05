@@ -37,21 +37,21 @@
 		<main>
 			<div class="cards">
 				<div class="card">
-					<h2>Correct</h2>
+					<h2>Correct (Marks +{result.cmarks})</h2>
 					<p>{correct.length}</p>
 				</div>
 				<div class="card">
-					<h2>Incorrect</h2>
+					<h2>Incorrect (Marks {result.imarks})</h2>
 					<p>{incorrect.length}</p>
 				</div>
 				<div class="card">
 					<h2>Skipped</h2>
 					<p>{skipped.length}</p>
 				</div>
-			</div>
-			<div class="card">
-				<h2>Score</h2>
-				<p>{score}</p>
+				<div class="card">
+					<h2>Score</h2>
+					<p>{score}</p>
+				</div>
 			</div>
 		</main>
 		<footer>
@@ -130,20 +130,18 @@
 		}
 	}
 	main {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: 1rem;
+		@media (max-width: 768px) {
+			grid-template-columns: 1fr;
+		}
 		.cards {
 			display: grid;
+			grid-template-columns: repeat(4, 1fr);
 			gap: 1rem;
 		}
 		.card {
 			display: flex;
 			flex-direction: column;
 			place-items: center;
-			p {
-				font-size: xxx-large;
-			}
 		}
 	}
 	article {
