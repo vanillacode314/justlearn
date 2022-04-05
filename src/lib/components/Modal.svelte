@@ -6,12 +6,17 @@
 
 	/// STATE
 	export let open: boolean = false;
+	export let closeOnOutsideClick: boolean = false;
 
 	$: open && dispatch('open');
 </script>
 
 {#if open}
-	<div on:click|self={() => (open = false)} transition:fade={{ duration: 150 }} class="modal">
+	<div
+		on:click|self={() => closeOnOutsideClick && (open = false)}
+		transition:fade={{ duration: 150 }}
+		class="modal"
+	>
 		<slot />
 	</div>
 {/if}
