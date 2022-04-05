@@ -13,6 +13,7 @@
 	import { page } from '$app/stores';
 	import { results, subjects } from '$lib/stores/user';
 	import { allPapers } from '$lib/stores/app';
+	import { writable } from 'svelte/store';
 
 	const id = $page.params.id;
 
@@ -28,8 +29,8 @@
 		for (const item of accordionItems) {
 			const offset = item.props.offset;
 			const questions = item.props.questions;
-			item.props.answers = answers.slice(offset, questions.length);
-			item.props.marks = marks.slice(offset, questions.length);
+			item.props.answers = answers.slice(offset, questions.length + offset);
+			item.props.marks = marks.slice(offset, questions.length + offset);
 		}
 		accordionItems = accordionItems;
 	}
@@ -55,19 +56,28 @@
 		const filteredSubjects = $subjects.filter((s) =>
 			paper?.questions.some((p) => p.subject === s.name)
 		);
+		filteredSubjects.sort((a, b) => {
+			if (a.name > b.name) {
+				return 1;
+			} else if (a.name < b.name) {
+				return -1;
+			}
+			return 0;
+		});
 		let offset: number = 0;
 		filteredSubjects.forEach((s) => {
 			const questions = paper.questions.filter((p) => p.subject === s.name);
-			accordionItems.push({
+			const item = {
 				heading: s.name,
 				component: Questions,
 				props: {
 					questions,
 					offset,
-					answers: answers.slice(offset, questions.length),
-					marks: marks.slice(offset, questions.length)
+					answers: answers.slice(offset, offset + questions.length),
+					marks: marks.slice(offset, offset + questions.length)
 				}
-			});
+			};
+			accordionItems.push(item);
 			offset += questions.length;
 		});
 		accordionItems = accordionItems;

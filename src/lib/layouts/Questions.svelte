@@ -37,7 +37,7 @@
 		background-color: var(--background);
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(3rem, 1fr));
-		padding-top: 0.1rem;
+		padding-block: 0.1rem;
 		gap: 0.1rem;
 	}
 </style>

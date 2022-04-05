@@ -17,6 +17,7 @@
 	let chapter: string = '';
 	let options: Option[] = [];
 	let selected = -1;
+	let adding: boolean = false;
 
 	/// METHODS
 	function onOpen() {
@@ -29,8 +30,10 @@
 	}
 
 	async function addOption() {
+		if (adding) return;
 		const option = prompt('Enter option (type image to upload image)');
 		if (!option) return;
+		adding = true;
 		switch (option) {
 			case 'image':
 				let image: File;
@@ -50,7 +53,6 @@
 							options = options;
 						} else {
 							alert('Image upload failed, Please try again');
-							return;
 						}
 					}
 				}
@@ -64,6 +66,7 @@
 				options = options;
 				break;
 		}
+		adding = false;
 		await tick();
 		MathLive.renderMathInDocument();
 	}
