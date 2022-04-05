@@ -606,6 +606,690 @@
 				"subject": "Biology",
 				"chapter": "Plant Kingdom",
 				"text": "An example of colonial alga is"
+			},
+			{
+				"id": 623791974346,
+				"answer": 455098162426,
+				"options": [
+					{ "id": 455098162426, "text": "Maturation" },
+					{ "id": 685202940448, "text": "Elongation" },
+					{ "id": 159500282274, "text": "Root cap" },
+					{ "id": 582514729949, "text": "Meristematic activity" }
+				],
+				"subject": "Biology",
+				"chapter": "Anatomy of Flowering Plants",
+				"text": "Root hairs develop from the region of:"
+			},
+			{
+				"id": 798516088684,
+				"answer": 319065383591,
+				"options": [
+					{ "id": 968782618722, "text": "Growth Hormone becomes inactive in adults" },
+					{ "id": 319065383591, "text": "Epiphyseal plates close after adolescence" },
+					{
+						"id": 411797417742,
+						"text": "Bones loose their sensitivity of Growth Hormone in adults"
+					},
+					{ "id": 364510567292, "text": "Muscle fibres do not grow in size after birth" }
+				],
+				"subject": "Biology",
+				"chapter": "Chemical Coordination and Integration",
+				"text": "Hypersecretion of Growth Hormone in adults does not cause furhter increase in height, because:"
+			},
+			{
+				"id": 218264420038,
+				"answer": 304499012351,
+				"options": [
+					{ "id": 307438688488, "text": "Tertiary treatment" },
+					{ "id": 955097895995, "text": "Secondary treatment" },
+					{ "id": 304499012351, "text": "Primary treatment" },
+					{ "id": 389832382949, "text": "Sludge treatment" }
+				],
+				"subject": "Biology",
+				"chapter": "Microbes in Human Welfare",
+				"text": "Which of the following in sewage treatment removes suspended solids?"
+			},
+			{
+				"id": 354276478283,
+				"answer": 871867190828,
+				"options": [
+					{ "id": 871867190828, "text": "1" },
+					{ "id": 198799158252, "text": "2" },
+					{ "id": 259846666542, "text": "3" },
+					{ "id": 926399310604, "text": "4" }
+				],
+				"subject": "Biology",
+				"chapter": "Plant Kingdom",
+				"text": "Select the mismatch:",
+				"image": "https://i.ibb.co/559LKC7/Screenshot-2022-04-04-13-47-15-995-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 327325817282,
+				"answer": 784203185194,
+				"options": [
+					{ "id": 486513486702, "text": "The larger the fragment size, the farther it moves" },
+					{ "id": 784203185194, "text": "The smaller the fragment size, the farther it moves" },
+					{ "id": 298985103875, "text": "Positive charged fragment moves to farther end" },
+					{ "id": 353166702490, "text": "Negatively charged fragments do not move" }
+				],
+				"subject": "Biology",
+				"chapter": "Biotechnology - Principles and Processes",
+				"text": "What is the criterion for DNA fragments movement on agaros gel during gel electrophoresis"
+			},
+			{
+				"id": 965816191380,
+				"answer": 547684660684,
+				"options": [
+					{ "id": 317276333302, "text": "Stipules" },
+					{ "id": 309751671423, "text": "Adventitous root" },
+					{ "id": 547684660684, "text": "Stem" },
+					{ "id": 348099506917, "text": "Leaf" }
+				],
+				"subject": "Biology",
+				"chapter": "Morphology of Flowering Plants",
+				"text": "In Bougainvillea thorns are the modification of:"
+			},
+			{
+				"id": 630440729906,
+				"answer": 626986277389,
+				"options": [
+					{ "id": 943003527448, "text": "Transcription is occuring" },
+					{ "id": 462279480072, "text": "DNA replication is occuring" },
+					{ "id": 626986277389, "text": "The DNA is condensed into a Chromatin Fibre" },
+					{ "id": 953878343119, "text": "The DNA double helix is exposed" }
+				],
+				"subject": "Biology",
+				"chapter": "Molecular Basis of Inheritance",
+				"text": "The association of histone H1 with a nucleosome indicates:"
+			},
+			{
+				"id": 202472129745,
+				"answer": 833495275531,
+				"options": [
+					{ "id": 602619245774, "text": "Pineal gland" },
+					{ "id": 220595682282, "text": "Corpus cardiacum" },
+					{ "id": 833495275531, "text": "Corpus luteum" },
+					{ "id": 732946318300, "text": "Corpus allatum" }
+				],
+				"subject": "Biology",
+				"chapter": "Chemical Coordination and Integration",
+				"text": "A temporary endocrine gland in the human body is:"
+			},
+			{
+				"id": 996111903753,
+				"answer": 115107161644,
+				"options": [
+					{ "id": 411034262356, "text": "1" },
+					{ "id": 115107161644, "text": "2" },
+					{ "id": 242764700677, "text": "3" },
+					{ "id": 572903025009, "text": "4" }
+				],
+				"subject": "Biology",
+				"chapter": "Microbes in Human Welfare",
+				"text": "Select the mismatch:",
+				"image": "https://i.ibb.co/StTfvhQ/Screenshot-2022-04-05-13-10-03-347-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 468743123109,
+				"answer": 165655466261,
+				"options": [
+					{
+						"id": 665606303358,
+						"text": "anterior pituitary gland and stimulates secretion of LH and oxytocin"
+					},
+					{
+						"id": 165655466261,
+						"text": "anterior pituitary gland and stimulates secretion of LH and FSH"
+					},
+					{
+						"id": 653029139667,
+						"text": "posterior pituitary gland and stimulates secretion of oxytocin and FSH."
+					},
+					{
+						"id": 965368870269,
+						"text": "posterior pituitary gland and stimulates secretion of LH and relaxin"
+					}
+				],
+				"subject": "Biology",
+				"chapter": "Chemical Coordination and Integration",
+				"text": "GnRH, a hypothalamic hormone, needed in reproduction, acts on:"
+			},
+			{
+				"id": 444421799727,
+				"answer": 421581923387,
+				"options": [
+					{ "id": 421581923387, "text": "Selectable marker" },
+					{ "id": 534900588247, "text": "Vector" },
+					{ "id": 472272402906, "text": "plasmid" },
+					{ "id": 836162815843, "text": "Structural gene" }
+				],
+				"subject": "Biology",
+				"chapter": "Biotechnology - Principles and Processes",
+				"text": "A gene whose expression helps to identify transformed cell is known as:"
+			},
+			{
+				"id": 878198712441,
+				"answer": 740684930015,
+				"options": [
+					{ "id": 586798537626, "text": "Tropical Savannah" },
+					{ "id": 740684930015, "text": "Tropical Rain Forest" },
+					{ "id": 862732792398, "text": "Grassland" },
+					{ "id": 728545197659, "text": "Temperate Forest" }
+				],
+				"subject": "Biology",
+				"chapter": "Organisms and Populations",
+				"text": "Presence of plants arranged into well defined vertical layers depending on their height can be seen best in"
+			},
+			{
+				"id": 793978153706,
+				"answer": 754990539376,
+				"options": [
+					{ "id": 186286177480, "text": "Ovule" },
+					{ "id": 936717693955, "text": "Endosperm" },
+					{ "id": 754990539376, "text": "Embryo sac" },
+					{ "id": 359150112339, "text": "Embryo" }
+				],
+				"subject": "Biology",
+				"chapter": "Sexual Reproduction in Flowering Plants",
+				"text": "Functional megaspore in an angiosperm develops into:"
+			},
+			{
+				"id": 494300698790,
+				"answer": 341663751908,
+				"options": [
+					{ "id": 554452472660, "text": "During S phase" },
+					{ "id": 694735316437, "text": "Withing nucleolus" },
+					{ "id": 341663751908, "text": "Prior to fission" },
+					{ "id": 855562640324, "text": "Just before transcription" }
+				],
+				"subject": "Biology",
+				"chapter": "Biological Classification",
+				"text": "DNA replication in bacteria occurs:"
+			},
+			{
+				"id": 523976088373,
+				"answer": 850288612477,
+				"options": [
+					{ "id": 322374281540, "text": "Seals, Dolphins, Sharks" },
+					{ "id": 850288612477, "text": "Whales, Dolphins, Seals" },
+					{ "id": 579234939361, "text": "Dolphins, Seals, Trygon" },
+					{ "id": 440734769979, "text": "Trygon, Whales, Seals" }
+				],
+				"subject": "Biology",
+				"chapter": "Animal Kingdom",
+				"text": "Which among these is the correct combination of aquatic mammals?"
+			},
+			{
+				"id": 289046444828,
+				"answer": 114939521357,
+				"options": [
+					{ "id": 114939521357, "text": "Drupe" },
+					{ "id": 522500180886, "text": "Berry" },
+					{ "id": 270996435836, "text": "Nut" },
+					{ "id": 629644320135, "text": "Capsule" }
+				],
+				"subject": "Biology",
+				"chapter": "Morphology of Flowering Plants",
+				"text": "Coconut fruit is a"
+			},
+			{
+				"id": 624438976174,
+				"answer": 385095874903,
+				"options": [
+					{ "id": 924651951787, "text": "Gymnosperms" },
+					{ "id": 298518432688, "text": "Algae" },
+					{ "id": 379842228139, "text": "Fungi" },
+					{ "id": 385095874903, "text": "Angiosperms" }
+				],
+				"subject": "Biology",
+				"chapter": "Sexual Reproduction in Flowering Plants",
+				"text": "Double fertilization is exhibited by:"
+			},
+			{
+				"id": 841042683344,
+				"answer": 112201310604,
+				"options": [
+					{ "id": 373513601428, "text": "Cell Wall" },
+					{ "id": 814688655035, "text": "Nuclear Membrane" },
+					{ "id": 765063728066, "text": "Plasma Membrane" },
+					{ "id": 112201310604, "text": "Glycocalyx" }
+				],
+				"subject": "Biology",
+				"chapter": "Biological Classification",
+				"text": "Which of the following components provides sticky character to the bacterial cell?"
+			},
+			{
+				"id": 478572848075,
+				"answer": 545827823144,
+				"options": [
+					{ "id": 497635300738, "text": "Haplontic, Diplontic" },
+					{ "id": 911251204350, "text": "Diplontic, Haplodiplontic" },
+					{ "id": 545827823144, "text": "Haplodiplontic, Diplontic" },
+					{ "id": 682140447470, "text": "Haplodiplontic, Haplontic" }
+				],
+				"subject": "Biology",
+				"chapter": "Plant Kingdom",
+				"text": "Life cycle of Ectocarpus and fucus respectively are:"
+			},
+			{
+				"id": 281365433031,
+				"answer": 177939505535,
+				"options": [
+					{ "id": 177939505535, "text": "Wildlife Safari Parks" },
+					{ "id": 419382445620, "text": "Biodiversity hot spots" },
+					{ "id": 777674543006, "text": "Amazon rainforest" },
+					{ "id": 693872532744, "text": "Himalayan region" }
+				],
+				"subject": "Biology",
+				"chapter": "Biodiversity and Conservation",
+				"text": "Which one of the following is related to ex-situ conservation of threatened animals and plants?"
+			},
+			{
+				"id": 111880024367,
+				"answer": 391516192927,
+				"options": [
+					{ "id": 757445599340, "text": "(a) and (b)" },
+					{ "id": 391516192927, "text": "(a), (c) and (d)" },
+					{ "id": 241380820459, "text": "(a) and (c)" },
+					{ "id": 947627352643, "text": "(b), (c) and (d)" }
+				],
+				"subject": "Biology",
+				"chapter": "Neural Control and Coordination",
+				"text": "Good vision depends on adequate intake of carotene rich food.",
+				"image": "https://i.ibb.co/4sJ4BQf/Screenshot-2022-04-05-13-31-31-746-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 141964127961,
+				"answer": 377961786934,
+				"options": [
+					{
+						"id": 861700361546,
+						"text": "Both are due to a qualitative defect in globin chain synthesis"
+					},
+					{
+						"id": 288902270374,
+						"text": "Both are due to a quantitative defect in globin chain synthesis"
+					},
+					{
+						"id": 377961786934,
+						"text": "Thalassemia is due to less synthesis of globin molecules"
+					},
+					{
+						"id": 330071116736,
+						"text": "Sickle cell anemia is due to a quantitative problem of globin molecules"
+					}
+				],
+				"subject": "Biology",
+				"chapter": "Principles of Inheritance and Variation",
+				"text": "Thalassemia and sickle cell anemia are caused due to a problem in globin molecule synthesis. Select the correct statement"
+			},
+			{
+				"id": 383351170539,
+				"answer": 578653853849,
+				"options": [
+					{ "id": 796087801941, "text": "nucleic acids" },
+					{ "id": 335043000575, "text": "proteins" },
+					{ "id": 594132213710, "text": "polysaccharides" },
+					{ "id": 578653853849, "text": "lipids" }
+				],
+				"subject": "Biology",
+				"chapter": "Biomolecules",
+				"text": "Which of the following are not polymeric?"
+			},
+			{
+				"id": 478891495836,
+				"answer": 466301312531,
+				"options": [
+					{ "id": 466301312531, "text": "Down's Syndrome" },
+					{ "id": 340898041315, "text": "Klinefelter's Syndrome" },
+					{ "id": 291596102022, "text": "Turner's Syndrome" },
+					{ "id": 921513372196, "text": "Sickle Cell Anemia" }
+				],
+				"subject": "Biology",
+				"chapter": "Principles of Inheritance and Variation",
+				"text": "A disease caused by an autosomal primary non disjunction is:"
+			},
+			{
+				"id": 482746816923,
+				"answer": 991544325070,
+				"options": [
+					{
+						"id": 120682566472,
+						"text": "Light saturation for\n\\(CO_2\\)\nfixation occurs at 10% of full sunlight"
+					},
+					{
+						"id": 654595374084,
+						"text": "Increasing atmospheric \\(CO_2\\) concentration up to 0.05% can enhance \\(CO_2\\) fixation rate"
+					},
+					{
+						"id": 991544325070,
+						"text": "\\(C_3\\) plants respond to higher temperatures with enhanced photosynthesis while \\(C_4\\) plants have much lower temperature optimum"
+					},
+					{
+						"id": 521024320480,
+						"text": "Tomato is a greenhouse crop which can be grown in \\(CO_2\\) enriched atmosphere for higher yield"
+					}
+				],
+				"subject": "Biology",
+				"chapter": "Photosynthesis in Higher Plants",
+				"text": "With reference to factors affecting the rate of photosynthesis, which of the following statements is not correct?"
+			},
+			{
+				"id": 169677729435,
+				"answer": 377356548816,
+				"options": [
+					{ "id": 486503579389, "text": "Cytokinins" },
+					{ "id": 340935891255, "text": "Ethylene" },
+					{ "id": 377356548816, "text": "Auxins" },
+					{ "id": 885229438493, "text": "Gibberellic acid" }
+				],
+				"subject": "Biology",
+				"chapter": "Plant Growth and Development",
+				"text": "Fruit and leaf drop at early stages can be prevented by the application of:"
+			},
+			{
+				"id": 629818756837,
+				"answer": 163311062139,
+				"options": [
+					{ "id": 163311062139, "text": "Core zone" },
+					{ "id": 926017692888, "text": "Buffer zone" },
+					{ "id": 598594488122, "text": "Transition zone" },
+					{ "id": 687967655101, "text": "Restoration zone" }
+				],
+				"subject": "Biology",
+				"chapter": "Biodiversity and Conservation",
+				"text": "The region of biosphere reserve which is legally protected and where no human activity is allowed is known as:"
+			},
+			{
+				"id": 833916462258,
+				"answer": 335877806017,
+				"options": [
+					{ "id": 588493640314, "text": "ostia" },
+					{ "id": 815062222083, "text": "oscula" },
+					{ "id": 335877806017, "text": "choanocytes" },
+					{ "id": 694533958120, "text": "mesenchymal cells" }
+				],
+				"subject": "Biology",
+				"chapter": "Animal Kingdom",
+				"text": "In case of poriferans, the spongocoel is lined with flagellated cells called:"
+			},
+			{
+				"id": 447945297417,
+				"answer": 850909670709,
+				"options": [
+					{ "id": 482587405921, "text": "Renin" },
+					{ "id": 850909670709, "text": "Atrial natriuretic Factor" },
+					{ "id": 380451448752, "text": "Aldosterone" },
+					{ "id": 181955277456, "text": "ADH" }
+				],
+				"subject": "Biology",
+				"chapter": "Excretory Products and their Elimination",
+				"text": "A decrease in blood pressure / volume will not cause the release of:"
+			},
+			{
+				"id": 709192609500,
+				"answer": 972352303662,
+				"options": [
+					{ "id": 382087508677, "text": "autogamy and xenogamy" },
+					{ "id": 972352303662, "text": "autogamy and geitonogamy" },
+					{ "id": 237410056935, "text": "geitonogamy and xenogamy" },
+					{ "id": 225326751224, "text": "cliestogamy and xenogamy" }
+				],
+				"subject": "Biology",
+				"chapter": "Sexual Reproduction in Flowering Plants",
+				"text": "A dioecious flowering plant prevents both:"
+			},
+			{
+				"id": 876576416662,
+				"answer": 681271404216,
+				"options": [
+					{ "id": 966043069889, "text": "Contraction of outer wall of guard cells" },
+					{ "id": 522313502199, "text": "Decrease in turgidity of guard cells" },
+					{
+						"id": 681271404216,
+						"text": "Radial orientation of cellulose microfibrils in the cell wall of guard cells"
+					},
+					{
+						"id": 702371622950,
+						"text": "Longitudinal orientation of cellulose microfibrils in the cell wall of guard cells"
+					}
+				],
+				"subject": "Biology",
+				"chapter": "Transport in Plants",
+				"text": "Which of the following facilitates opening of stomatal aperture?"
+			},
+			{
+				"id": 983454776615,
+				"answer": 698788313638,
+				"options": [
+					{ "id": 982165836930, "text": "Bromophenol blue" },
+					{ "id": 286390789387, "text": "Acetocarmine" },
+					{ "id": 122304583678, "text": "Aniline blue" },
+					{ "id": 698788313638, "text": "Ethidium bromide" }
+				],
+				"subject": "Biology",
+				"chapter": "Biotechnology - Principles and Processes",
+				"text": "The DNA fragments seperated on an agarose gel can be visualised after staining with"
+			},
+			{
+				"id": 812749633896,
+				"answer": 923170535225,
+				"options": [
+					{
+						"id": 966103170874,
+						"text": "There are three points in the cycle where \\(NAD^+\\) is reduced to \\(NADH+H^+\\)"
+					},
+					{
+						"id": 470586377767,
+						"text": "There is one point in the cycle where \\(FAD^+\\) is reduced to \\(FADH_2\\)"
+					},
+					{
+						"id": 669188919175,
+						"text": "During conversion of succinyl CoA to succinic acid, a molecule of GTP is synthesised"
+					},
+					{
+						"id": 923170535225,
+						"text": "The cycle starts with condensation of acetyl group (acetyl CoA) with pyruvic acid to yield citric acid"
+					}
+				],
+				"subject": "Biology",
+				"chapter": "Respiration in Plants",
+				"text": "Which statement is wrong for Kreb's cycle?"
+			},
+			{
+				"id": 345589735790,
+				"answer": 699569452248,
+				"options": [
+					{ "id": 255959730731, "text": "Fungistasis" },
+					{ "id": 258132506671, "text": "Amensalism" },
+					{ "id": 831471208781, "text": "Antibiosis" },
+					{ "id": 699569452248, "text": "Mutualism" }
+				],
+				"subject": "Biology",
+				"chapter": "Organisms and Populations",
+				"text": "Mycorrhizae are the example of"
+			},
+			{
+				"id": 957612926721,
+				"answer": 746578677068,
+				"options": [
+					{ "id": 646161962503, "text": "Fibrous joint" },
+					{ "id": 315353047930, "text": "Cartilaginous joint" },
+					{ "id": 746578677068, "text": "Synovial joint" },
+					{ "id": 618562851963, "text": "Saddle joint" }
+				],
+				"subject": "Biology",
+				"chapter": "Locomotion and Movement",
+				"text": "The pivot joining between atlas and axis is a type of"
+			},
+			{
+				"id": 574452332532,
+				"answer": 553972042482,
+				"options": [
+					{ "id": 525008688740, "text": "Acetoacter aceti : Antibiotics" },
+					{ "id": 867933641248, "text": "Methanobacterium : Lactic acid" },
+					{ "id": 345298303743, "text": "Penicillium notatum : Acetic acid" },
+					{ "id": 553972042482, "text": "Sacchromyces cerevsiae : Ethanol" }
+				],
+				"subject": "Biology",
+				"chapter": "Microbes in Human Welfare",
+				"text": "Which of the following is correctly matched for the product produced by them?"
+			},
+			{
+				"id": 427224370009,
+				"answer": 673516701578,
+				"options": [
+					{ "id": 231679954736, "text": "only (c)" },
+					{ "id": 477039063662, "text": "only (d)" },
+					{ "id": 838235933959, "text": "(a) and (b)" },
+					{ "id": 673516701578, "text": "(c) and (d)" }
+				],
+				"subject": "Biology",
+				"chapter": "Structural Organisation in Animals",
+				"text": "Frog's heart when taken out of the body continues to beat for sometime. Select the best option from the following statements",
+				"image": "https://i.ibb.co/4Sb01MJ/Screenshot-2022-04-05-14-03-12-626-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 481569335997,
+				"answer": 885644783618,
+				"options": [
+					{ "id": 885644783618, "text": "Schwann cell and Oligodendrocytes" },
+					{ "id": 997691957984, "text": "Astrocytes and Schwann cells" },
+					{ "id": 955476706443, "text": "Oligodendrocytes and Osteoclasts" },
+					{ "id": 452594014004, "text": "Osteoclasts and Astrocytes" }
+				],
+				"subject": "Biology",
+				"chapter": "Neural Control and Coordination",
+				"text": "Myelin sheath is produced by"
+			},
+			{
+				"id": 428031664989,
+				"answer": 876204439911,
+				"options": [
+					{ "id": 297030159415, "text": "Rete testis" },
+					{ "id": 416877681186, "text": "Epididymis" },
+					{ "id": 300834944254, "text": "Vas deferens" },
+					{ "id": 876204439911, "text": "Female reproductive tract" }
+				],
+				"subject": "Biology",
+				"chapter": "Human Reproduction",
+				"text": "Capacitation occurs in"
+			},
+			{
+				"id": 882184256679,
+				"answer": 148868415739,
+				"options": [
+					{ "id": 218282158729, "text": "Perisperm" },
+					{ "id": 583922751235, "text": "Cotyledon" },
+					{ "id": 148868415739, "text": "Endosperm" },
+					{ "id": 464322292940, "text": "Pericarp" }
+				],
+				"subject": "Biology",
+				"chapter": "Morphology of Flowering Plants",
+				"text": "The morphological nature of the edible part of coconut is"
+			},
+			{
+				"id": 873619610849,
+				"answer": 856718326457,
+				"options": [
+					{ "id": 241440873730, "text": "Xylem parenchyma" },
+					{ "id": 989550225682, "text": "Collenchyma" },
+					{ "id": 856718326457, "text": "Phellem" },
+					{ "id": 487959997705, "text": "Phloem" }
+				],
+				"subject": "Biology",
+				"chapter": "Anatomy of Flowering Plants",
+				"text": "Which of the following is made up of dead cells"
+			},
+			{
+				"id": 859931867674,
+				"answer": 193305800676,
+				"options": [
+					{ "id": 362324330169, "text": "Intrauterine transfer" },
+					{ "id": 354465876076, "text": "Gamete intracytoplasmic fallopian transfer" },
+					{ "id": 193305800676, "text": "Aritficial insemination" },
+					{ "id": 664758628830, "text": "Intracytoplasmic sperm injection" }
+				],
+				"subject": "Biology",
+				"chapter": "Reproductive Health",
+				"text": "In case of a couple where the male is having a very low sperm count, which technique will be suitable for fertilisation"
+			},
+			{
+				"id": 908829405460,
+				"answer": 638060235116,
+				"options": [
+					{ "id": 638060235116, "text": "r-RNA" },
+					{ "id": 312337880175, "text": "t-RNA" },
+					{ "id": 362432473068, "text": "m-RNA" },
+					{ "id": 871265949061, "text": "mi-RNA" }
+				],
+				"subject": "Biology",
+				"chapter": "Molecular Basis of Inheritance",
+				"text": "Which of the following RNAs should be the most abundant in animal cell"
+			},
+			{
+				"id": 351162095738,
+				"answer": 311360453928,
+				"options": [
+					{ "id": 393745385431, "text": "Phelloderm" },
+					{ "id": 412710265483, "text": "Primary phloem" },
+					{ "id": 311360453928, "text": "Secondary xylem" },
+					{ "id": 200434937905, "text": "Periderm" }
+				],
+				"subject": "Biology",
+				"chapter": "Anatomy of Flowering Plants",
+				"text": "The vascular cambium normally gives rise to"
+			},
+			{
+				"id": 122741461947,
+				"answer": 949208259481,
+				"options": [
+					{
+						"id": 949208259481,
+						"text": "Condensation → nuclear membrane disassembly → arrangement at equator → centromere division → segregation → telophase"
+					},
+					{
+						"id": 922486452364,
+						"text": "Condensation → crossing over → nuclear membrane disassembly → segregation → telophase"
+					},
+					{
+						"id": 223569531341,
+						"text": "Condensation → nuclear membrane disassembly → crossing over → segregation → telophase"
+					},
+					{
+						"id": 931574544632,
+						"text": "Condensation → arrangement at equator → centromere division → segregation → telophase"
+					}
+				],
+				"subject": "Biology",
+				"chapter": "Cell Cycle and Cell Division",
+				"text": "Which of the following options gives the correct sequences of events during mitosis?"
+			},
+			{
+				"id": 710768156512,
+				"answer": 954308095967,
+				"options": [
+					{ "id": 328350579480, "text": "amylase, peptidase, trypsinogen, rennin" },
+					{ "id": 917068638202, "text": "amylase, pepsin, trypsinogen, maltase" },
+					{ "id": 596316615650, "text": "petidase, amylase, pepsin, rennin" },
+					{ "id": 954308095967, "text": "lipase, amylase, trypsinogen, procarboxypeptidase" }
+				],
+				"subject": "Biology",
+				"chapter": "Digestion and Absorption",
+				"text": "Which of the following option best represents the enzyme composition of pancreatic juice?"
+			},
+			{
+				"id": 447200941636,
+				"answer": 868604561389,
+				"options": [
+					{ "id": 804227665729, "text": "Anemophily" },
+					{ "id": 868604561389, "text": "Entomophily" },
+					{ "id": 895579021732, "text": "Hydrophily" },
+					{ "id": 172142928622, "text": "Cleistogamy" }
+				],
+				"subject": "Biology",
+				"chapter": "Sexual Reproduction in Flowering Plants",
+				"text": "Attractants and rewards are required for:"
 			}
 		]
 	}
