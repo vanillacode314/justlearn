@@ -6,7 +6,8 @@
 	import { page } from '$app/stores';
 	import { allPapers } from '$lib/stores/app';
 	import { results } from '$lib/stores/user';
-	import { afterUpdate } from 'svelte';
+	import { afterUpdate, onMount } from 'svelte';
+	import ResultQuestion from '$lib/layouts/ResultQuestion.svelte';
 	$: id = $page.params.id;
 	$: result = $results.find((r) => r.id === Number(id));
 	$: paper = result && $allPapers.find((p) => p.id === result.paper);
@@ -18,77 +19,73 @@
 		: [];
 	$: score = result ? correct.length * result.cmarks + incorrect.length * result.imarks : 0;
 
-	/// METHODS
+	onMount(() => {});
 
+	/// METHODS
 	afterUpdate(() => {
 		MathLive.renderMathInDocument();
 	});
 </script>
 
 <div class="container">
-	<article>
-		<header>
-			{#if result && paper}
+	{#if result && paper}
+		<article>
+			<header>
 				<h1>{paper.name} (result id: {id})</h1>
-			{:else}
-				<p>No result with id {id} found :(</p>
-			{/if}
-		</header>
-		<main>
-			<div class="cards">
-				<div class="card">
-					<h2>Correct (Marks +{result.cmarks})</h2>
-					<p>{correct.length}</p>
+			</header>
+			<main>
+				<div class="cards">
+					<div class="card">
+						<h2>Correct (Marks +{result.cmarks})</h2>
+						<p>{correct.length}</p>
+					</div>
+					<div class="card">
+						<h2>Incorrect (Marks {result.imarks})</h2>
+						<p>{incorrect.length}</p>
+					</div>
+					<div class="card">
+						<h2>Skipped</h2>
+						<p>{skipped.length}</p>
+					</div>
+					<div class="card">
+						<h2>Score</h2>
+						<p>{score}</p>
+					</div>
 				</div>
-				<div class="card">
-					<h2>Incorrect (Marks {result.imarks})</h2>
-					<p>{incorrect.length}</p>
-				</div>
-				<div class="card">
-					<h2>Skipped</h2>
-					<p>{skipped.length}</p>
-				</div>
-				<div class="card">
-					<h2>Score</h2>
-					<p>{score}</p>
-				</div>
-			</div>
-		</main>
-		<footer>
-			<table>
-				<thead>
-					<tr>
-						<th> Question No. </th>
-						<th> Status </th>
-						<th> Chosen Option </th>
-						<th> Correct Option </th>
-					</tr>
-				</thead>
-				<tbody>
-					{#each paper?.questions ?? [] as { answer, options }, index}
-						{@const isCorrect = result.answers[index] === answer}
-						{@const isSkipped = result.answers[index] === null}
-						{@const chosenOption = options.find((o) => o['id'] === result.answers[index])}
-						{@const correctOption = options.find((o) => o['id'] === answer)}
-						<tr>
-							<td>
-								{index + 1}
-							</td>
-							<td class:correct={isCorrect} class:incorrect={!isSkipped && !isCorrect}>
-								{isCorrect ? 'Correct' : isSkipped ? 'Skipped' : 'Incorrect'}
-							</td>
-							<td>
-								{isSkipped ? '' : chosenOption?.text}
-							</td>
-							<td>
-								{correctOption?.text}
-							</td>
-						</tr>
-					{/each}
-				</tbody>
-			</table>
-		</footer>
-	</article>
+			</main>
+			<footer>
+				{#each paper?.questions ?? [] as question, index}
+					{@const { answer, options } = question}
+					{@const isCorrect = result.answers[index] === answer}
+					{@const isSkipped = result.answers[index] === null}
+					{@const chosenOption = options.find((o) => o['id'] === result.answers[index])}
+					{@const correctOption = options.find((o) => o['id'] === answer)}
+					<ResultQuestion
+						{isCorrect}
+						{isSkipped}
+						{chosenOption}
+						{correctOption}
+						{question}
+						{index}
+					/>
+					<!-- <td> -->
+					<!-- 	{index + 1} -->
+					<!-- </td> -->
+					<!-- <td class:correct={isCorrect} class:incorrect={!isSkipped && !isCorrect}> -->
+					<!-- 	{isCorrect ? 'Correct' : isSkipped ? 'Skipped' : 'Incorrect'} -->
+					<!-- </td> -->
+					<!-- <td> -->
+					<!-- 	{isSkipped ? '' : chosenOption?.text} -->
+					<!-- </td> -->
+					<!-- <td> -->
+					<!-- 	{correctOption?.text} -->
+					<!-- </td> -->
+				{/each}
+			</footer>
+		</article>
+	{:else}
+		<p>No result with id {id} found :(</p>
+	{/if}
 </div>
 
 <style lang="scss">
@@ -104,30 +101,9 @@
 		border: 0.1rem var(--foreground) solid;
 		padding: 1rem;
 	}
-	table {
-		width: 100%;
-		th {
-			background-color: var(--foreground);
-			color: var(--background);
-		}
-		th,
-		td {
-			margin: 0;
-			padding: 0.5rem;
-			border: 0.1rem solid var(--foreground);
-		}
-		td {
-			&.correct {
-				background-color: green;
-				color: white;
-				border: 0.1rem solid transparent;
-			}
-			&.incorrect {
-				background-color: red;
-				color: white;
-				border: 0.1rem solid transparent;
-			}
-		}
+	footer {
+		display: grid;
+		gap: 0.1rem;
 	}
 	main {
 		@media (max-width: 768px) {
