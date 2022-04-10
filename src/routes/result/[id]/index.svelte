@@ -111,8 +111,14 @@
 		}
 		.cards {
 			display: grid;
-			grid-template-columns: repeat(4, 1fr);
+			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 			gap: 1rem;
+			h2 {
+				font-size: small;
+			}
+			p {
+				font-size: xx-large;
+			}
 		}
 		.card {
 			display: flex;
