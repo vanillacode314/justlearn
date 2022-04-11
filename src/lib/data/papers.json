@@ -1892,6 +1892,686 @@
 				"subject": "Physics",
 				"chapter": "Current Electricity",
 				"text": "The resistance of a wire is 'R' ohm. If it melted and stretched to 'n' times its original length, its new resistance will be"
+			},
+			{
+				"id": 899025627066,
+				"answer": 282529773939,
+				"options": [
+					{ "id": 132663122035, "text": "Bond angle remains same but bond length changes" },
+					{ "id": 604361559398, "text": "Bond angle changes but bond length remains same" },
+					{ "id": 500041171519, "text": "Both bond angle and bond length change" },
+					{ "id": 282529773939, "text": "Both bond angles and bond length remains same" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Hydrocarbons",
+				"text": "With respect to the conformers of ethane, which of the following statements is true?"
+			},
+			{
+				"id": 983701687292,
+				"answer": 238588280106,
+				"options": [
+					{ "id": 967115167822, "text": "\\(BeCl_2, XeF_2\\)" },
+					{ "id": 735555716340, "text": "\\(Tel_2, XeF_2\\)" },
+					{ "id": 238588280106, "text": "\\(IBr_2^-, XeF_2\\)" },
+					{ "id": 476683744640, "text": "\\(IF_3, XeF_2\\)" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Chemical Bonding and Molecular Structure",
+				"text": "Which of the following pairs of compounds is isoelectronic and isostructural?"
+			},
+			{
+				"id": 148083069965,
+				"answer": 669739557941,
+				"options": [
+					{ "id": 609420693180, "text": "\\(HgI_2, I_3^-\\)" },
+					{ "id": 665825273357, "text": "\\(HgI_2, I^-\\)" },
+					{ "id": 669739557941, "text": "\\(HgI_4^{2-}, I_3^-\\)" },
+					{ "id": 206352925424, "text": "\\(Hg_2I_2, I^-\\)" }
+				],
+				"subject": "Chemistry",
+				"chapter": "d-Block",
+				"text": "\\(HgCl_2\\) and \\(I_2\\) both when dissolved in water containing \\(I^-\\) ions the pair of species formed is"
+			},
+			{
+				"id": 912969158848,
+				"answer": 471664999008,
+				"options": [
+					{ "id": 757797240496, "text": "Analgesic" },
+					{ "id": 471664999008, "text": "Antiseptic" },
+					{ "id": 907180892717, "text": "Antipyretic" },
+					{ "id": 798015744975, "text": "Antibiotic" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Chemistry in Everyday Life",
+				"text": "Mixture of chloroxylenol and terpineol acts as"
+			},
+			{
+				"id": 223163054588,
+				"answer": 529325893197,
+				"options": [
+					{
+						"id": 529325893197,
+						"text": "\\(FeO_{0.98}\\) has non stoichiometric metal deficiency defect"
+					},
+					{
+						"id": 421311878806,
+						"text": "Density decreases in case of crystals with Schottky's defect"
+					},
+					{
+						"id": 274925846911,
+						"text": "NaCl(s) is insulator, silicon is semiconductor, silver is conductor, quartz is piezo electric crystal"
+					},
+					{
+						"id": 505346114000,
+						"text": "Frenkel defect is favoured in those ionic compounds in which sizes of cation and anions are largely different"
+					}
+				],
+				"subject": "Chemistry",
+				"chapter": "The Solid State",
+				"text": "Which is the incorrect statement?"
+			},
+			{
+				"id": 853474135028,
+				"answer": 801607919662,
+				"options": [
+					{ "id": 235231449073, "text": "\\(2.42 \\times 10^{-8}\\)" },
+					{ "id": 932316035295, "text": "\\(2.66 \\times 10^{-12}\\)" },
+					{ "id": 896269231216, "text": "\\(4.5 \\times 10^{-11}\\)" },
+					{ "id": 801607919662, "text": "\\(5.3 \\times 10^{-12}\\)" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Equilibrium",
+				"text": "Concentration of the \\(Ag^+\\) ions in a saturated solution of \\(Ag_2C_2O_4\\) is \\(2.2 \\times 10^-4 mol L^{-1}\\). Solubility product of \\(Ag_2C_2O_4\\) is"
+			},
+			{
+				"id": 437105555632,
+				"answer": 343684119034,
+				"options": [
+					{ "id": 154679096525, "image": "https://i.ibb.co/27V1yGB/option1.jpg" },
+					{ "id": 343684119034, "image": "https://i.ibb.co/Sd2v2G2/option2.jpg" },
+					{ "id": 902573014945, "image": "https://i.ibb.co/BT4PB2r/option3.jpg" },
+					{ "id": 225616138247, "image": "https://i.ibb.co/QXjJJKS/option4.jpg" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Aldehydes, Ketones and Carboxylic Acids",
+				"text": "Of the following, which is the product formed when cyclohexanone undergoes aldol condensation followed by heating?"
+			},
+			{
+				"id": 690701117003,
+				"answer": 823816820645,
+				"options": [
+					{ "id": 701027340259, "text": "\\(PH_3\\)" },
+					{ "id": 441225256505, "text": "\\(ClF_3\\)" },
+					{ "id": 169786341174, "text": "\\(NCl_3\\)" },
+					{ "id": 823816820645, "text": "\\(BCl_3\\)" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Chemical Bonding and Molecular Structure",
+				"text": "The species, having bond angles of \\(120\\degree\\) is"
+			},
+			{
+				"id": 250587580209,
+				"answer": 740220841416,
+				"options": [
+					{ "id": 671378302687, "text": "Doubled" },
+					{ "id": 492609352555, "text": "Halved" },
+					{ "id": 460756326161, "text": "Tripled" },
+					{ "id": 740220841416, "text": "Unchanged" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Solutions",
+				"text": "If molality of the dilute solution is doubled, the value of molal depression constant (\\(K_f\\)) will be"
+			},
+			{
+				"id": 485446021846,
+				"answer": 312694317592,
+				"options": [
+					{ "id": 848799831132, "image": "https://i.ibb.co/xFYtnBH/option1.jpg" },
+					{ "id": 578021839648, "image": "https://i.ibb.co/yVxpq4d/option2.jpg" },
+					{ "id": 105402325417, "image": "https://i.ibb.co/zr61B5T/option3.jpg" },
+					{ "id": 312694317592, "image": "https://i.ibb.co/VYq3SWX/option4.jpg" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Alcohols, Phenols and Ethers",
+				"text": "Which one is the most acidic compound?"
+			},
+			{
+				"id": 794106189172,
+				"answer": 178662461304,
+				"options": [
+					{
+						"id": 178662461304,
+						"text": "\\(Sn^{2+}\\) is reducing while \\(Pb^{4+}\\) is oxidising"
+					},
+					{
+						"id": 650326301233,
+						"text": "\\(Sn^{2+}\\) is oxidising while \\(Pb^{4+}\\) is reducing"
+					},
+					{
+						"id": 605038823920,
+						"text": "\\(Sn^{2+}\\) and \\(Pb^{2+}\\) are both oxidising and reducing"
+					},
+					{
+						"id": 880170896877,
+						"text": "\\(Sn^{4+}\\) is reducing while \\(Pb^{4+}\\) is oxidising"
+					}
+				],
+				"subject": "Chemistry",
+				"chapter": "p-Block",
+				"text": "It is because of inability of \\(ns^2\\) electrons of the valence shell to participate in bonding that"
+			},
+			{
+				"id": 347379239948,
+				"answer": 417305418023,
+				"options": [
+					{ "id": 375926783974, "image": "https://i.ibb.co/R25TNhB/option1.jpg" },
+					{ "id": 319215797639, "image": "https://i.ibb.co/n195WZ9/option2.jpg" },
+					{ "id": 769322600978, "image": "https://i.ibb.co/xCZkfv2/option3.jpg" },
+					{ "id": 417305418023, "image": "https://i.ibb.co/cxfxQcN/option4.jpg" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Hydrocarbons",
+				"text": "Predict the correct intermediate and product in the following reaction",
+				"image": "https://i.ibb.co/ZcCgDhr/Screenshot-2022-04-10-23-33-28-439-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 188276210666,
+				"answer": 271849533670,
+				"options": [
+					{ "id": 809579664661, "text": "Catalyst does not initiate any reaction" },
+					{
+						"id": 271849533670,
+						"text": "The value of equilibrium constant is changed in the presence of a catalyst in the reaction at equilibrium"
+					},
+					{ "id": 259341758096, "text": "Enzymes catalyse mainly bio-chemical reactions" },
+					{ "id": 885570607743, "text": "Coenzymes increase the catalytic activity of enzyme" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Surface Chemistry",
+				"text": "Which one of the following statements is not correct?"
+			},
+			{
+				"id": 614697657165,
+				"answer": 947312195365,
+				"options": [
+					{
+						"id": 705281278324,
+						"text": "de-Broglie's wavelength is given by \\(\\lambda = \\frac{h}{mv}\\), where m = mass of the particle, v = group velocity of the particle"
+					},
+					{
+						"id": 425129320643,
+						"text": "The uncertainity principle is \\(\\Delta E \\times \\Delta t \\geq \\frac{h}{4\\pi}\\)"
+					},
+					{
+						"id": 761820944238,
+						"text": "Half-filled and fully filled orbitals have greater stability due to greater exchange energy, greater symmetry and more balanced arrangement"
+					},
+					{
+						"id": 947312195365,
+						"text": "The energy of 2s orbital is less than the energy of 2p orbital in case of Hydrogen like atoms"
+					}
+				],
+				"subject": "Chemistry",
+				"chapter": "Structure of Atom",
+				"text": "Which one is the wrong statement?"
+			},
+			{
+				"id": 608609470139,
+				"answer": 567134227444,
+				"options": [
+					{ "id": 491189890224, "text": "1136.25J" },
+					{ "id": 524390217022, "text": "-500J" },
+					{ "id": 567134227444, "text": "-505J" },
+					{ "id": 829388568344, "text": "+505J" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Thermodynamics",
+				"text": "A gas is allowed to expand in a well insulated container against a constant external pressure of 2.5atm from an initial volume of 2.50L to a final volume 4.50L. The change in internal energy \\(\\Delta U\\) of the gas in joules will be"
+			},
+			{
+				"id": 385068308841,
+				"answer": 729132077611,
+				"options": [
+					{
+						"id": 737242749291,
+						"text": "A-Methoxymethane, X-Ethanoic acid, Y-Acetate ion, Z-hydrazine"
+					},
+					{
+						"id": 944309659949,
+						"text": "A-Methoxymethane, X-Ethanol, Y-Ethanoic acid, Z-Semicarbazide"
+					},
+					{ "id": 729132077611, "text": "A-Ethanal, X-Ethanol, Y-But-2-enal, Z-Semicarbazone" },
+					{ "id": 995032842397, "text": "A-Ethanol, X-Acetaldehyde, Y-Butanone, Z-Hydrazone" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Aldehydes, Ketones and Carboxylic Acids",
+				"text": "Identify A, X, Y and Z",
+				"image": "https://i.ibb.co/47bHJz6/Screenshot-2022-04-11-16-12-59-851-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 932964070480,
+				"answer": 141486808115,
+				"options": [
+					{
+						"id": 632348417301,
+						"text": "\\(CH_2 = CH_2 \\gt CH_3 - CH = CH_2 \\gt CH_3 - C \\equiv CH \\gt CH \\equiv CH\\)"
+					},
+					{
+						"id": 141486808115,
+						"text": "\\(CH \\equiv CH \\gt CH_3 - C \\equiv CH \\gt CH_2 = CH_2 \\gt CH_3 - CH_3\\)"
+					},
+					{
+						"id": 276895942096,
+						"text": "\\(CH \\equiv CH \\gt CH_2 = CH_2 \\gt CH_3 - C \\equiv CH \\gt CH_3 - CH_3\\)"
+					},
+					{
+						"id": 124799408906,
+						"text": "\\(CH_3 - CH_3 \\gt CH_2 = CH_2 \\gt CH_3 - C \\equiv CH \\gt CH \\equiv CH\\)"
+					}
+				],
+				"subject": "Chemistry",
+				"chapter": "Hydrocarbons",
+				"text": "Which one is the correct order of acidity?"
+			},
+			{
+				"id": 975336588213,
+				"answer": 267248071837,
+				"options": [
+					{ "id": 962472046362, "text": "\\(E_1 = E_2\\)" },
+					{ "id": 863136825247, "text": "\\(E_1 < E_2\\)" },
+					{ "id": 267248071837, "text": "\\(E_1 > E_2\\)" },
+					{ "id": 551242663601, "text": "\\(E_2 = 0 \\neq E_1\\)" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Electrochemistry",
+				"text": "In an electrochemical cell: \\(Zn|ZnSO_4(0.01M)||CuSO_4(1.0M)|Cu\\), the emf of this Daniel cell is \\(E_1\\). When the concentration of \\(ZnSO_4\\) is changed to 1.0M and that of \\(CuSO_4\\) changed to 0.01M, the emf changes to \\(E_2\\). From the following, which one is the relationship between \\(E_1\\) and \\(E_2\\)? (Given \\(\\frac{RT}{F} = 0.059\\))"
+			},
+			{
+				"id": 960269794936,
+				"answer": 461360322137,
+				"options": [
+					{ "id": 480542811441, "text": "II < III < I" },
+					{ "id": 103208627809, "text": "III < I < II" },
+					{ "id": 284139157759, "text": "III < II < I" },
+					{ "id": 461360322137, "text": "II < I < III" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Amines",
+				"text": "The correct increasing order of basic strength for the following compounds is",
+				"image": "https://i.ibb.co/R4vRzPs/Screenshot-2022-04-11-16-49-53-148-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 575091003092,
+				"answer": 632666090683,
+				"options": [
+					{ "id": 707263090683, "text": "\\(S_2O_7^{2-}, S_2O_3^{2-}\\)" },
+					{ "id": 632666090683, "text": "\\(S_4O_6^{2-}, S_2O_3^{2-}\\)" },
+					{ "id": 586126533032, "text": "\\(S_2O_7^{2-}, S_2O_8^{2-}\\)" },
+					{ "id": 170333318035, "text": "\\(S_4O_6^{2-}, S_2O_7^{2-}\\)" }
+				],
+				"subject": "Chemistry",
+				"chapter": "p-Block",
+				"text": "In which pair of ions both the species contain S-S bond?"
+			},
+			{
+				"id": 235957964848,
+				"answer": 762259459600,
+				"options": [
+					{ "id": 982948806146, "text": "1 AgCl, 3 AgCl, 2 AgCl" },
+					{ "id": 807502359274, "text": "3 AgCl, 1 AgCl, 2 AgCl" },
+					{ "id": 762259459600, "text": "3 AgCl, 2 AgCl, 1 AgCl" },
+					{ "id": 601211522254, "text": "2 AgCl, 3 AgCl, 1 AgCl" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Coordination Compounds",
+				"text": "The correct order of the stoichiometries of \\(AgCl\\) formed \\(AgNO_3\\) in excess is treated with the complexes: \\(CoCl_3\\cdot 6NH_3, CoCl_3\\cdot 5NH_3, CoCl_3\\cdot 4NH_3\\) respectively is"
+			},
+			{
+				"id": 963640575077,
+				"answer": 405163899384,
+				"options": [
+					{ "id": 785267326307, "text": "1" },
+					{ "id": 405163899384, "text": "2" },
+					{ "id": 522267559824, "text": "3" },
+					{ "id": 175530816287, "text": "4" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Chemical Bonding and Molecular Structure",
+				"text": "Match the interhalogen compounds of column I with the geometry in column II and assign the correct code",
+				"image": "https://i.ibb.co/pvvPmTk/Screenshot-2022-04-11-16-58-29-027-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 902554535406,
+				"answer": 276821069224,
+				"options": [
+					{ "id": 867690194352, "text": "The radioactive nature of actionoids" },
+					{ "id": 301361057735, "text": "Actinoid contraction" },
+					{ "id": 276821069224, "text": "5f, 6d and 7s levels having comparable energies" },
+					{ "id": 685971118259, "text": "4f and 5d levels being close in energies" }
+				],
+				"subject": "Chemistry",
+				"chapter": "f-Block",
+				"text": "The reason for greater range of oxidation states actinoids is attributed to"
+			},
+			{
+				"id": 612470857971,
+				"answer": 296203651777,
+				"options": [
+					{ "id": 296203651777, "text": "5 litre" },
+					{ "id": 851990629992, "text": "10 litre" },
+					{ "id": 105068397433, "text": "4 litre" },
+					{ "id": 135060319717, "text": "2 litre" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Equilibrium",
+				"text": "A 20 litre container at 400 K contains \\(CO_2(g)\\) at pressure 0.4atm and an excess of \\(SrO\\) (neglect the volume of solid \\(SrO\\)). The volume of the containers is now decreased by moving the movable piston fitted in the container. The maximum volume of the container, when pressure of \\(CO_2\\) attains its maximum value, will be (Given that: \\(SrCO_3(s) \\rightleftharpoons SrO(s) + CO_2(g), K_p = 1.6 atm\\))"
+			},
+			{
+				"id": 151790890934,
+				"answer": 712237819728,
+				"options": [
+					{
+						"id": 545109142169,
+						"text": "Electrophile is a negatively charged species and can form a bond by accepting a pair of electrons from a nucleophile"
+					},
+					{
+						"id": 284961470675,
+						"text": "Electrophile is a negatively charged species and can form a bond by accepting a pair of electrons from another electrophile"
+					},
+					{
+						"id": 147269779589,
+						"text": "Electrons are generally neutral species and can form a bond by accepting a pair of electrons from a nucleophile"
+					},
+					{
+						"id": 712237819728,
+						"text": "Electrons can be either neutral or positively charged species and can form a bond by accepting a pair of electrons from a nucleophile"
+					}
+				],
+				"subject": "Chemistry",
+				"chapter": "General Organic Chemistry",
+				"text": "The correct statement regarding electrophile is"
+			},
+			{
+				"id": 905774977435,
+				"answer": 319033222907,
+				"options": [
+					{ "id": 703765790360, "text": "Haemoglobin" },
+					{ "id": 319033222907, "text": "Micro-organisms present in soil" },
+					{ "id": 362101374351, "text": "Oceans" },
+					{ "id": 595952460560, "text": "Plants" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Enviromental Chemistry",
+				"text": "Which of the following is a sink for \\(CO\\)?"
+			},
+			{
+				"id": 461565253692,
+				"answer": 802729175465,
+				"options": [
+					{ "id": 703890511370, "text": "Halogen family, \\([Rn]5f^{14}6d^{10}7s^{2}7p^{5}\\)" },
+					{ "id": 802729175465, "text": "Carbon family, \\([Rn]5f^{14}6d^{10}7s^{2}7p^{2}\\)" },
+					{ "id": 410578582807, "text": "Oxygen family, \\([Rn]5f^{14}6d^{10}7s^{2}7p^{4}\\)" },
+					{ "id": 400401593790, "text": "Nitrogen family, \\([Rn]5f^{14}6d^{10}7s^{2}7p^{6}\\)" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Classification of Elements and Periodicity in Properties",
+				"text": "The element \\(Z = 114\\) has been discovered recently. It will belong to which of the following family group and electronic configuration?"
+			},
+			{
+				"id": 817461186614,
+				"answer": 792111309762,
+				"options": [
+					{
+						"id": 792111309762,
+						"text": "\\( [Co(en)_3]^{3+}, [Co(NH_3)_6]^{3+}, [Co(H_2O)_6]^{3+} \\)"
+					},
+					{
+						"id": 748396360021,
+						"text": "\\( [Co(H_2O)_6]^{3+}, [Co(en)_3]^{3+}, [Co(NH_3)_6]^{3+} \\)"
+					},
+					{
+						"id": 145721518958,
+						"text": "\\( [Co(NH_3)_6]^{3+}, [Co(en)_3]^{3+}, [Co(H_2O)_6]^{3+} \\)"
+					},
+					{
+						"id": 270953222564,
+						"text": "\\( [Co(H_2O)_6]^{3+}, [Co(NH_3)_6]^{3+}, [Co(en)_3]^{3+} \\)"
+					}
+				],
+				"subject": "Chemistry",
+				"chapter": "Coordination Compounds",
+				"text": "Correct increasing order for the wavelengths of absorption in the visible region for the complexes of \\(Co^{3+}\\) is"
+			},
+			{
+				"id": 809291237853,
+				"answer": 239205776432,
+				"options": [
+					{
+						"id": 987204361354,
+						"text": "Insulin maintains sugar level in the blood of a human body"
+					},
+					{ "id": 697538940957, "text": "Ovalbumin is a simple food reserve in egg-white" },
+					{
+						"id": 489451516739,
+						"text": "Blood proteins thrombin and fibrinogen are involved in blood clotting"
+					},
+					{ "id": 239205776432, "text": "Denaturation makes the proteins more active" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Biomolecules",
+				"text": "Which of the following statements is not correct?"
+			},
+			{
+				"id": 228890997281,
+				"answer": 463101662798,
+				"options": [
+					{ "id": 452887140029, "text": "Ruthenocene" },
+					{ "id": 463101662798, "text": "Grignard's reagent" },
+					{ "id": 833591120670, "text": "Ferrocene" },
+					{ "id": 883740445293, "text": "Cobaltocene" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Coordination Compounds",
+				"text": "An example of a sigma bonded organometallic compound is:"
+			},
+			{
+				"id": 678956363962,
+				"answer": 504919009844,
+				"options": [
+					{ "id": 887651394898, "text": "Molality" },
+					{ "id": 504919009844, "text": "Molarity" },
+					{ "id": 863603909070, "text": "Mole fraction" },
+					{ "id": 157931608592, "text": "Weight percentage" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Some Basic Concepts of Chemistry",
+				"text": "Which of the following is dependent on temperature?"
+			},
+			{
+				"id": 968302055249,
+				"answer": 528950240495,
+				"options": [
+					{ "id": 872636102495, "text": "T < 425K" },
+					{ "id": 528950240495, "text": "T > 425K" },
+					{ "id": 580714421966, "text": "All temperatures" },
+					{ "id": 788965210109, "text": "T > 298K" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Thermodynamics",
+				"text": "For a given reaction, \\(\\Delta H = 35.3 kJ mol^{-1}\\) and \\(\\Delta S = 83.6 JK^{-1} mol^{-1}\\). The reaction is spontaneous at: (Assume that \\(\\Delta H\\) and \\(\\Delta S\\) do not vary with temperature)"
+			},
+			{
+				"id": 824906650685,
+				"answer": 771046683466,
+				"options": [
+					{ "id": 679398943494, "text": "Sublimation" },
+					{ "id": 182946806545, "text": "Chromatography" },
+					{ "id": 782612049457, "text": "Crystallisation" },
+					{ "id": 771046683466, "text": "Steam distillation" }
+				],
+				"subject": "Chemistry",
+				"chapter": "General Organic Chemistry",
+				"text": "The most suitable method of separation of 1:1 mixture of ortho and para-nitrophenols is"
+			},
+			{
+				"id": 765648059976,
+				"answer": 230849944812,
+				"options": [
+					{ "id": 491298045059, "text": "\\(CO, NO\\)" },
+					{ "id": 703748194915, "text": "\\(O_2, NO^+\\)" },
+					{ "id": 230849944812, "text": "\\(CN^-, CO\\)" },
+					{ "id": 105364048815, "text": "\\(N_2, O_2^-\\)" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Chemical Bonding and Molecular Structure",
+				"text": "Which one of the following pairs of species have the same bond order?"
+			},
+			{
+				"id": 503979395244,
+				"answer": 943656586689,
+				"options": [
+					{ "id": 943656586689, "image": "https://i.ibb.co/DM4rqhs/option1.jpg" },
+					{ "id": 623022043415, "image": "https://i.ibb.co/pRkvxzC/option2.jpg" },
+					{ "id": 117989092282, "image": "https://i.ibb.co/DCqmctN/option3.jpg" },
+					{ "id": 691483760303, "image": "https://i.ibb.co/mqtB9XW/option4.jpg" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Haloalkanes and Haloarenes",
+				"text": "Identify A and type of reaction",
+				"image": "https://i.ibb.co/sRV7D5C/Screenshot-2022-04-11-20-33-23-379-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 932443900768,
+				"answer": 983218177717,
+				"options": [
+					{ "id": 528531674990, "text": "238.6 s" },
+					{ "id": 983218177717, "text": "138.6 s" },
+					{ "id": 320317263908, "text": "346.5 s" },
+					{ "id": 402465691437, "text": "693.0 s" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Chemical Kinetics",
+				"text": "A first order reaction has a specific reaction rate of \\(10^{-2} s^{-1}\\). How much time will it take for 20 g of the reactant to reduce to 5 g?"
+			},
+			{
+				"id": 804075756661,
+				"answer": 256599162213,
+				"options": [
+					{ "id": 310787994175, "text": "\\(CO_2\\)" },
+					{ "id": 256599162213, "text": "\\(SO_2\\)" },
+					{ "id": 676098553539, "text": "\\(NO_2\\)" },
+					{ "id": 867633771776, "text": "\\(P_2O_5\\)" }
+				],
+				"subject": "Chemistry",
+				"chapter": "d-Block",
+				"text": "Name the gas that readily decolourises acidified \\(KMnO_4\\) solution:"
+			},
+			{
+				"id": 496592199414,
+				"answer": 679165880241,
+				"options": [
+					{ "id": 646713648296, "text": "Ethyl chlorides" },
+					{ "id": 536046632275, "text": "Iodobenzene" },
+					{ "id": 679165880241, "text": "Phenol" },
+					{ "id": 899882281815, "text": "Benzene" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Alcohols, Phenols and Ethers",
+				"text": "The heating of phenyl-methyl ethers with \\(HI\\) produces:"
+			},
+			{
+				"id": 660377155778,
+				"answer": 611546291549,
+				"options": [
+					{ "id": 832292227215, "text": "It is \\(sp^3d^2\\) hybridised and octahedral" },
+					{ "id": 332594608890, "text": "It is \\(sp^3d^2\\) hybridised and tetrahedral" },
+					{ "id": 611546291549, "text": "It is \\(d^2sp^3\\) hybridised and octahedral" },
+					{ "id": 685440553661, "text": "It is \\(dsp^2\\) hybridised and square planar" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Coordination Compounds",
+				"text": "Pick out the correct statement with respect \\([Mn(CN)_6]^{3-}\\):"
+			},
+			{
+				"id": 674593764491,
+				"answer": 137849718779,
+				"options": [
+					{ "id": 794712303589, "text": "Na" },
+					{ "id": 436425294717, "text": "K" },
+					{ "id": 689497746981, "text": "Rb" },
+					{ "id": 137849718779, "text": "Li" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Electrochemistry",
+				"text": "Ionic mobility of which of the following alkali metal ions is lowest when aqueous solution of their salts are put under an electric field?"
+			},
+			{
+				"id": 930500759947,
+				"answer": 828363422162,
+				"options": [
+					{ "id": 355376755158, "text": "\\(\\frac{K_1K_3^3}{K_2}\\)" },
+					{ "id": 828363422162, "text": "\\(\\frac{K_2K_3^3}{K_1}\\)" },
+					{ "id": 924744663657, "text": "\\(\\frac{K_2K_3}{K_1}\\)" },
+					{ "id": 238662053315, "text": "\\(\\frac{K_2^3K_3}{K_1}\\)" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Equilibrium",
+				"text": "Find K in terms of \\(K_1, K_2, K_3\\):",
+				"image": "https://i.ibb.co/VDNxGLv/Screenshot-2022-04-11-20-47-49-731-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 213190979881,
+				"answer": 946373217968,
+				"options": [
+					{ "id": 927660325120, "text": "Carbylamine reaction" },
+					{ "id": 946373217968, "text": "Hoffmann hypobromamide reaction" },
+					{ "id": 167451874208, "text": "Stephens reaction" },
+					{ "id": 399407344151, "text": "Gabriels phthalimide synthesis" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Amines",
+				"text": "Which of the following reactions is appropriate for converting acetamide to methanamine?"
+			},
+			{
+				"id": 377259393783,
+				"answer": 786803447627,
+				"options": [
+					{ "id": 492613720165, "text": "1" },
+					{ "id": 604124805740, "text": "2" },
+					{ "id": 406478720486, "text": "0" },
+					{ "id": 786803447627, "text": "1.5" }
+				],
+				"subject": "Chemistry",
+				"chapter": "Chemical Kinetics",
+				"text": "Mechanism of a hypothetical reaction \\(X_2 + Y_2 \\rightarrow 2XY\\) is given in the figure. The overall order of the reaction will be",
+				"image": "https://i.ibb.co/ct35C1H/Screenshot-2022-04-11-20-53-47-306-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 648569009398,
+				"answer": 811483544441,
+				"options": [
+					{ "id": 811483544441, "text": "3-keto-2-methylhex-4-enal" },
+					{ "id": 107745310431, "text": "5-formylhex-2-en-3-one" },
+					{ "id": 405784876084, "text": "5-methyl-4-oxohex-2-en-5-al" },
+					{ "id": 139861099264, "text": "3-keto-2-methylhex-5-enal" }
+				],
+				"subject": "Chemistry",
+				"chapter": "General Organic Chemistry",
+				"text": "The IUPAC name of the compound",
+				"image": "https://i.ibb.co/6J3LkBH/Screenshot-2022-04-11-20-56-13-314-letest-ncertbooks.jpg"
+			},
+			{
+				"id": 400799313485,
+				"answer": 747296074873,
+				"options": [
+					{ "id": 529290334480, "text": "Liquation" },
+					{ "id": 242955926274, "text": "Distillation" },
+					{ "id": 224801945697, "text": "Zone refining" },
+					{ "id": 747296074873, "text": "Displacement with Zn" }
+				],
+				"subject": "Chemistry",
+				"chapter": "General Principles and Processes of Isolation of Elements",
+				"text": "Extraction of gold and silver involves leaching with \\(CN^-\\) ion. Silver is later recovered by"
 			}
 		]
 	}
