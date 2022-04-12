@@ -38,8 +38,8 @@
 
 <div class="container">
 	<div class="toolbar">
-		<Button inverted on:click={addPaper}><IconAdd /> Add</Button>
-		<Button inverted on:click={_import}><IconImport /> Import</Button>
+		<Button inverted on:click={addPaper}><IconAdd /> Add Paper</Button>
+		<Button inverted on:click={_import}><IconImport /> Import Paper</Button>
 	</div>
 	<main>
 		<ul class="paper-grid">

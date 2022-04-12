@@ -6,6 +6,7 @@
 	import IconBack from '~icons/mdi/arrow-back';
 	import IconCog from '~icons/mdi/cog';
 	import IconGithub from '~icons/mdi/github';
+	import IconResult from '~icons/mdi/file-document';
 
 	function goBack() {
 		goto('/');
@@ -22,11 +23,11 @@
 		<h1 class="brand">JustLearn</h1>
 	</header>
 	<footer>
-		<a href="/results"> Results </a>
-		<a href="/admin">
-			<IconCog /> Admin
+		<a title="admin" href="/admin">
+			<IconCog />
 		</a>
-		<a href="https://github.com/vanillacode314/justlearn">
+		<a title="results" href="/results"> <IconResult /> </a>
+		<a title="github" href="https://github.com/vanillacode314/justlearn" rel="external">
 			<IconGithub />
 		</a>
 	</footer>

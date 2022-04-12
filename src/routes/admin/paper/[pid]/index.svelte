@@ -38,10 +38,10 @@
 
 <div class="container">
 	<div class="toolbar">
-		<Button inverted on:click={addQuestion}><IconAdd /> Add</Button>
-		<Button inverted on:click={renamePaper}><IconPencil /> Rename</Button>
-		<Button inverted on:click={deletePaper}><IconTrash /> Delete</Button>
-		<Button inverted on:click={_export}><IconExport /> Export</Button>
+		<Button inverted on:click={addQuestion}><IconAdd /> Add Question</Button>
+		<Button inverted on:click={renamePaper}><IconPencil /> Rename Paper</Button>
+		<Button inverted on:click={deletePaper}><IconTrash /> Delete Paper</Button>
+		<Button inverted on:click={_export}><IconExport /> Export Paper</Button>
 	</div>
 	<main>
 		{#if paper}
