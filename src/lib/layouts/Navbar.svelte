@@ -5,6 +5,7 @@
 
 	import IconBack from '~icons/mdi/arrow-back';
 	import IconCog from '~icons/mdi/cog';
+	import IconGithub from '~icons/mdi/github';
 
 	function goBack() {
 		goto('/');
@@ -24,6 +25,9 @@
 		<a href="/results"> Results </a>
 		<a href="/admin">
 			<IconCog /> Admin
+		</a>
+		<a href="https://github.com/vanillacode314/justlearn">
+			<IconGithub />
 		</a>
 	</footer>
 </nav>
