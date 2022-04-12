@@ -199,7 +199,6 @@
 
 <style lang="scss">
 	form {
-		min-width: 400px;
 		max-width: 95%;
 		background-color: var(--background);
 		header {
@@ -239,6 +238,10 @@
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			width: 100%;
+		}
+		select {
+			width: 100%;
+			text-overflow: ellipsis;
 		}
 		input[type='text'] {
 			padding: 0.3rem;

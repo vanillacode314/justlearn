@@ -42,7 +42,6 @@
 
 <style lang="scss">
 	form {
-		min-width: 400px;
 		max-width: 95%;
 		background-color: var(--background);
 		header {

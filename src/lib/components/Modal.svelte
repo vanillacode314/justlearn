@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
-	import { fade } from 'svelte/transition';
+	import { fade, scale } from 'svelte/transition';
 
 	const dispatch = createEventDispatcher();
 
@@ -12,23 +12,29 @@
 </script>
 
 {#if open}
-	<div
+	<div class="backdrop" transition:fade={{ duration: 150 }} />
+	<main
 		on:click|self={() => closeOnOutsideClick && (open = false)}
-		transition:fade={{ duration: 150 }}
-		class="modal"
+		transition:scale={{ duration: 400 }}
 	>
 		<slot />
-	</div>
+	</main>
 {/if}
 
 <style lang="scss">
-	.modal {
+	.backdrop {
+		position: fixed;
+		inset: -10rem;
+		z-index: 10;
+		opacity: 0.8;
+		background-color: black;
+	}
+	main {
 		position: fixed;
 		left: 0;
 		top: 0;
 		bottom: 0;
 		right: 0;
-		backdrop-filter: brightness(50%) blur(2px);
 		z-index: 10000;
 		display: grid;
 		place-items: center;
