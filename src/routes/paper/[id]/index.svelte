@@ -1,4 +1,9 @@
 <script lang="ts">
+	import DurationUnitFormat from 'intl-unofficial-duration-unit-format';
+	const duration = new DurationUnitFormat(undefined, {
+		style: DurationUnitFormat.styles.TIMER,
+		format: '{hour}:{minutes}:{seconds}'
+	});
 	/// COMPONENTS
 	import Button from '$lib/components/Button.svelte';
 	import Question from '$lib/layouts/Question.svelte';
@@ -13,9 +18,11 @@
 	import { page } from '$app/stores';
 	import { results, subjects } from '$lib/stores/user';
 	import { allPapers } from '$lib/stores/app';
-	import { writable } from 'svelte/store';
+	import timer from '$lib/stores/timer';
+	import StartPaperModal from '$lib/modals/StartPaperModal.svelte';
 
 	const id = $page.params.id;
+	const countdown = timer({ interval: 100 });
 
 	let result: TestResult,
 		paper: Paper,
@@ -24,6 +31,9 @@
 	let currentQuestion: number = 0;
 	let start_time: number = Date.now();
 	let accordionItems: AccordionItem[] = [];
+	$: if (($countdown.getTime() - start_time) / 1000 >= result?.total_time_available * 60) {
+		submit();
+	}
 
 	$: {
 		for (const item of accordionItems) {
@@ -96,8 +106,11 @@
 	}
 
 	function submit() {
-		const c = confirm("Are you sure you'd like to submit the paper before the time is up?");
-		if (c) {
+		let c = false;
+		if (!(($countdown.getTime() - start_time) / 1000 >= result?.total_time_available * 60)) {
+			c = confirm("Are you sure you'd like to submit the paper before the time is up?");
+		}
+		if (c || ($countdown.getTime() - start_time) / 1000 >= result?.total_time_available * 60) {
 			let end_time: number = Date.now();
 			result.done = true;
 			result.seconds_taken = (end_time - start_time) / 1000;
@@ -143,7 +156,11 @@
 				success={!marks[currentQuestion]}>{marks[currentQuestion] ? 'Unmark' : 'Mark'}</Button
 			>
 			<span class="spacer" />
-			<Button type="button" on:click={submit} inverted>Submit</Button>
+			<Button type="button" on:click={submit} inverted
+				>Submit ({duration.format(
+					result?.total_time_available * 60 - ($countdown.getTime() - start_time) / 1000
+				)})</Button
+			>
 		</div>
 	</footer>
 </div>

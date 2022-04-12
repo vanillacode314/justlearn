@@ -6,6 +6,8 @@ specifiers:
   '@sveltejs/adapter-netlify': ^1.0.0-next.51
   '@sveltejs/kit': next
   dotenv: ^16.0.0
+  intl-messageformat: ^9.12.0
+  intl-unofficial-duration-unit-format: ^3.1.0
   normalize.css: ^8.0.1
   prettier: ^2.5.1
   prettier-plugin-svelte: ^2.5.0
@@ -21,6 +23,8 @@ specifiers:
 
 dependencies:
   dotenv: 16.0.0
+  intl-messageformat: 9.12.0
+  intl-unofficial-duration-unit-format: 3.1.0_intl-messageformat@9.12.0
   normalize.css: 8.0.1
   svelte-frappe-charts: 1.9.1
   svelte-local-storage-store: 0.2.6_svelte@3.46.6
@@ -29,7 +33,7 @@ devDependencies:
   '@iconify/json': 2.1.23
   '@sveltejs/adapter-auto': 1.0.0-next.34
   '@sveltejs/adapter-netlify': 1.0.0-next.51
-  '@sveltejs/kit': 1.0.0-next.304_sass@1.49.10+svelte@3.46.6
+  '@sveltejs/kit': 1.0.0-next.311_sass@1.49.10+svelte@3.46.6
   prettier: 2.6.1
   prettier-plugin-svelte: 2.6.0_prettier@2.6.1+svelte@3.46.6
   sass: 1.49.10
@@ -52,6 +56,40 @@ packages:
   /@antfu/utils/0.5.0:
     resolution: {integrity: sha512-MrAQ/MrPSxbh1bBrmwJjORfJymw4IqSHFBXqvxaga3ZdDM+/zokYF8DjyJpSjY2QmpmgQrajDUBJOWrYeARfzA==}
     dev: true
+
+  /@formatjs/ecma402-abstract/1.11.4:
+    resolution: {integrity: sha512-EBikYFp2JCdIfGEb5G9dyCkTGDmC57KSHhRQOC3aYxoPWVZvfWCDjZwkGYHN7Lis/fmuWl906bnNTJifDQ3sXw==}
+    dependencies:
+      '@formatjs/intl-localematcher': 0.2.25
+      tslib: 2.3.1
+    dev: false
+
+  /@formatjs/fast-memoize/1.2.1:
+    resolution: {integrity: sha512-Rg0e76nomkz3vF9IPlKeV+Qynok0r7YZjL6syLz4/urSg0IbjPZCB/iYUMNsYA643gh4mgrX3T7KEIFIxJBQeg==}
+    dependencies:
+      tslib: 2.3.1
+    dev: false
+
+  /@formatjs/icu-messageformat-parser/2.0.19:
+    resolution: {integrity: sha512-8HsLm9YLyVVIDMyBJb7wmve2wGd461cUwJ470eUog5YH5ZsF4p5lgvaJ+oGKxz1mrSMNNdDHU9v/NDsS+z+ilg==}
+    dependencies:
+      '@formatjs/ecma402-abstract': 1.11.4
+      '@formatjs/icu-skeleton-parser': 1.3.6
+      tslib: 2.3.1
+    dev: false
+
+  /@formatjs/icu-skeleton-parser/1.3.6:
+    resolution: {integrity: sha512-I96mOxvml/YLrwU2Txnd4klA7V8fRhb6JG/4hm3VMNmeJo1F03IpV2L3wWt7EweqNLES59SZ4d6hVOPCSf80Bg==}
+    dependencies:
+      '@formatjs/ecma402-abstract': 1.11.4
+      tslib: 2.3.1
+    dev: false
+
+  /@formatjs/intl-localematcher/0.2.25:
+    resolution: {integrity: sha512-YmLcX70BxoSopLFdLr1Ds99NdlTI2oWoLbaUW2M406lxOIPzE1KQhRz2fPUkq34xVZQaihCoU29h0KK7An3bhA==}
+    dependencies:
+      tslib: 2.3.1
+    dev: false
 
   /@iarna/toml/2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
@@ -139,8 +177,8 @@ packages:
       esbuild: 0.14.29
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.304_sass@1.49.10+svelte@3.46.6:
-    resolution: {integrity: sha512-3+bCoDsF2Omolx51lK6+4Zgr8NYge8USxKpZpAg8OfonEW8L4GToyV4g+udLMCI3CC4QEw3eS1RFUj9UxLf2NQ==}
+  /@sveltejs/kit/1.0.0-next.311_sass@1.49.10+svelte@3.46.6:
+    resolution: {integrity: sha512-OkRIi0XBXcs16J+H+6fgOeFYxKu05gamY08KHAQ5cohjymUODGWIwaIfwAuNkZAcEEr8Vh2ejp4UcaxNzD53lQ==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -636,6 +674,24 @@ packages:
   /inherits/2.0.4:
     resolution: {integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==}
     dev: true
+
+  /intl-messageformat/9.12.0:
+    resolution: {integrity: sha512-5Q9j21JreB1G27/CqMYsA+pvJ19JjHyhiTSeUuvZK9BCDJGHtOLgpUUcGM+GLHiUuoVMKVeeX1smamiVHQrSKQ==}
+    dependencies:
+      '@formatjs/ecma402-abstract': 1.11.4
+      '@formatjs/fast-memoize': 1.2.1
+      '@formatjs/icu-messageformat-parser': 2.0.19
+      tslib: 2.3.1
+    dev: false
+
+  /intl-unofficial-duration-unit-format/3.1.0_intl-messageformat@9.12.0:
+    resolution: {integrity: sha512-yjvUDwV63zSGkbeUqpDRJmOgMQoJA8OFhNeo+1KY20q+lFCtcvRWszJNsq/ssrUJRy8g+Mt3BYNfwFvRRSAkow==}
+    engines: {node: '>=10.0'}
+    peerDependencies:
+      intl-messageformat: '>= 5.1'
+    dependencies:
+      intl-messageformat: 9.12.0
+    dev: false
 
   /is-binary-path/2.1.0:
     resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
@@ -1146,7 +1202,6 @@ packages:
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
-    dev: true
 
   /typescript/4.6.3:
     resolution: {integrity: sha512-yNIatDa5iaofVozS/uQJEl3JRWLKKGJKh6Yaiv0GLGSuhpFJe7P3SbHZ8/yjAHRQwKRoA6YZqlfjXWmVzoVSMw==}
