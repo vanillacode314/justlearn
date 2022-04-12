@@ -71,6 +71,10 @@
 </section>
 
 <style lang="scss">
+	img {
+		width: 100%;
+		max-width: 500px;
+	}
 	button {
 		width: 100%;
 		cursor: pointer;
