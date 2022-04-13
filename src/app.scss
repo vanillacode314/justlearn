@@ -1,6 +1,8 @@
 :root {
 	--background: white;
 	--foreground: black;
+	--sidebar-button-background: black;
+	--sidebar-button-foreground: white;
 }
 
 * {
@@ -15,5 +17,5 @@ html {
 	height: 100%;
 	background-color: var(--background);
 	color: var(--foreground);
-	font-family: 'Roboto Mono', monospace;
+	font-family: 'Barlow', sans-serif;
 }

@@ -4,24 +4,21 @@
 	import Button from '$lib/components/Button.svelte';
 
 	/// UTILS
-	import { activePaper, deletePaperModalOpen } from '$lib/stores/app';
+	import { activePaper, deletePaperModal } from '$lib/stores/app';
 	import { papers } from '$lib/stores/user';
 	import { goto } from '$app/navigation';
 
 	/// STATE
 
 	/// METHODS
-	function close() {
-		$deletePaperModalOpen = false;
-	}
 	async function _delete() {
 		await goto('/admin');
 		$papers = $papers.filter((p) => p.id !== $activePaper.id);
-		close();
+		deletePaperModal.close();
 	}
 </script>
 
-<Modal bind:open={$deletePaperModalOpen}>
+<Modal bind:open={$deletePaperModal}>
 	<form on:submit|preventDefault>
 		<header>
 			<h3>Delete Paper</h3>
@@ -31,7 +28,7 @@
 		</p>
 		<div class="actions">
 			<Button on:click={_delete} inverted>DELETE</Button>
-			<Button on:click={close}>Cancel</Button>
+			<Button on:click={deletePaperModal.close}>Cancel</Button>
 		</div>
 	</form>
 </Modal>

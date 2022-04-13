@@ -1,3 +1,23 @@
+<script lang="ts" context="module">
+	import { writable } from 'svelte/store';
+	import { quadInOut } from 'svelte/easing';
+
+	export function modalStore() {
+		const { subscribe, set, update } = writable<boolean>(false);
+		const open = () => set(true);
+		const close = () => set(false);
+		const toggle = () => update((t) => !t);
+		return {
+			subscribe,
+			set,
+			update,
+			open,
+			close,
+			toggle
+		};
+	}
+</script>
+
 <script lang="ts">
 	import { createEventDispatcher } from 'svelte';
 	import { fade, scale } from 'svelte/transition';
@@ -12,10 +32,10 @@
 </script>
 
 {#if open}
-	<div class="backdrop" transition:fade={{ duration: 150 }} />
+	<div class="backdrop" transition:fade={{ duration: 200 }} />
 	<main
 		on:click|self={() => closeOnOutsideClick && (open = false)}
-		transition:scale={{ duration: 400 }}
+		transition:scale={{ duration: 250, easing: quadInOut }}
 	>
 		<slot />
 	</main>

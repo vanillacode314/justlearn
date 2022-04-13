@@ -29,11 +29,13 @@
   },
   "type": "module",
   "dependencies": {
+    "@sveltejs/svelte-virtual-list": "^3.0.1",
     "dotenv": "^16.0.0",
     "intl-messageformat": "^9.12.0",
     "intl-unofficial-duration-unit-format": "^3.1.0",
     "normalize.css": "^8.0.1",
     "svelte-frappe-charts": "^1.9.1",
-    "svelte-local-storage-store": "^0.2.6"
+    "svelte-local-storage-store": "^0.2.6",
+    "svelte-tiny-virtual-list": "^2.0.3"
   }
 }

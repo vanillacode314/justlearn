@@ -9,7 +9,7 @@
 	import { goto } from '$app/navigation';
 
 	/// STATE
-	import { activePaper, startPaperModalOpen } from '$lib/stores/app';
+	import { activePaper, startPaperModal } from '$lib/stores/app';
 	import { results } from '$lib/stores/user';
 	let qInput: HTMLInputElement;
 	let time: number = 180;
@@ -22,10 +22,6 @@
 		time = 180;
 		cmarks = 4;
 		imarks = -1;
-	}
-
-	function close() {
-		$startPaperModalOpen = false;
 	}
 
 	async function startPaper() {
@@ -45,11 +41,11 @@
 		$results.push(result);
 		$results = $results;
 		goto('/paper/' + result.id);
-		close();
+		startPaperModal.close();
 	}
 </script>
 
-<Modal bind:open={$startPaperModalOpen} on:open={onOpen}>
+<Modal bind:open={$startPaperModal} on:open={onOpen}>
 	<form on:submit|preventDefault={startPaper}>
 		<header>
 			<h3>Configure Paper</h3>
@@ -72,7 +68,7 @@
 		</div>
 		<div class="actions">
 			<Button type="submit" inverted>Start</Button>
-			<Button type="button" on:click={close}>Cancel</Button>
+			<Button type="button" on:click={startPaperModal.close}>Cancel</Button>
 		</div>
 	</form>
 </Modal>

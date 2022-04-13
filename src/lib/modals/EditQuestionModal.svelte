@@ -6,7 +6,7 @@
 
 	/// UTILS
 	import { genRandomNumber } from '$lib/utils';
-	import { activePaper, activeQuestion, editQuestionModalOpen } from '$lib/stores/app';
+	import { activePaper, activeQuestion, editQuestionModal } from '$lib/stores/app';
 	import { papers, subjects } from '$lib/stores/user';
 	import { tick } from 'svelte';
 
@@ -66,11 +66,8 @@
 				break;
 		}
 		await tick();
+		//@ts-ignore
 		MathLive.renderMathInDocument();
-	}
-
-	function close() {
-		$editQuestionModalOpen = false;
 	}
 
 	async function updateQuestion() {
@@ -114,11 +111,11 @@
 		const p = $papers.findIndex((p) => p.id === $activePaper.id);
 		$papers[p] = $activePaper;
 		$papers = $papers;
-		close();
+		editQuestionModal.close();
 	}
 </script>
 
-<Modal bind:open={$editQuestionModalOpen} on:open={onOpen}>
+<Modal bind:open={$editQuestionModal} on:open={onOpen}>
 	<form on:submit|preventDefault={updateQuestion}>
 		<header>
 			<h3>Edit Question</h3>
@@ -143,7 +140,6 @@
 						</option>
 					{/each}
 				</select>
-				<!-- <input type="text" bind:value={subject} placeholder="Subject..." /> -->
 			</label>
 			{#if subject}
 				<label
@@ -155,7 +151,6 @@
 							</option>
 						{/each}
 					</select>
-					<!-- <input type="text" bind:value={subject} placeholder="Subject..." /> -->
 				</label>
 			{/if}
 			<label
@@ -192,7 +187,7 @@
 		</div>
 		<div class="actions">
 			<Button type="submit" inverted>OK</Button>
-			<Button type="button" on:click={close}>Cancel</Button>
+			<Button type="button" on:click={editQuestionModal.close}>Cancel</Button>
 		</div>
 	</form>
 </Modal>

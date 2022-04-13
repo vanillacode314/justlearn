@@ -1,6 +1,7 @@
 <script lang="ts">
 	/// COMPONENTS
 	import Navbar from '$lib/layouts/Navbar.svelte';
+	import Sidebar from '$lib/layouts/Sidebar.svelte';
 	import AddQuestionModal from '$lib/modals/AddQuestionModal.svelte';
 	import DeletePaperModal from '$lib/modals/DeletePaperModal.svelte';
 	import DeleteQuestionModal from '$lib/modals/DeleteQuestionModal.svelte';
@@ -14,7 +15,10 @@
 
 <div class="wrapper">
 	<Navbar />
-	<slot />
+	<Sidebar />
+	<main>
+		<slot />
+	</main>
 </div>
 
 <AddQuestionModal />
@@ -25,9 +29,20 @@
 
 <style lang="scss">
 	.wrapper {
-		overflow: hidden;
 		height: 100%;
 		display: grid;
-		grid-template-rows: auto 1fr;
+		grid-template-rows: auto 1fr auto;
+		grid-template-columns: 200px 1fr;
+		grid-template-areas: 'nav nav' 'sidebar main' 'sidebar main';
+		@media (max-width: 768px) {
+			grid-template-rows: auto 1fr;
+			grid-template-columns: 200px 1fr;
+			grid-template-areas: 'nav nav' 'main main' 'sidebar sidebar';
+		}
+	}
+	main {
+		grid-area: main;
+		height: 100%;
+		overflow-y: auto;
 	}
 </style>

@@ -37,10 +37,10 @@
 
 	$: {
 		for (const item of accordionItems) {
-			const offset = item.props.offset;
-			const questions = item.props.questions;
-			item.props.answers = answers.slice(offset, questions.length + offset);
-			item.props.marks = marks.slice(offset, questions.length + offset);
+			const offset = item.data.offset;
+			const questions = item.data.questions;
+			item.data.answers = answers.slice(offset, questions.length + offset);
+			item.data.marks = marks.slice(offset, questions.length + offset);
 		}
 		accordionItems = accordionItems;
 	}
@@ -79,8 +79,7 @@
 			const questions = paper.questions.filter((p) => p.subject === s.name);
 			const item = {
 				heading: s.name,
-				component: Questions,
-				props: {
+				data: {
 					questions,
 					offset,
 					answers: answers.slice(offset, offset + questions.length),
@@ -143,7 +142,9 @@
 		{/if}
 	</main>
 	<aside>
-		<Accordion items={accordionItems} on:select={(e) => (currentQuestion = e.detail)} />
+		<Accordion items={accordionItems} let:item>
+			<Questions {...item.data} on:select={(e) => (currentQuestion = e.detail)} />
+		</Accordion>
 	</aside>
 	<footer>
 		<div class="buttons">

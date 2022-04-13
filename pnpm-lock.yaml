@@ -5,6 +5,7 @@ specifiers:
   '@sveltejs/adapter-auto': next
   '@sveltejs/adapter-netlify': ^1.0.0-next.51
   '@sveltejs/kit': next
+  '@sveltejs/svelte-virtual-list': ^3.0.1
   dotenv: ^16.0.0
   intl-messageformat: ^9.12.0
   intl-unofficial-duration-unit-format: ^3.1.0
@@ -17,17 +18,20 @@ specifiers:
   svelte-frappe-charts: ^1.9.1
   svelte-local-storage-store: ^0.2.6
   svelte-preprocess: ^4.10.1
+  svelte-tiny-virtual-list: ^2.0.3
   tslib: ^2.3.1
   typescript: ~4.6.2
   unplugin-icons: ^0.14.1
 
 dependencies:
+  '@sveltejs/svelte-virtual-list': 3.0.1
   dotenv: 16.0.0
   intl-messageformat: 9.12.0
   intl-unofficial-duration-unit-format: 3.1.0_intl-messageformat@9.12.0
   normalize.css: 8.0.1
   svelte-frappe-charts: 1.9.1
   svelte-local-storage-store: 0.2.6_svelte@3.46.6
+  svelte-tiny-virtual-list: 2.0.3
 
 devDependencies:
   '@iconify/json': 2.1.23
@@ -195,6 +199,10 @@ packages:
       - stylus
       - supports-color
     dev: true
+
+  /@sveltejs/svelte-virtual-list/3.0.1:
+    resolution: {integrity: sha512-aF9TptS7NKKS7/TqpsxQBSDJ9Q0XBYzBehCeIC5DzdMEgrJZpIYao9LRLnyyo6SVodpapm2B7FE/Lj+FSA5/SQ==}
+    dev: false
 
   /@sveltejs/vite-plugin-svelte/1.0.0-next.40_svelte@3.46.6+vite@2.9.1:
     resolution: {integrity: sha512-DtXF01fYGEJkbC7GntU/7jaq9M1SwyyNCkbDA+cfQSXRpm3H7zbu0M80wSQBSpntdd+hgSdxKCxv4GgX6/zI6w==}
@@ -1181,6 +1189,10 @@ packages:
       svelte: 3.46.6
       typescript: 4.6.3
     dev: true
+
+  /svelte-tiny-virtual-list/2.0.3:
+    resolution: {integrity: sha512-f2V8xlB+5bnsQ2w02MqQvD/vTUrVr1QLacbDU8DNVNby/YMKX8b8IOft//eJId9Wv3ATaiIpnFpRD5ojt9MYtw==}
+    dev: false
 
   /svelte/3.46.6:
     resolution: {integrity: sha512-o9nNft/OzCz/9kJpmWa1S52GAM+huCjPIsNWydYmgei74ZWlOA9/hN9+Z12INdklghu31seEXZMRHhS1+8DETw==}

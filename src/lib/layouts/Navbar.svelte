@@ -14,23 +14,16 @@
 </script>
 
 <nav>
-	<header>
-		{#if $page.url.pathname !== '/'}
-			<span on:click={goBack}>
-				<IconBack class="back-arrow" />
-			</span>
-		{/if}
-		<h1 class="brand">JustLearn</h1>
-	</header>
-	<footer>
-		<a title="admin" href="/admin">
-			<IconCog />
-		</a>
-		<a title="results" href="/results"> <IconResult /> </a>
-		<a title="github" href="https://github.com/vanillacode314/justlearn" rel="external">
-			<IconGithub />
-		</a>
-	</footer>
+	{#if $page.url.pathname !== '/'}
+		<span on:click={goBack}>
+			<IconBack class="back-arrow" />
+		</span>
+	{/if}
+	<h1 class="brand">JustLearn</h1>
+	<span class="spacer" />
+	<a title="github" href="https://github.com/vanillacode314/justlearn" rel="external">
+		<IconGithub style="font-size: 1.2em" />
+	</a>
 </nav>
 
 <style lang="scss">
@@ -50,18 +43,14 @@
 		gap: 0.3rem;
 	}
 	nav {
+		border-bottom: 0.1rem var(--background) solid;
+		grid-area: nav;
 		display: flex;
 		gap: 1rem;
-		justify-content: space-between;
 		align-items: center;
-		padding: 0.5rem 1rem;
+		padding: 1rem;
 		background: var(--foreground);
 		color: var(--background);
-		header {
-			display: flex;
-			gap: 1rem;
-			align-items: center;
-		}
 		h1 {
 			font-size: x-large;
 			text-transform: uppercase;
@@ -69,9 +58,8 @@
 			margin: 0;
 			padding: 0;
 		}
-		footer {
-			display: flex;
-			gap: 1rem;
+		.spacer {
+			flex-grow: 1;
 		}
 	}
 </style>

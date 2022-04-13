@@ -6,7 +6,7 @@
 
 	/// UTILS
 	import { genRandomNumber } from '$lib/utils';
-	import { activePaper, addQuestionModalOpen } from '$lib/stores/app';
+	import { activePaper, addQuestionModal } from '$lib/stores/app';
 	import { papers, subjects } from '$lib/stores/user';
 	import { tick } from 'svelte';
 
@@ -71,10 +71,6 @@
 		MathLive.renderMathInDocument();
 	}
 
-	function close() {
-		$addQuestionModalOpen = false;
-	}
-
 	async function addQuestion() {
 		if (options.length < 2) {
 			alert('Please add atleast two options to choose from.');
@@ -107,11 +103,11 @@
 		}
 		$activePaper.questions.push(question);
 		$papers = $papers;
-		close();
+		addQuestionModal.close();
 	}
 </script>
 
-<Modal bind:open={$addQuestionModalOpen} on:open={onOpen}>
+<Modal bind:open={$addQuestionModal} on:open={onOpen}>
 	<form on:submit|preventDefault={addQuestion}>
 		<header>
 			<h3>Add Question</h3>
@@ -181,7 +177,7 @@
 		</div>
 		<div class="actions">
 			<Button type="submit" inverted>OK</Button>
-			<Button type="button" on:click={close}>Cancel</Button>
+			<Button type="button" on:click={addQuestionModal.close}>Cancel</Button>
 		</div>
 	</form>
 </Modal>

@@ -1,28 +1,12 @@
 <script lang="ts">
-	/// COMPONENTS
-	import IconAdd from '~icons/mdi/add';
-
 	/// STATE
 	import { papers } from '$lib/stores/user';
-	import { genRandomNumber } from '$lib/utils';
 	import Button from '$lib/components/Button.svelte';
-	import { activePaper, sharedPapers, startPaperModalOpen } from '$lib/stores/app';
-
-	function addPaper() {
-		const name = prompt('Enter a name for the paper.');
-		if (!name) return;
-		const paper: Paper = {
-			id: genRandomNumber(12),
-			name,
-			questions: []
-		};
-		$papers.push(paper);
-		$papers = $papers;
-	}
+	import { activePaper, sharedPapers, startPaperModal } from '$lib/stores/app';
 
 	function startPaper(paper: Paper) {
 		$activePaper = paper;
-		$startPaperModalOpen = true;
+		startPaperModal.open();
 	}
 </script>
 
@@ -37,6 +21,9 @@
 					</Button>
 				</li>
 			{/each}
+			{#if $papers.length < 1}
+				<p>No local papers found. You can create one from the admin panel</p>
+			{/if}
 		</ul>
 	</section>
 	<section>
@@ -55,21 +42,28 @@
 
 <style lang="scss">
 	main {
+		grid-area: main;
 		height: 100%;
-		padding: 1rem;
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
-		h3 {
-			margin-bottom: 0.3rem;
-		}
 		ul.paper-grid {
+			padding: 1rem;
 			list-style-type: none;
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 			gap: 1rem;
 			li {
 				display: contents;
+			}
+		}
+		section {
+			h3 {
+				--bg-color: black;
+				--fg-color: white;
+				padding: 0.5rem;
+				font-size: small;
+				background-color: var(--bg-color);
+				color: var(--fg-color);
 			}
 		}
 	}

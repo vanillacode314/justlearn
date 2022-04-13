@@ -11,8 +11,8 @@
 	import {
 		activePaper,
 		activeQuestion,
-		deleteQuestionModalOpen,
-		editQuestionModalOpen
+		deleteQuestionModal,
+		editQuestionModal
 	} from '$lib/stores/app';
 	$: pid = $page.params.pid;
 	$: paper = $papers.find((p) => p.id === Number(pid));
@@ -20,21 +20,12 @@
 	$: id = $page.params.qid;
 	$: question = paper?.questions.find((q) => q.id === Number(id));
 	$: $activeQuestion = question;
-
-	/// METHODS
-	function editQuestion() {
-		$editQuestionModalOpen = true;
-	}
-
-	function deleteQuestion() {
-		$deleteQuestionModalOpen = true;
-	}
 </script>
 
 <div class="container">
 	<div class="toolbar">
-		<Button inverted on:click={editQuestion}><IconPencil /> Edit</Button>
-		<Button inverted on:click={deleteQuestion}><IconTrash /> Delete</Button>
+		<Button inverted on:click={editQuestionModal.open}><IconPencil /> Edit</Button>
+		<Button inverted on:click={deleteQuestionModal.open}><IconTrash /> Delete</Button>
 	</div>
 	<main>
 		{#if paper}

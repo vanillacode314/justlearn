@@ -1,20 +1,18 @@
 <script lang="ts" context="module">
-	import { slide } from 'svelte/transition';
-
 	export interface AccordionItem {
 		heading: string;
-		component: any;
-		props: any;
+		data: any;
 	}
 </script>
 
 <script lang="ts">
+	import { slide } from 'svelte/transition';
 	/// COMPONENTS
 	import IconDown from '~icons/mdi/chevron-down';
 
 	/// STATE
 	export let items: AccordionItem[];
-	export let key: Function = (t) => t;
+	export let key: Function = (t: any) => t;
 	let activeIndex: number = 0;
 
 	/// METHODS
@@ -41,8 +39,7 @@
 		</header>
 		{#if active}
 			<main transition:slide>
-				<!-- HACK: static event forwarding -->
-				<svelte:component this={item.component} on:select {...item.props} />
+				<slot {item} {index} />
 			</main>
 		{/if}
 	</div>
