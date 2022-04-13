@@ -54,7 +54,7 @@
 			</div>
 		</main>
 		<footer>
-			<VirtualList items={paper?.questions} let:item={question}>
+			<VirtualList items={paper?.questions} let:item={question} height="800px">
 				{@const { answer, options } = question}
 				{@const index = paper.questions.findIndex((q) => q === question)}
 				{@const isCorrect = result.answers[index] === answer}
