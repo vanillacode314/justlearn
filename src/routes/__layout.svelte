@@ -32,11 +32,11 @@
 		height: 100%;
 		display: grid;
 		grid-template-rows: auto 1fr auto;
-		grid-template-columns: 200px 1fr;
+		grid-template-columns: auto 1fr;
 		grid-template-areas: 'nav nav' 'sidebar main' 'sidebar main';
 		@media (max-width: 768px) {
 			grid-template-rows: auto 1fr;
-			grid-template-columns: 200px 1fr;
+			grid-template-columns: auto 1fr;
 			grid-template-areas: 'nav nav' 'main main' 'sidebar sidebar';
 		}
 	}

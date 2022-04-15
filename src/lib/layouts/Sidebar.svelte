@@ -11,20 +11,22 @@
 	}
 </script>
 
-<nav aria-label="sidebar">
-	<a title="results" href="/results" class:active={$page.url.pathname.startsWith('/results')}>
-		<IconResult style="font-size: 1.2em" />
-		<span> Results </span></a
-	>
-	<a title="admin" href="/admin" class:active={$page.url.pathname.startsWith('/admin')}>
-		<IconCog style="font-size: 1.2em" />
-		<span> Admin </span>
-	</a>
-	<span class="spacer" />
-	<!-- <a title="github" href="https://github.com/vanillacode314/justlearn" rel="external"> -->
-	<!-- 	<IconGithub style="font-size: 1.2em" /> <span> Github </span> -->
-	<!-- </a> -->
-</nav>
+{#if !$page.url.pathname.startsWith('/paper')}
+	<nav aria-label="sidebar">
+		<a title="results" href="/results" class:active={$page.url.pathname.startsWith('/results')}>
+			<IconResult style="font-size: 1.2em" />
+			<span> Results </span></a
+		>
+		<a title="admin" href="/admin" class:active={$page.url.pathname.startsWith('/admin')}>
+			<IconCog style="font-size: 1.2em" />
+			<span> Admin </span>
+		</a>
+		<span class="spacer" />
+		<!-- <a title="github" href="https://github.com/vanillacode314/justlearn" rel="external"> -->
+		<!-- 	<IconGithub style="font-size: 1.2em" /> <span> Github </span> -->
+		<!-- </a> -->
+	</nav>
+{/if}
 
 <style lang="scss">
 	a {
@@ -42,6 +44,7 @@
 		gap: 1rem;
 	}
 	nav {
+		min-width: 200px;
 		grid-area: sidebar;
 		display: flex;
 		flex-direction: column;
