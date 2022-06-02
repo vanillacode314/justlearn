@@ -105,7 +105,7 @@
 		}
 		&:not(:is(.isCorrect, .isSkipped)) {
 			border: none;
-			background-color: rgb(150, 171, 179);
+			background-color: red;
 			color: white;
 			:global(.icon--down) {
 				color: white;
