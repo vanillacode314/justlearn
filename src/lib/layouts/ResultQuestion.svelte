@@ -60,10 +60,10 @@
 			<div class="more--info">
 				<h4>More info:</h4>
 				<span>
-					Chapter: {question.chapter}
+					<strong>Chapter</strong>: {question.chapter}
 				</span>
 				<span>
-					Subject: {question.subject}
+					<strong>Subject</strong>: {question.subject}
 				</span>
 			</div>
 		</div>
@@ -105,7 +105,7 @@
 		}
 		&:not(:is(.isCorrect, .isSkipped)) {
 			border: none;
-			background-color: red;
+			background-color: rgb(150, 171, 179);
 			color: white;
 			:global(.icon--down) {
 				color: white;

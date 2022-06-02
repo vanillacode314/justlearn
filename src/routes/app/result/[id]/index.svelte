@@ -2,7 +2,6 @@
 	/// COMPONENTS
 	import Button from '$lib/components/Button.svelte';
 	import VirtualList from '@sveltejs/svelte-virtual-list';
-	import IconDelete from '~icons/mdi/delete';
 
 	/// STATE
 	import { page } from '$app/stores';
@@ -10,7 +9,6 @@
 	import { results } from '$lib/stores/user';
 	import { afterUpdate, onMount } from 'svelte';
 	import ResultQuestion from '$lib/layouts/ResultQuestion.svelte';
-	import { goto } from '$app/navigation';
 	$: id = $page.params.id;
 	$: result = $results.find((r) => r.id === Number(id));
 	$: paper = result && $allPapers.find((p) => p.id === result.paper);
@@ -28,22 +26,12 @@
 	afterUpdate(() => {
 		MathLive.renderMathInDocument();
 	});
-
-	async function removeResult() {
-		await goto('/results');
-		$results = $results.filter((r) => r.id !== result.id);
-	}
 </script>
 
 <div class="container">
 	{#if result && paper}
 		<header>
 			<h1>{paper.name} (result id: {id})</h1>
-			<span class="spacer" />
-			<Button outlined on:click={removeResult}>
-				<IconDelete />
-				Delete
-			</Button>
 		</header>
 		<main>
 			<div class="cards">
@@ -102,12 +90,6 @@
 	}
 	header {
 		grid-area: header;
-		display: flex;
-		align-items: center;
-		gap: 1rem;
-		.spacer {
-			flex-grow: 1;
-		}
 		h1 {
 			font-size: large;
 			margin: 0;
