@@ -17,19 +17,12 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
-  a: () => activePaper,
-  b: () => addQuestionModalOpen,
-  c: () => activeQuestion,
-  d: () => deletePaperModalOpen,
-  e: () => deleteQuestionModalOpen,
-  f: () => editQuestionModalOpen,
   p: () => page
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_1696507a = require("./index-1696507a.js");
-var import_user_ef559a82 = require("./user-ef559a82.js");
+var import_index_62ca9411 = require("./index-62ca9411.js");
 const getStores = () => {
-  const stores = (0, import_index_1696507a.i)("__svelte__");
+  const stores = (0, import_index_62ca9411.h)("__svelte__");
   return {
     page: {
       subscribe: stores.page.subscribe
@@ -53,9 +46,3 @@ const page = {
     return store.subscribe(fn);
   }
 };
-const activePaper = (0, import_user_ef559a82.w)(null);
-const activeQuestion = (0, import_user_ef559a82.w)(null);
-const addQuestionModalOpen = (0, import_user_ef559a82.w)(false);
-const editQuestionModalOpen = (0, import_user_ef559a82.w)(false);
-const deletePaperModalOpen = (0, import_user_ef559a82.w)(false);
-const deleteQuestionModalOpen = (0, import_user_ef559a82.w)(false);

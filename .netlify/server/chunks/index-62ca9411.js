@@ -20,18 +20,20 @@ __export(stdin_exports, {
   a: () => spread,
   b: () => subscribe,
   c: () => create_ssr_component,
-  d: () => createEventDispatcher,
+  d: () => add_attribute,
   e: () => escape_object,
-  f: () => add_attribute,
-  g: () => each,
-  h: () => escape,
-  i: () => getContext,
+  f: () => each,
+  g: () => escape,
+  h: () => getContext,
+  i: () => createEventDispatcher,
   j: () => compute_rest_props,
   k: () => safe_not_equal,
-  l: () => get_store_value,
+  l: () => is_function,
   m: () => missing_component,
   n: () => noop,
-  o: () => set_store_value,
+  o: () => get_store_value,
+  p: () => set_store_value,
+  r: () => run_all,
   s: () => setContext,
   v: () => validate_component
 });
@@ -46,6 +48,9 @@ function blank_object() {
 }
 function run_all(fns) {
   fns.forEach(run);
+}
+function is_function(thing) {
+  return typeof thing === "function";
 }
 function safe_not_equal(a, b) {
   return a != a ? b == b : a !== b || (a && typeof a === "object" || typeof a === "function");
@@ -74,9 +79,9 @@ function set_store_value(store, ret, value) {
   store.set(value);
   return ret;
 }
-function custom_event(type, detail, bubbles = false) {
+function custom_event(type, detail, { bubbles = false, cancelable = false } = {}) {
   const e = document.createEvent("CustomEvent");
-  e.initCustomEvent(type, bubbles, false, detail);
+  e.initCustomEvent(type, bubbles, cancelable, detail);
   return e;
 }
 let current_component;
@@ -90,18 +95,21 @@ function get_current_component() {
 }
 function createEventDispatcher() {
   const component = get_current_component();
-  return (type, detail) => {
+  return (type, detail, { cancelable = false } = {}) => {
     const callbacks = component.$$.callbacks[type];
     if (callbacks) {
-      const event = custom_event(type, detail);
+      const event = custom_event(type, detail, { cancelable });
       callbacks.slice().forEach((fn) => {
         fn.call(component, event);
       });
+      return !event.defaultPrevented;
     }
+    return true;
   };
 }
 function setContext(key, context) {
   get_current_component().$$.context.set(key, context);
+  return context;
 }
 function getContext(key) {
   return get_current_component().$$.context.get(key);

@@ -22,11 +22,13 @@ var stdin_exports = {};
 __export(stdin_exports, {
   css: () => css,
   entry: () => entry,
+  index: () => index,
   js: () => js,
   module: () => module2
 });
 module.exports = __toCommonJS(stdin_exports);
 var module2 = __toESM(require("../entries/pages/admin/index.svelte.js"));
-const entry = "pages/admin/index.svelte-0fc66b9f.js";
-const js = ["pages/admin/index.svelte-0fc66b9f.js", "chunks/index-c527663a.js", "chunks/add-88002483.js", "chunks/user-dae718b2.js", "chunks/index-48d9e608.js", "chunks/index-962aa2bd.js", "chunks/Button-908e5cd6.js"];
-const css = ["assets/pages/admin/index.svelte-b77e326d.css", "assets/Button-25f461c1.css"];
+const index = 3;
+const entry = "pages/admin/index.svelte-b8c13239.js";
+const js = ["pages/admin/index.svelte-b8c13239.js", "chunks/index-cde6f13c.js", "chunks/add-7201011a.js", "chunks/import-cba59628.js", "chunks/user-492c0b52.js", "chunks/index-7c40fde7.js", "chunks/index-962aa2bd.js", "chunks/Button-74c6a51e.js"];
+const css = ["assets/pages/app/admin/index.svelte-1ff5fa83.css", "assets/user-df43c53e.css"];

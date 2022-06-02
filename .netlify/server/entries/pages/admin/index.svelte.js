@@ -20,41 +20,33 @@ __export(stdin_exports, {
   default: () => Admin
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_1696507a = require("../../../chunks/index-1696507a.js");
-var import_add_19131305 = require("../../../chunks/add-19131305.js");
-var import_user_ef559a82 = require("../../../chunks/user-ef559a82.js");
-var import_Button_cadf2420 = require("../../../chunks/Button-cadf2420.js");
-const Import = (0, import_index_1696507a.c)(($$result, $$props, $$bindings, slots) => {
-  return `<svg${(0, import_index_1696507a.a)([
-    { preserveAspectRatio: "xMidYMid meet" },
-    { viewBox: "0 0 24 24" },
-    { width: "1.2em" },
-    { height: "1.2em" },
-    (0, import_index_1696507a.e)($$props)
-  ], {})}><!-- HTML_TAG_START -->${`<path fill="currentColor" d="m14 12l-4-4v3H2v2h8v3m10 2V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3h2V6h12v12H6v-3H4v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2Z"/>`}<!-- HTML_TAG_END --></svg>`;
-});
+var import_index_62ca9411 = require("../../../chunks/index-62ca9411.js");
+var import_add_d29b6d80 = require("../../../chunks/add-d29b6d80.js");
+var import_import_5c475997 = require("../../../chunks/import-5c475997.js");
+var import_user_843637aa = require("../../../chunks/user-843637aa.js");
+var import_Button_2086bf86 = require("../../../chunks/Button-2086bf86.js");
 var index_svelte_svelte_type_style_lang = "";
 const css = {
   code: '.container.svelte-14upl5b.svelte-14upl5b{display:grid;grid-template-columns:minmax(200px, auto) 1fr;grid-template-rows:1fr;grid-template-areas:"toolbar main";height:100%}@media(max-width: 768px){.container.svelte-14upl5b.svelte-14upl5b{grid-template-rows:auto 1fr;grid-template-columns:1fr;grid-template-areas:"toolbar" "main"}}.toolbar.svelte-14upl5b.svelte-14upl5b{grid-area:toolbar;background-color:var(--foreground);height:100%;display:flex;flex-direction:column}@media(max-width: 768px){.toolbar.svelte-14upl5b.svelte-14upl5b{flex-direction:row;flex-wrap:wrap}}main.svelte-14upl5b.svelte-14upl5b{padding:1rem}ul.paper-grid.svelte-14upl5b.svelte-14upl5b{list-style-type:none;display:grid;grid-template-columns:repeat(auto-fill, minmax(360px, 1fr));gap:1rem}ul.paper-grid.svelte-14upl5b li a.svelte-14upl5b{display:block;border:2px solid var(--foreground);padding:1rem;transition:all 0.3s ease-in-out;text-decoration:none;color:var(--foreground);font-size:x-large}ul.paper-grid.svelte-14upl5b li a.svelte-14upl5b:hover{font-weight:bold;background-color:var(--foreground);color:var(--background)}',
   map: null
 };
-const Admin = (0, import_index_1696507a.c)(($$result, $$props, $$bindings, slots) => {
+const Admin = (0, import_index_62ca9411.c)(($$result, $$props, $$bindings, slots) => {
   let $papers, $$unsubscribe_papers;
-  $$unsubscribe_papers = (0, import_index_1696507a.b)(import_user_ef559a82.p, (value) => $papers = value);
+  $$unsubscribe_papers = (0, import_index_62ca9411.b)(import_user_843637aa.p, (value) => $papers = value);
   $$result.css.add(css);
   $$unsubscribe_papers();
-  return `<div class="${"container svelte-14upl5b"}"><div class="${"toolbar svelte-14upl5b"}">${(0, import_index_1696507a.v)(import_Button_cadf2420.B, "Button").$$render($$result, { inverted: true }, {}, {
+  return `<div class="${"container svelte-14upl5b"}"><div class="${"toolbar svelte-14upl5b"}">${(0, import_index_62ca9411.v)(import_Button_2086bf86.B, "Button").$$render($$result, { inverted: true }, {}, {
     default: () => {
-      return `${(0, import_index_1696507a.v)(import_add_19131305.A, "IconAdd").$$render($$result, {}, {}, {})} Add`;
+      return `${(0, import_index_62ca9411.v)(import_add_d29b6d80.A, "IconAdd").$$render($$result, {}, {}, {})} Add Paper`;
     }
   })}
-		${(0, import_index_1696507a.v)(import_Button_cadf2420.B, "Button").$$render($$result, { inverted: true }, {}, {
+		${(0, import_index_62ca9411.v)(import_Button_2086bf86.B, "Button").$$render($$result, { inverted: true }, {}, {
     default: () => {
-      return `${(0, import_index_1696507a.v)(Import, "IconImport").$$render($$result, {}, {}, {})} Import`;
+      return `${(0, import_index_62ca9411.v)(import_import_5c475997.I, "IconImport").$$render($$result, {}, {}, {})} Import Paper`;
     }
   })}</div>
-	<main class="${"svelte-14upl5b"}"><ul class="${"paper-grid svelte-14upl5b"}">${(0, import_index_1696507a.g)($papers, (paper) => {
-    return `<li><a href="${"/admin/paper/" + (0, import_index_1696507a.h)(paper.id)}" class="${"svelte-14upl5b"}">${(0, import_index_1696507a.h)(paper.name)}</a>
+	<main class="${"svelte-14upl5b"}"><ul class="${"paper-grid svelte-14upl5b"}">${(0, import_index_62ca9411.f)($papers, (paper) => {
+    return `<li><a href="${"/admin/paper/" + (0, import_index_62ca9411.g)(paper.id)}" class="${"svelte-14upl5b"}">${(0, import_index_62ca9411.g)(paper.name)}</a>
 				</li>`;
   })}</ul></main>
 </div>`;

@@ -22,11 +22,13 @@ var stdin_exports = {};
 __export(stdin_exports, {
   css: () => css,
   entry: () => entry,
+  index: () => index,
   js: () => js,
   module: () => module2
 });
 module.exports = __toCommonJS(stdin_exports);
-var module2 = __toESM(require("../entries/pages/paper/_pid_/question/_qid_/index.svelte.js"));
-const entry = "pages/paper/_pid_/question/_qid_/index.svelte-fa9857c3.js";
-const js = ["pages/paper/_pid_/question/_qid_/index.svelte-fa9857c3.js", "chunks/index-c527663a.js", "chunks/Question-214c8bd0.js", "chunks/Button-908e5cd6.js", "chunks/pencil-b449d5ee.js", "chunks/trash-e49fc3bf.js", "chunks/app-fff97c3e.js", "chunks/index-48d9e608.js", "chunks/user-dae718b2.js"];
-const css = ["assets/pages/paper/_pid_/question/_qid_/index.svelte-957b710c.css", "assets/Question-5360b04a.css", "assets/Button-25f461c1.css"];
+var module2 = __toESM(require("../entries/pages/app/admin/paper/_pid_/index.svelte.js"));
+const index = 7;
+const entry = "pages/app/admin/paper/_pid_/index.svelte-be38072b.js";
+const js = ["pages/app/admin/paper/_pid_/index.svelte-be38072b.js", "chunks/index-cde6f13c.js", "chunks/Button-74c6a51e.js", "chunks/user-492c0b52.js", "chunks/index-7c40fde7.js", "chunks/add-7201011a.js", "chunks/trash-ed8626f2.js", "chunks/List-b6494b08.js", "chunks/pencil-0a045645.js", "chunks/stores-19c859ca.js", "chunks/app-24d36692.js", "chunks/index-962aa2bd.js"];
+const css = ["assets/pages/app/admin/paper/_pid_/index.svelte-b31719a7.css", "assets/user-df43c53e.css", "assets/List-e4ce28ed.css", "assets/app-01f45c13.css"];

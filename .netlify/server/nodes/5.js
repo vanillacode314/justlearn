@@ -22,11 +22,13 @@ var stdin_exports = {};
 __export(stdin_exports, {
   css: () => css,
   entry: () => entry,
+  index: () => index,
   js: () => js,
   module: () => module2
 });
 module.exports = __toCommonJS(stdin_exports);
 var module2 = __toESM(require("../entries/pages/admin/paper/_pid_/question/_qid_/index.svelte.js"));
-const entry = "pages/admin/paper/_pid_/question/_qid_/index.svelte-9be65738.js";
-const js = ["pages/admin/paper/_pid_/question/_qid_/index.svelte-9be65738.js", "chunks/index-c527663a.js", "chunks/Question-214c8bd0.js", "chunks/Button-908e5cd6.js", "chunks/pencil-b449d5ee.js", "chunks/trash-e49fc3bf.js", "chunks/app-fff97c3e.js", "chunks/index-48d9e608.js", "chunks/user-dae718b2.js"];
-const css = ["assets/pages/admin/paper/_pid_/question/_qid_/index.svelte-4c1a2a09.css", "assets/Question-5360b04a.css", "assets/Button-25f461c1.css"];
+const index = 5;
+const entry = "pages/admin/paper/_pid_/question/_qid_/index.svelte-1ef48dd4.js";
+const js = ["pages/admin/paper/_pid_/question/_qid_/index.svelte-1ef48dd4.js", "chunks/index-cde6f13c.js", "chunks/Question-1deaa543.js", "chunks/Button-74c6a51e.js", "chunks/user-492c0b52.js", "chunks/index-7c40fde7.js", "chunks/pencil-0a045645.js", "chunks/trash-ed8626f2.js", "chunks/stores-19c859ca.js", "chunks/app-24d36692.js"];
+const css = ["assets/pages/admin/paper/_pid_/question/_qid_/index.svelte-4c1a2a09.css", "assets/Question-5360b04a.css", "assets/user-df43c53e.css", "assets/app-01f45c13.css"];

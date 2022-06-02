@@ -21,23 +21,23 @@ __export(stdin_exports, {
   load: () => load
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_1696507a = require("../../chunks/index-1696507a.js");
+var import_index_62ca9411 = require("../../chunks/index-62ca9411.js");
 function load({ error, status }) {
   return { props: { error, status } };
 }
-const Error2 = (0, import_index_1696507a.c)(($$result, $$props, $$bindings, slots) => {
+const Error2 = (0, import_index_62ca9411.c)(($$result, $$props, $$bindings, slots) => {
   let { status } = $$props;
   let { error } = $$props;
   if ($$props.status === void 0 && $$bindings.status && status !== void 0)
     $$bindings.status(status);
   if ($$props.error === void 0 && $$bindings.error && error !== void 0)
     $$bindings.error(error);
-  return `<h1>${(0, import_index_1696507a.h)(status)}</h1>
+  return `<h1>${(0, import_index_62ca9411.g)(status)}</h1>
 
-<pre>${(0, import_index_1696507a.h)(error.message)}</pre>
+<pre>${(0, import_index_62ca9411.g)(error.message)}</pre>
 
 
 
-${error.frame ? `<pre>${(0, import_index_1696507a.h)(error.frame)}</pre>` : ``}
-${error.stack ? `<pre>${(0, import_index_1696507a.h)(error.stack)}</pre>` : ``}`;
+${error.frame ? `<pre>${(0, import_index_62ca9411.g)(error.frame)}</pre>` : ``}
+${error.stack ? `<pre>${(0, import_index_62ca9411.g)(error.stack)}</pre>` : ``}`;
 });

@@ -22,11 +22,13 @@ var stdin_exports = {};
 __export(stdin_exports, {
   css: () => css,
   entry: () => entry,
+  index: () => index,
   js: () => js,
   module: () => module2
 });
 module.exports = __toCommonJS(stdin_exports);
 var module2 = __toESM(require("../entries/fallbacks/error.svelte.js"));
-const entry = "error.svelte-69bf1142.js";
-const js = ["error.svelte-69bf1142.js", "chunks/index-c527663a.js"];
+const index = 1;
+const entry = "error.svelte-83813ff2.js";
+const js = ["error.svelte-83813ff2.js", "chunks/index-cde6f13c.js"];
 const css = [];

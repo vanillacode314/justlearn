@@ -1,0 +1,273 @@
+{
+  "0 debug pnpm:scope": {
+    "selected": 1
+  },
+  "1 debug pnpm:package-manifest": {
+    "initial": {
+      "name": "justlearn",
+      "version": "0.0.1",
+      "scripts": {
+        "dev": "svelte-kit dev",
+        "build": "svelte-kit build",
+        "package": "svelte-kit package",
+        "preview": "svelte-kit preview",
+        "prepare": "svelte-kit sync",
+        "check": "svelte-check --tsconfig ./tsconfig.json",
+        "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+        "lint": "prettier --ignore-path .gitignore --check --plugin-search-dir=. .",
+        "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
+      },
+      "devDependencies": {
+        "@iconify/json": "^2.1.23",
+        "@sveltejs/adapter-auto": "next",
+        "@sveltejs/adapter-netlify": "^1.0.0-next.51",
+        "@sveltejs/kit": "next",
+        "prettier": "^2.5.1",
+        "prettier-plugin-svelte": "^2.5.0",
+        "sass": "^1.49.10",
+        "svelte": "^3.44.0",
+        "svelte-check": "^2.2.6",
+        "svelte-preprocess": "^4.10.1",
+        "tslib": "^2.3.1",
+        "typescript": "~4.6.2",
+        "unplugin-icons": "^0.14.1"
+      },
+      "type": "module",
+      "dependencies": {
+        "@sveltejs/svelte-virtual-list": "^3.0.1",
+        "dotenv": "^16.0.0",
+        "intl-messageformat": "^9.12.0",
+        "intl-unofficial-duration-unit-format": "^3.1.0",
+        "normalize.css": "^8.0.1",
+        "svelte-frappe-charts": "^1.9.1",
+        "svelte-local-storage-store": "^0.2.6",
+        "svelte-tiny-virtual-list": "^2.0.3"
+      }
+    },
+    "prefix": "/home/vc/projects/svelte/justlearn"
+  },
+  "2 debug pnpm:context": {
+    "currentLockfileExists": false,
+    "storeDir": "/home/vc/.local/share/pnpm/store/v3",
+    "virtualStoreDir": "/home/vc/projects/svelte/justlearn/node_modules/.pnpm"
+  },
+  "3 debug pnpm:stage": {
+    "prefix": "/home/vc/projects/svelte/justlearn",
+    "stage": "resolution_started"
+  },
+  "4 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/unplugin-icons/0.14.3",
+    "wanted": {
+      "dependentId": ".",
+      "name": "unplugin-icons",
+      "rawSpec": "^0.14.1"
+    }
+  },
+  "5 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/unplugin-icons/0.14.3",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "resolved"
+  },
+  "6 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/unplugin-icons/0.14.3",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "found_in_store"
+  },
+  "7 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@sveltejs/svelte-virtual-list/3.0.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@sveltejs/svelte-virtual-list",
+      "rawSpec": "^3.0.1"
+    }
+  },
+  "8 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@sveltejs/svelte-virtual-list/3.0.1",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "resolved"
+  },
+  "9 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@sveltejs/svelte-virtual-list/3.0.1",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "found_in_store"
+  },
+  "10 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/intl-unofficial-duration-unit-format/3.1.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "intl-unofficial-duration-unit-format",
+      "rawSpec": "^3.1.0"
+    }
+  },
+  "11 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/intl-unofficial-duration-unit-format/3.1.0",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "resolved"
+  },
+  "12 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/intl-unofficial-duration-unit-format/3.1.0",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "found_in_store"
+  },
+  "13 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/normalize.css/8.0.1",
+    "wanted": {
+      "dependentId": ".",
+      "name": "normalize.css",
+      "rawSpec": "^8.0.1"
+    }
+  },
+  "14 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/normalize.css/8.0.1",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "resolved"
+  },
+  "15 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/normalize.css/8.0.1",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "found_in_store"
+  },
+  "16 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@sveltejs/adapter-auto/1.0.0-next.50",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@sveltejs/adapter-auto",
+      "rawSpec": "next"
+    }
+  },
+  "17 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@sveltejs/adapter-auto/1.0.0-next.50",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "resolved"
+  },
+  "18 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@sveltejs/adapter-auto/1.0.0-next.50",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "found_in_store"
+  },
+  "19 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/prettier-plugin-svelte/2.7.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "prettier-plugin-svelte",
+      "rawSpec": "^2.5.0"
+    }
+  },
+  "20 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/prettier-plugin-svelte/2.7.0",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "resolved"
+  },
+  "21 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/svelte-local-storage-store/0.2.6",
+    "wanted": {
+      "dependentId": ".",
+      "name": "svelte-local-storage-store",
+      "rawSpec": "^0.2.6"
+    }
+  },
+  "22 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/svelte-local-storage-store/0.2.6",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "resolved"
+  },
+  "23 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/prettier-plugin-svelte/2.7.0",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "found_in_store"
+  },
+  "24 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/svelte-local-storage-store/0.2.6",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "found_in_store"
+  },
+  "25 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/tslib/2.4.0",
+    "wanted": {
+      "dependentId": ".",
+      "name": "tslib",
+      "rawSpec": "^2.3.1"
+    }
+  },
+  "26 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tslib/2.4.0",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "resolved"
+  },
+  "27 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/tslib/2.4.0",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "found_in_store"
+  },
+  "28 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/@sveltejs/adapter-netlify/1.0.0-next.64",
+    "wanted": {
+      "dependentId": ".",
+      "name": "@sveltejs/adapter-netlify",
+      "rawSpec": "^1.0.0-next.51"
+    }
+  },
+  "29 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@sveltejs/adapter-netlify/1.0.0-next.64",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "resolved"
+  },
+  "30 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/@sveltejs/adapter-netlify/1.0.0-next.64",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "found_in_store"
+  },
+  "31 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/svelte-tiny-virtual-list/2.0.5",
+    "wanted": {
+      "dependentId": ".",
+      "name": "svelte-tiny-virtual-list",
+      "rawSpec": "^2.0.3"
+    }
+  },
+  "32 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/svelte-tiny-virtual-list/2.0.5",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "resolved"
+  },
+  "33 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/svelte-tiny-virtual-list/2.0.5",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "found_in_store"
+  },
+  "34 warn pnpm:install-check": {
+    "message": "Unsupported engine for registry.npmjs.org/@sveltejs/kit/1.0.0-next.347: wanted: {\"node\":\">=16.7\"} (current: {\"node\":\"v14.17.0\",\"pnpm\":\"7.0.1\"})",
+    "prefix": "/home/vc/projects/svelte/justlearn"
+  },
+  "35 error pnpm": {
+    "code": "ERR_PNPM_UNSUPPORTED_ENGINE",
+    "packageId": "registry.npmjs.org/@sveltejs/kit/1.0.0-next.347",
+    "wanted": {
+      "node": ">=16.7"
+    },
+    "current": {
+      "node": "v14.17.0",
+      "pnpm": "7.0.1"
+    },
+    "pkgsStack": [],
+    "err": {
+      "name": "pnpm",
+      "message": "Unsupported engine for registry.npmjs.org/@sveltejs/kit/1.0.0-next.347: wanted: {\"node\":\">=16.7\"} (current: {\"node\":\"v14.17.0\",\"pnpm\":\"7.0.1\"})",
+      "code": "ERR_PNPM_UNSUPPORTED_ENGINE",
+      "stack": "pnpm: Unsupported engine for registry.npmjs.org/@sveltejs/kit/1.0.0-next.347: wanted: {\"node\":\">=16.7\"} (current: {\"node\":\"v14.17.0\",\"pnpm\":\"7.0.1\"})\n    at checkEngine (/snapshot/dist/pnpm.cjs)\n    at checkPackage (/snapshot/dist/pnpm.cjs)\n    at packageIsInstallable (/snapshot/dist/pnpm.cjs)\n    at resolveAndFetch (/snapshot/dist/pnpm.cjs)\n    at runMicrotasks (<anonymous>)\n    at processTicksAndRejections (internal/process/task_queues.js:95:5)\n    at async resolveDependency (/snapshot/dist/pnpm.cjs)\n    at async resolveDependenciesOfDependency (/snapshot/dist/pnpm.cjs)\n    at async Promise.all (index 3)\n    at async resolveDependencies (/snapshot/dist/pnpm.cjs)"
+    }
+  },
+  "36 debug pnpm:_dependency_resolved": {
+    "resolution": "registry.npmjs.org/svelte-preprocess/4.10.6",
+    "wanted": {
+      "dependentId": ".",
+      "name": "svelte-preprocess",
+      "rawSpec": "^4.10.1"
+    }
+  },
+  "37 debug pnpm:progress": {
+    "packageId": "registry.npmjs.org/svelte-preprocess/4.10.6",
+    "requester": "/home/vc/projects/svelte/justlearn",
+    "status": "resolved"
+  }
+}

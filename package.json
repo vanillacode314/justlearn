@@ -13,29 +13,29 @@
     "format": "prettier --ignore-path .gitignore --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@iconify/json": "^2.1.23",
+    "@iconify/json": "^2.1.55",
     "@sveltejs/adapter-auto": "next",
-    "@sveltejs/adapter-netlify": "^1.0.0-next.51",
+    "@sveltejs/adapter-netlify": "^1.0.0-next.64",
     "@sveltejs/kit": "next",
-    "prettier": "^2.5.1",
-    "prettier-plugin-svelte": "^2.5.0",
-    "sass": "^1.49.10",
-    "svelte": "^3.44.0",
-    "svelte-check": "^2.2.6",
-    "svelte-preprocess": "^4.10.1",
-    "tslib": "^2.3.1",
-    "typescript": "~4.6.2",
-    "unplugin-icons": "^0.14.1"
+    "prettier": "^2.6.2",
+    "prettier-plugin-svelte": "^2.7.0",
+    "sass": "^1.52.1",
+    "svelte": "^3.48.0",
+    "svelte-check": "^2.7.1",
+    "svelte-preprocess": "^4.10.6",
+    "tslib": "^2.4.0",
+    "typescript": "~4.6.4",
+    "unplugin-icons": "^0.14.3"
   },
   "type": "module",
   "dependencies": {
     "@sveltejs/svelte-virtual-list": "^3.0.1",
-    "dotenv": "^16.0.0",
-    "intl-messageformat": "^9.12.0",
+    "dotenv": "^16.0.1",
+    "intl-messageformat": "^9.13.0",
     "intl-unofficial-duration-unit-format": "^3.1.0",
     "normalize.css": "^8.0.1",
-    "svelte-frappe-charts": "^1.9.1",
+    "svelte-frappe-charts": "^1.9.2",
     "svelte-local-storage-store": "^0.2.6",
-    "svelte-tiny-virtual-list": "^2.0.3"
+    "svelte-tiny-virtual-list": "^2.0.5"
   }
 }

@@ -20,28 +20,54 @@ __export(stdin_exports, {
   default: () => Routes
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_1696507a = require("../../chunks/index-1696507a.js");
-var import_user_ef559a82 = require("../../chunks/user-ef559a82.js");
+var import_index_62ca9411 = require("../../chunks/index-62ca9411.js");
+var import_user_843637aa = require("../../chunks/user-843637aa.js");
+var import_Button_2086bf86 = require("../../chunks/Button-2086bf86.js");
+var import_app_0d80de54 = require("../../chunks/app-0d80de54.js");
 var index_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".container.svelte-fg6rrv.svelte-fg6rrv{height:100%}main.svelte-fg6rrv.svelte-fg6rrv{padding:1rem}ul.paper-grid.svelte-fg6rrv.svelte-fg6rrv{list-style-type:none;display:grid;grid-template-columns:repeat(auto-fill, minmax(360px, 1fr));gap:1rem}ul.paper-grid.svelte-fg6rrv li a.svelte-fg6rrv{display:block;border:2px solid var(--foreground);padding:1rem;transition:all 0.3s ease-in-out;text-decoration:none;color:var(--foreground);font-size:x-large}ul.paper-grid.svelte-fg6rrv li a.svelte-fg6rrv:hover{font-weight:bold;background-color:var(--foreground);color:var(--background)}",
+  code: "main.svelte-xy4z22.svelte-xy4z22{grid-area:main;height:100%;display:flex;flex-direction:column}main.svelte-xy4z22 ul.paper-grid.svelte-xy4z22{padding:1rem;list-style-type:none;display:grid;grid-template-columns:repeat(auto-fill, minmax(360px, 1fr));gap:1rem}main.svelte-xy4z22 ul.paper-grid li.svelte-xy4z22{display:contents}main.svelte-xy4z22 section h3.svelte-xy4z22{--bg-color:black;--fg-color:white;padding:0.5rem;font-size:small;background-color:var(--bg-color);color:var(--fg-color)}",
   map: null
 };
-const Routes = (0, import_index_1696507a.c)(($$result, $$props, $$bindings, slots) => {
+const Routes = (0, import_index_62ca9411.c)(($$result, $$props, $$bindings, slots) => {
+  let $$unsubscribe_activePaper;
   let $papers, $$unsubscribe_papers;
-  $$unsubscribe_papers = (0, import_index_1696507a.b)(import_user_ef559a82.p, (value) => $papers = value);
+  let $sharedPapers, $$unsubscribe_sharedPapers;
+  $$unsubscribe_activePaper = (0, import_index_62ca9411.b)(import_app_0d80de54.a, (value) => value);
+  $$unsubscribe_papers = (0, import_index_62ca9411.b)(import_user_843637aa.p, (value) => $papers = value);
+  $$unsubscribe_sharedPapers = (0, import_index_62ca9411.b)(import_app_0d80de54.g, (value) => $sharedPapers = value);
   $$result.css.add(css);
+  $$unsubscribe_activePaper();
   $$unsubscribe_papers();
-  return `<div class="${"container svelte-fg6rrv"}">
-	
-	
-	<main class="${"svelte-fg6rrv"}"><ul class="${"paper-grid svelte-fg6rrv"}">${(0, import_index_1696507a.g)($papers, (paper) => {
-    return `<li><a href="${"/paper/" + (0, import_index_1696507a.h)(paper.id)}" class="${"svelte-fg6rrv"}">${(0, import_index_1696507a.h)(paper.name)}</a>
+  $$unsubscribe_sharedPapers();
+  return `<main class="${"svelte-xy4z22"}"><section><h3 class="${"svelte-xy4z22"}">Local Papers</h3>
+		<ul class="${"paper-grid svelte-xy4z22"}">${(0, import_index_62ca9411.f)($papers, (paper) => {
+    return `<li class="${"svelte-xy4z22"}">${(0, import_index_62ca9411.v)(import_Button_2086bf86.B, "Button").$$render($$result, {
+      type: "button",
+      large: true,
+      outlined: true
+    }, {}, {
+      default: () => {
+        return `${(0, import_index_62ca9411.g)(paper.name)}
+					`;
+      }
+    })}
 				</li>`;
-  })}</ul>
-		
-		
-		
-		</main>
-</div>`;
+  })}
+			${$papers.length < 1 ? `<p>No local papers found. You can create one from the admin panel</p>` : ``}</ul></section>
+	<section><h3 class="${"svelte-xy4z22"}">Shared Papers</h3>
+		<ul class="${"paper-grid svelte-xy4z22"}">${(0, import_index_62ca9411.f)($sharedPapers, (paper) => {
+    return `<li class="${"svelte-xy4z22"}">${(0, import_index_62ca9411.v)(import_Button_2086bf86.B, "Button").$$render($$result, {
+      type: "button",
+      large: true,
+      outlined: true
+    }, {}, {
+      default: () => {
+        return `${(0, import_index_62ca9411.g)(paper.name)}
+					`;
+      }
+    })}
+				</li>`;
+  })}</ul></section>
+</main>`;
 });

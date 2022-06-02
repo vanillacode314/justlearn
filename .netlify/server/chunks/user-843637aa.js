@@ -17,18 +17,26 @@ var __copyProps = (to, from, except, desc) => {
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 var stdin_exports = {};
 __export(stdin_exports, {
+  a: () => readable,
+  d: () => derived,
   p: () => papers,
+  r: () => results,
   s: () => subjects,
   w: () => writable$1
 });
 module.exports = __toCommonJS(stdin_exports);
-var import_index_1696507a = require("./index-1696507a.js");
+var import_index_62ca9411 = require("./index-62ca9411.js");
 const subscriber_queue = [];
-function writable$1(value, start = import_index_1696507a.n) {
+function readable(value, start) {
+  return {
+    subscribe: writable$1(value, start).subscribe
+  };
+}
+function writable$1(value, start = import_index_62ca9411.n) {
   let stop;
   const subscribers = /* @__PURE__ */ new Set();
   function set(new_value) {
-    if ((0, import_index_1696507a.k)(value, new_value)) {
+    if ((0, import_index_62ca9411.k)(value, new_value)) {
       value = new_value;
       if (stop) {
         const run_queue = !subscriber_queue.length;
@@ -48,11 +56,11 @@ function writable$1(value, start = import_index_1696507a.n) {
   function update(fn) {
     set(fn(value));
   }
-  function subscribe(run, invalidate = import_index_1696507a.n) {
+  function subscribe2(run, invalidate = import_index_62ca9411.n) {
     const subscriber = [run, invalidate];
     subscribers.add(subscriber);
     if (subscribers.size === 1) {
-      stop = start(set) || import_index_1696507a.n;
+      stop = start(set) || import_index_62ca9411.n;
     }
     run(value);
     return () => {
@@ -63,8 +71,47 @@ function writable$1(value, start = import_index_1696507a.n) {
       }
     };
   }
-  return { set, update, subscribe };
+  return { set, update, subscribe: subscribe2 };
 }
+function derived(stores2, fn, initial_value) {
+  const single = !Array.isArray(stores2);
+  const stores_array = single ? [stores2] : stores2;
+  const auto = fn.length < 2;
+  return readable(initial_value, (set) => {
+    let inited = false;
+    const values = [];
+    let pending = 0;
+    let cleanup = import_index_62ca9411.n;
+    const sync = () => {
+      if (pending) {
+        return;
+      }
+      cleanup();
+      const result = fn(single ? values[0] : values, set);
+      if (auto) {
+        set(result);
+      } else {
+        cleanup = (0, import_index_62ca9411.l)(result) ? result : import_index_62ca9411.n;
+      }
+    };
+    const unsubscribers = stores_array.map((store, i) => (0, import_index_62ca9411.b)(store, (value) => {
+      values[i] = value;
+      pending &= ~(1 << i);
+      if (inited) {
+        sync();
+      }
+    }, () => {
+      pending |= 1 << i;
+    }));
+    inited = true;
+    sync();
+    return function stop() {
+      (0, import_index_62ca9411.r)(unsubscribers);
+      cleanup();
+    };
+  });
+}
+var Button_svelte_svelte_type_style_lang = "";
 var stores = {};
 function writable(key, initialValue) {
   const browser = typeof localStorage != "undefined";
@@ -88,24 +135,23 @@ function writable(key, initialValue) {
         return () => window.removeEventListener("storage", handleStorage);
       }
     });
-    const { subscribe, set } = store;
+    const { subscribe: subscribe2, set } = store;
     stores[key] = {
       set(value) {
         updateStorage(key, value);
         set(value);
       },
       update(updater) {
-        const value = updater((0, import_index_1696507a.l)(store));
+        const value = updater((0, import_index_62ca9411.o)(store));
         updateStorage(key, value);
         set(value);
       },
-      subscribe
+      subscribe: subscribe2
     };
   }
   return stores[key];
 }
-const papers = writable("papers", []);
-const subjects = writable("subjects", [
+var subjectsJson = [
   {
     name: "Physics",
     chapters: [
@@ -165,7 +211,14 @@ const subjects = writable("subjects", [
       "General Principles and Processes of Isolation of Elements",
       "d-Block",
       "f-Block",
-      "Coordination Compounds"
+      "Coordination Compounds",
+      "Haloalkanes and Haloarenes",
+      "Alcohols, Phenols and Ethers",
+      "Aldehydes, Ketones and Carboxylic Acids",
+      "Amines",
+      "Biomolecules",
+      "Polymers",
+      "Chemistry in Everyday Life"
     ]
   },
   {
@@ -198,7 +251,7 @@ const subjects = writable("subjects", [
       "Human Reproduction",
       "Reproductive Health",
       "Principles of Inheritance and Variation",
-      "Moleculara Basis of Inheritance",
+      "Molecular Basis of Inheritance",
       "Evolution",
       "Human Health and Disease",
       "Strategies for Enhancement in Food Production",
@@ -242,4 +295,7 @@ const subjects = writable("subjects", [
       "Linear Programming"
     ]
   }
-]);
+];
+const papers = writable("papers", []);
+const subjects = writable("subjects", subjectsJson);
+const results = writable("results", []);
