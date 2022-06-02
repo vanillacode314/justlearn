@@ -15,10 +15,18 @@
 	$: result = $results.find((r) => r.id === Number(id));
 	$: paper = result && $allPapers.find((p) => p.id === result.paper);
 
-	$: correct = paper ? result.answers.filter((a, i) => a === paper.questions[i].answer) : [];
+	$: questions =
+		(paper?.questions &&
+			[...paper?.questions].sort((a, b) => {
+				if (a.subject > b.subject) return 1;
+				if (a.subject < b.subject) return -1;
+				return 0;
+			})) ||
+		[];
+	$: correct = paper ? result.answers.filter((a, i) => a === questions[i].answer) : [];
 	$: skipped = paper ? result.answers.filter((a) => a === null) : [];
 	$: incorrect = paper
-		? result.answers.filter((a, i) => a !== null && a !== paper.questions[i].answer)
+		? result.answers.filter((a, i) => a !== null && a !== questions[i].answer)
 		: [];
 	$: score = result ? correct.length * result.cmarks + incorrect.length * result.imarks : 0;
 
@@ -66,9 +74,9 @@
 			</div>
 		</main>
 		<footer>
-			<VirtualList items={paper?.questions} let:item={question} height="800px">
+			<VirtualList items={questions} let:item={question} height="800px">
 				{@const { answer, options } = question}
-				{@const index = paper.questions.findIndex((q) => q === question)}
+				{@const index = questions.findIndex((q) => q === question)}
 				{@const isCorrect = result.answers[index] === answer}
 				{@const isSkipped = result.answers[index] === null}
 				{@const chosenOption = options.find((o) => o['id'] === result.answers[index])}
