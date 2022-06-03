@@ -55,20 +55,20 @@
 		</header>
 		<main>
 			<div class="cards">
-				<div class="card">
-					<h2>Correct (Marks +{result.cmarks})</h2>
+				<div class="card success">
+					<span class="name">Correct (Marks +{result.cmarks})</span>
 					<p>{correct.length}</p>
 				</div>
-				<div class="card">
-					<h2>Incorrect (Marks {result.imarks})</h2>
+				<div class="card danger">
+					<span class="name">Incorrect (Marks {result.imarks})</span>
 					<p>{incorrect.length}</p>
 				</div>
-				<div class="card">
-					<h2>Skipped</h2>
+				<div class="card neutral">
+					<span class="name">Skipped</span>
 					<p>{skipped.length}</p>
 				</div>
 				<div class="card">
-					<h2>Score</h2>
+					<span class="name">Score 🏆</span>
 					<p>{score}</p>
 				</div>
 			</div>
@@ -128,11 +128,36 @@
 		}
 		.cards {
 			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 			gap: 1rem;
 			.card {
-				border: 0.1rem var(--foreground) solid;
-				padding: 1rem;
+				background-color: black;
+				color: white;
+				padding: 2rem;
+				border-radius: 1rem;
+				cursor: pointer;
+				border: none;
+				outline: none;
+				transition: all 0.2s ease-in-out;
+				/* &:hover { */
+				/* 	background-color: #222; */
+				/* } */
+				&.success {
+					background-color: green;
+				}
+				&.danger {
+					background-color: red;
+				}
+				&.neutral {
+					background-color: gray;
+				}
+				display: grid;
+				gap: 1rem;
+				.name {
+					text-align: center;
+					font-weight: bold;
+					font-size: x-large;
+				}
 			}
 			h2 {
 				font-size: small;

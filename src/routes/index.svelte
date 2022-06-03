@@ -13,27 +13,32 @@
 <main>
 	<section>
 		<h3>Local Papers</h3>
-		<ul class="paper-grid">
-			{#each $papers as paper}
-				<li>
-					<Button type="button" large outlined on:click={() => startPaper(paper)}>
-						{paper.name}
-					</Button>
-				</li>
-			{/each}
-			{#if $papers.length < 1}
-				<p>No local papers found. You can create one from the admin panel</p>
-			{/if}
-		</ul>
+		{#if $papers.length < 1}
+			<p>No local papers found. You can create one from the admin panel</p>
+		{:else}
+			<ul class="paper-grid">
+				{#each $papers as paper}
+					<li>
+						<button type="button" on:click={() => startPaper(paper)}>
+							<span class="name">
+								{paper.name}
+							</span>
+						</button>
+					</li>
+				{/each}
+			</ul>
+		{/if}
 	</section>
 	<section>
 		<h3>Shared Papers</h3>
 		<ul class="paper-grid">
 			{#each $sharedPapers as paper}
 				<li>
-					<Button type="button" large outlined on:click={() => startPaper(paper)}>
-						{paper.name}
-					</Button>
+					<button type="button" on:click={() => startPaper(paper)}>
+						<span class="name">
+							{paper.name}
+						</span>
+					</button>
 				</li>
 			{/each}
 		</ul>
@@ -42,26 +47,46 @@
 
 <style lang="scss">
 	main {
+		padding: 1rem 0;
 		grid-area: main;
 		height: 100%;
 		display: flex;
 		flex-direction: column;
+		p {
+			padding: 1rem 0.5rem;
+		}
 		ul.paper-grid {
-			padding: 1rem;
+			padding: 1rem 0.5rem;
 			list-style-type: none;
 			display: grid;
 			grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 			gap: 1rem;
 			li {
-				display: contents;
+				button {
+					background-color: black;
+					color: white;
+					padding: 2rem;
+					border-radius: 1rem;
+					cursor: pointer;
+					border: none;
+					outline: none;
+					transition: all 0.2s ease-in-out;
+					&:hover {
+						background-color: #222;
+					}
+					display: grid;
+					gap: 1rem;
+					.name {
+						font-weight: bold;
+						font-size: xx-large;
+					}
+				}
 			}
 		}
 		section {
 			h3 {
-				--bg-color: black;
-				--fg-color: white;
 				padding: 0.5rem;
-				font-size: small;
+				font-size: xx-large;
 				background-color: var(--bg-color);
 				color: var(--fg-color);
 			}

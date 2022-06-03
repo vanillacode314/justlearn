@@ -38,8 +38,8 @@
 
 <div class="container">
 	<div class="toolbar">
-		<Button inverted on:click={addPaper}><IconAdd /> Add Paper</Button>
-		<Button inverted on:click={_import}><IconImport /> Import Paper</Button>
+		<button title="Add Paper" on:click={addPaper}><IconAdd /></button>
+		<button title="Import Paper" on:click={_import}><IconImport /></button>
 	</div>
 	<main>
 		<ul class="paper-grid">
@@ -57,9 +57,9 @@
 <style lang="scss">
 	.container {
 		display: grid;
-		grid-template-columns: minmax(200px, auto) 1fr;
+		grid-template-columns: 1fr auto;
 		grid-template-rows: 1fr;
-		grid-template-areas: 'toolbar main';
+		grid-template-areas: 'main toolbar';
 		@media (max-width: 768px) {
 			grid-template-rows: auto 1fr;
 			grid-template-columns: 1fr;
@@ -76,6 +76,17 @@
 		@media (max-width: 768px) {
 			flex-direction: row;
 			flex-wrap: wrap;
+		}
+		button {
+			background-color: black;
+			color: white;
+			padding: 1rem 1.5rem;
+			outline: none;
+			border: none;
+			cursor: pointer;
+			&:hover {
+				background-color: #222;
+			}
 		}
 	}
 	main {
