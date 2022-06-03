@@ -43,7 +43,6 @@
 		gap: 0.3rem;
 	}
 	nav {
-		border-bottom: 0.1rem var(--background) solid;
 		grid-area: nav;
 		display: flex;
 		gap: 1rem;

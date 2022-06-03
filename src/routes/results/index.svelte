@@ -17,11 +17,19 @@
 	<main>
 		<ul class="paper-grid">
 			{#each $results as result}
+				{@const paper = $allPapers.find((p) => p['id'] === result['paper'])}
 				<li>
-					<Button type="button" outlined on:click={() => gotoResult(result)}>
-						{@const paper = $allPapers.find((p) => p['id'] === result['paper'])}
-						{paper.name} <strong>({new Date(result.date_given).toLocaleString()})</strong>
-					</Button>
+					<button type="button" on:click={() => gotoResult(result)}>
+						<span class="name">
+							{paper.name}
+						</span>
+						<span class="date">
+							({new Date(result.date_given).toLocaleString(undefined, {
+								dateStyle: 'long',
+								timeStyle: 'short'
+							})})
+						</span>
+					</button>
 				</li>
 			{/each}
 		</ul>
@@ -41,7 +49,25 @@
 		grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
 		gap: 1rem;
 		li {
-			display: contents;
+			button {
+				background-color: black;
+				color: white;
+				padding: 2rem;
+				border-radius: 1rem;
+				cursor: pointer;
+				border: none;
+				outline: none;
+				transition: all 0.2s ease-in-out;
+				&:hover {
+					background-color: #222;
+				}
+				display: grid;
+				gap: 1rem;
+				.name {
+					font-weight: bold;
+					font-size: xx-large;
+				}
+			}
 		}
 	}
 </style>

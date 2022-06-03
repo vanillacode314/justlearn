@@ -5,6 +5,7 @@
 
 	import IconCog from '~icons/mdi/cog';
 	import IconResult from '~icons/mdi/file-document';
+	import IconHome from '~icons/mdi/home';
 
 	function goBack() {
 		goto('/');
@@ -13,13 +14,14 @@
 
 {#if !$page.url.pathname.startsWith('/paper')}
 	<nav aria-label="sidebar">
-		<a title="results" href="/results" class:active={$page.url.pathname.startsWith('/results')}>
+		<a title="Home" href="/" class:active={$page.url.pathname === '/'}>
+			<IconHome style="font-size: 1.2em" />
+		</a>
+		<a title="Results" href="/results" class:active={$page.url.pathname.startsWith('/results')}>
 			<IconResult style="font-size: 1.2em" />
-			<span> Results </span></a
-		>
-		<a title="admin" href="/admin" class:active={$page.url.pathname.startsWith('/admin')}>
+		</a>
+		<a title="Admin" href="/admin" class:active={$page.url.pathname.startsWith('/admin')}>
 			<IconCog style="font-size: 1.2em" />
-			<span> Admin </span>
 		</a>
 		<span class="spacer" />
 		<!-- <a title="github" href="https://github.com/vanillacode314/justlearn" rel="external"> -->
@@ -30,27 +32,27 @@
 
 <style lang="scss">
 	a {
-		padding: 0.5rem 1rem;
+		padding: 1rem 1.5rem;
 		text-decoration: none;
 		&:hover,
 		&.active {
 			font-weight: bold;
-			color: var(--foreground);
-			background: var(--background);
+			background: #222;
 		}
 		color: var(--background);
 		display: flex;
 		align-items: center;
 		gap: 1rem;
+		transition: all 0.3s ease-out;
 	}
 	nav {
-		min-width: 200px;
+		overflow: hidden;
+		/* border-radius: 0 1rem 1rem 0; */
 		grid-area: sidebar;
 		display: flex;
 		flex-direction: column;
 		background: var(--foreground);
 		color: var(--background);
-		border-right: 0.1rem var(--background) solid;
 		.spacer {
 			flex-grow: 1;
 		}

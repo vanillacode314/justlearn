@@ -21,6 +21,7 @@
 <style lang="scss">
 	button {
 		display: flex;
+		border-radius: 0.5rem;
 		justify-content: center;
 		align-items: center;
 		gap: 0.5rem;
