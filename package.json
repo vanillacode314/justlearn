@@ -29,10 +29,8 @@
   },
   "type": "module",
   "dependencies": {
-    "@macfja/svelte-persistent-store": "^1.3.0",
     "@sveltejs/svelte-virtual-list": "^3.0.1",
     "dotenv": "^16.0.1",
-    "idb": "^7.0.1",
     "intl-messageformat": "^9.13.0",
     "intl-unofficial-duration-unit-format": "^3.1.0",
     "normalize.css": "^8.0.1",
