@@ -126,64 +126,68 @@
 
 <div class="container">
 	<main>
-		{#if paper}
-			<h1>{paper.name}</h1>
-			{#if paper.questions.length}
-				<Question
-					index={currentQuestion}
-					question={paper.questions[currentQuestion]}
-					bind:answer={answers[currentQuestion]}
-				/>
+		<div class="main">
+			{#if paper}
+				<h1>{paper.name}</h1>
+				{#if paper.questions.length}
+					<Question
+						index={currentQuestion}
+						question={paper.questions[currentQuestion]}
+						bind:answer={answers[currentQuestion]}
+					/>
+				{:else}
+					<p>No questions found</p>
+				{/if}
 			{:else}
-				<p>No questions found</p>
+				<p>No paper with id {id} found :(</p>
 			{/if}
-		{:else}
-			<p>No paper with id {id} found :(</p>
-		{/if}
+		</div>
+		<div class="actions">
+			<div class="buttons">
+				<Button type="button" on:click={prev}>Prev</Button>
+				<Button type="button" on:click={next} inverted>Next</Button>
+				<Button
+					type="button"
+					on:click={toggleMark}
+					danger={marks[currentQuestion]}
+					success={!marks[currentQuestion]}>{marks[currentQuestion] ? 'Unmark' : 'Mark'}</Button
+				>
+				<span class="spacer" />
+				<Button type="button" on:click={submit} inverted
+					>Submit ({duration.format(
+						result?.total_time_available * 60 - ($countdown.getTime() - start_time) / 1000
+					)})</Button
+				>
+			</div>
+		</div>
 	</main>
 	<aside>
 		<Accordion items={accordionItems} let:item>
 			<Questions {...item.data} on:select={(e) => (currentQuestion = e.detail)} />
 		</Accordion>
 	</aside>
-	<footer>
-		<div class="buttons">
-			<Button type="button" on:click={prev}>Prev</Button>
-			<Button type="button" on:click={next} inverted>Next</Button>
-			<Button
-				type="button"
-				on:click={toggleMark}
-				danger={marks[currentQuestion]}
-				success={!marks[currentQuestion]}>{marks[currentQuestion] ? 'Unmark' : 'Mark'}</Button
-			>
-			<span class="spacer" />
-			<Button type="button" on:click={submit} inverted
-				>Submit ({duration.format(
-					result?.total_time_available * 60 - ($countdown.getTime() - start_time) / 1000
-				)})</Button
-			>
-		</div>
-	</footer>
 </div>
 
 <style lang="scss">
 	.container {
-		height: 100%;
-		overflow-y: hidden;
+		min-height: 100%;
 		display: grid;
 		grid-template-columns: 3fr 1fr;
-		grid-template-rows: 1fr auto;
-		grid-template-areas: 'main sidebar' 'footer sidebar';
+		grid-template-rows: 1fr;
+		grid-template-areas: 'main sidebar';
 		padding: 1rem;
 		gap: 1rem;
 		@media (max-width: 768px) {
-			grid-template-areas: 'main main' 'footer footer' 'sidebar sidebar';
+			grid-template-columns: 1fr;
+			grid-template-rows: 100% auto;
+			grid-template-areas: 'main' 'sidebar';
 		}
 	}
 	main {
 		grid-area: main;
 		display: flex;
 		flex-direction: column;
+		justify-content: space-between;
 		gap: 1rem;
 		h1 {
 			font-size: large;
@@ -192,10 +196,7 @@
 	}
 	aside {
 		grid-area: sidebar;
-		overflow-y: auto;
-	}
-	footer {
-		grid-area: footer;
+		display: block;
 	}
 	.buttons {
 		display: flex;

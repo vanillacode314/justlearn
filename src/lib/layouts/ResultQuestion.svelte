@@ -6,6 +6,7 @@
 	import IconDown from '~icons/mdi/chevron-down';
 
 	/// STATE
+	let el: HTMLElement;
 	export let question: Question;
 	export let index: number;
 	export let isCorrect: boolean;
@@ -16,11 +17,11 @@
 
 	/// METHODS
 	afterUpdate(() => {
-		MathLive.renderMathInDocument();
+		MathLive.renderMathInElement(el);
 	});
 </script>
 
-<section>
+<section bind:this={el}>
 	<button type="button" class:active on:click={() => (active = !active)}>
 		<header class:isCorrect class:isSkipped>
 			<p>

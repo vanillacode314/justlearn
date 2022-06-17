@@ -1,4 +1,5 @@
 <script lang="ts">
+	let el: HTMLElement;
 	export let question: Question;
 	export let index: number = -1;
 	export let answer: Question['answer'];
@@ -6,11 +7,11 @@
 
 	import { afterUpdate } from 'svelte';
 	afterUpdate(() => {
-		MathLive.renderMathInDocument();
+		MathLive.renderMathInElement(el);
 	});
 </script>
 
-<article>
+<article bind:this={el}>
 	{#if question?.image}
 		<img src={question.image} alt="question" />
 	{/if}

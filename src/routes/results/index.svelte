@@ -46,7 +46,7 @@
 	ul.paper-grid {
 		list-style-type: none;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 		gap: 1rem;
 		li {
 			button {

@@ -6,13 +6,15 @@
 
 	/// STATE
 	import { page } from '$app/stores';
-	import { allPapers } from '$lib/stores/app';
+	import { activeResult, allPapers } from '$lib/stores/app';
 	import { results } from '$lib/stores/user';
 	import { afterUpdate, onMount } from 'svelte';
 	import ResultQuestion from '$lib/layouts/ResultQuestion.svelte';
 	import { goto } from '$app/navigation';
+	import ResultCard from '$lib/layouts/ResultCard.svelte';
 	$: id = $page.params.id;
 	$: result = $results.find((r) => r.id === Number(id));
+	$: $activeResult = result;
 	$: paper = result && $allPapers.find((p) => p.id === result.paper);
 
 	$: questions =
@@ -33,10 +35,6 @@
 	onMount(() => {});
 
 	/// METHODS
-	afterUpdate(() => {
-		MathLive.renderMathInDocument();
-	});
-
 	async function removeResult() {
 		await goto('/results');
 		$results = $results.filter((r) => r.id !== result.id);
@@ -54,44 +52,40 @@
 			</Button>
 		</header>
 		<main>
-			<div class="cards">
-				<div class="card success">
-					<span class="name">Correct (Marks +{result.cmarks})</span>
-					<p>{correct.length}</p>
+			<div class="bullets">
+				<div class="bullet">
+					<div class="circle" style:background-color="lime" />
+					<span>Correct: {correct.length}</span>
 				</div>
-				<div class="card danger">
-					<span class="name">Incorrect (Marks {result.imarks})</span>
-					<p>{incorrect.length}</p>
+				<div class="bullet">
+					<div class="circle" style:background-color="red" />
+					<span>Incorrect: {incorrect.length}</span>
 				</div>
-				<div class="card neutral">
-					<span class="name">Skipped</span>
-					<p>{skipped.length}</p>
+				<div class="bullet">
+					<div class="circle" style:background-color="gray" />
+					<span>Skipped: {skipped.length}</span>
 				</div>
-				<div class="card">
-					<span class="name">Score 🏆</span>
-					<p>{score}</p>
-				</div>
+				<!-- <div class="bullet"> -->
+				<!-- 	<div class="circle" style:background-color="black" /> -->
+				<!-- 	<span>Score: {score}</span> -->
+				<!-- </div> -->
+			</div>
+			<div class="score--card">
+				<h3>Score 🏆</h3>
+				<p>{score}</p>
 			</div>
 		</main>
 		<footer>
-			<VirtualList items={questions} let:item={question} height="800px">
+			{#each questions as question}
+				<!-- <VirtualList items={questions} let:item={question} height="800px"> -->
 				{@const { answer, options } = question}
 				{@const index = questions.findIndex((q) => q === question)}
 				{@const isCorrect = result.answers[index] === answer}
 				{@const isSkipped = result.answers[index] === null}
 				{@const chosenOption = options.find((o) => o['id'] === result.answers[index])}
 				{@const correctOption = options.find((o) => o['id'] === answer)}
-				<div class="item">
-					<ResultQuestion
-						{isCorrect}
-						{isSkipped}
-						{chosenOption}
-						{correctOption}
-						{question}
-						{index}
-					/>
-				</div>
-			</VirtualList>
+				<ResultCard {question} {index} {isCorrect} {isSkipped} />
+			{/each}
 		</footer>
 	{:else}
 		<p>No result with id {id} found :(</p>
@@ -108,6 +102,20 @@
 		padding: 1rem;
 		max-height: 100%;
 	}
+	.score--card {
+		width: 100%;
+		background-color: black;
+		color: white;
+		padding: 2rem;
+		border-radius: 1rem;
+		margin-block: 1rem;
+		h3 {
+			font-size: x-large;
+		}
+		p {
+			font-size: xxx-large;
+		}
+	}
 	header {
 		grid-area: header;
 		display: flex;
@@ -121,61 +129,33 @@
 			margin: 0;
 		}
 	}
+	.bullet {
+		display: flex;
+		gap: 0.5rem;
+		font-size: small;
+		align-items: center;
+		.circle {
+			--diameter: 10px;
+			width: var(--diameter);
+			height: var(--diameter);
+			border-radius: 50%;
+		}
+	}
+	.bullets {
+		display: flex;
+		justify-content: flex-end;
+		gap: 1rem;
+	}
 	main {
 		grid-area: main;
 		@media (max-width: 768px) {
 			grid-template-columns: 1fr;
 		}
-		.cards {
-			display: grid;
-			grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-			gap: 1rem;
-			.card {
-				background-color: black;
-				color: white;
-				padding: 2rem;
-				border-radius: 1rem;
-				cursor: pointer;
-				border: none;
-				outline: none;
-				transition: all 0.2s ease-in-out;
-				/* &:hover { */
-				/* 	background-color: #222; */
-				/* } */
-				&.success {
-					background-color: green;
-				}
-				&.danger {
-					background-color: red;
-				}
-				&.neutral {
-					background-color: gray;
-				}
-				display: grid;
-				gap: 1rem;
-				.name {
-					text-align: center;
-					font-weight: bold;
-					font-size: x-large;
-				}
-			}
-			h2 {
-				font-size: small;
-			}
-			p {
-				font-size: xx-large;
-			}
-		}
-		.card {
-			display: flex;
-			flex-direction: column;
-			place-items: center;
-		}
 	}
 	footer {
 		grid-area: footer;
-		.item {
-			margin-block: 0.1rem;
-		}
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+		gap: 1rem;
 	}
 </style>

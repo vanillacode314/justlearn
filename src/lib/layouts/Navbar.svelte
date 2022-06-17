@@ -14,11 +14,11 @@
 </script>
 
 <nav>
-	{#if $page.url.pathname !== '/'}
-		<span on:click={goBack}>
-			<IconBack class="back-arrow" />
-		</span>
-	{/if}
+	<!-- {#if $page.url.pathname !== '/'} -->
+	<!-- 	<span on:click={goBack}> -->
+	<!-- 		<IconBack class="back-arrow" /> -->
+	<!-- 	</span> -->
+	<!-- {/if} -->
 	<h1 class="brand">JustLearn</h1>
 	<span class="spacer" />
 	<a title="github" href="https://github.com/vanillacode314/justlearn" rel="external">

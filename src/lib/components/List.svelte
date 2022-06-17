@@ -1,12 +1,14 @@
 <script lang="ts">
 	export let items: any[];
+	let el: HTMLUListElement;
 	import { afterUpdate } from 'svelte';
+
 	afterUpdate(() => {
-		MathLive.renderMathInDocument();
+		MathLive.renderMathInElement(el);
 	});
 </script>
 
-<ul>
+<ul bind:this={el}>
 	{#each items as item, index}
 		<li><a href={item?.href}><slot {item} {index} /></a></li>
 	{/each}

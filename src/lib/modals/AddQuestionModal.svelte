@@ -11,6 +11,7 @@
 	import { tick } from 'svelte';
 
 	/// STATE
+	let el: HTMLFormElement;
 	let qInput: HTMLInputElement;
 	let text: string = '';
 	let subject: string = '';
@@ -68,7 +69,7 @@
 		}
 		adding = false;
 		await tick();
-		MathLive.renderMathInDocument();
+		MathLive.renderMathInElement(el);
 	}
 
 	async function addQuestion() {
@@ -108,7 +109,7 @@
 </script>
 
 <Modal bind:open={$addQuestionModal} on:open={onOpen}>
-	<form on:submit|preventDefault={addQuestion}>
+	<form on:submit|preventDefault={addQuestion} bind:this={el}>
 		<header>
 			<h3>Add Question</h3>
 		</header>

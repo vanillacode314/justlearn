@@ -1,8 +1,14 @@
 <script lang="ts">
 	/// STATE
-	import { papers } from '$lib/stores/user';
+	import { papers, results } from '$lib/stores/user';
 	import Button from '$lib/components/Button.svelte';
 	import { activePaper, sharedPapers, startPaperModal } from '$lib/stores/app';
+	import { onMount, tick } from 'svelte';
+
+	onMount(async () => {
+		await tick();
+		$results = $results.filter((r) => r.done);
+	});
 
 	function startPaper(paper: Paper) {
 		$activePaper = paper;
