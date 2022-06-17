@@ -69,7 +69,7 @@
 			font-weight: bold;
 		}
 		.question {
-			overflow: auto;
+			overflow-x: auto;
 			font-size: large;
 		}
 	}
