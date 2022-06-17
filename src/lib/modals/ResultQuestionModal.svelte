@@ -114,6 +114,9 @@
 			padding: 0.3rem;
 		}
 	}
+	img {
+		width: 100%;
+	}
 	.options {
 		margin-top: 0.5rem;
 		display: grid;
