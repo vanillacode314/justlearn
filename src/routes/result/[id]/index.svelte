@@ -12,27 +12,48 @@
 	import ResultQuestion from '$lib/layouts/ResultQuestion.svelte';
 	import { goto } from '$app/navigation';
 	import ResultCard from '$lib/layouts/ResultCard.svelte';
-	$: id = $page.params.id;
-	$: result = $results.find((r) => r.id === Number(id));
-	$: $activeResult = result;
-	$: paper = result && $allPapers.find((p) => p.id === result.paper);
+	import Spinner from '$lib/components/Spinner.svelte';
 
-	$: questions =
-		(paper?.questions &&
-			[...paper?.questions].sort((a, b) => {
-				if (a.subject > b.subject) return 1;
-				if (a.subject < b.subject) return -1;
-				return 0;
-			})) ||
-		[];
-	$: correct = paper ? result.answers.filter((a, i) => a === questions[i].answer) : [];
-	$: skipped = paper ? result.answers.filter((a) => a === null) : [];
-	$: incorrect = paper
-		? result.answers.filter((a, i) => a !== null && a !== questions[i].answer)
-		: [];
-	$: score = result ? correct.length * result.cmarks + incorrect.length * result.imarks : 0;
+	let loaded: boolean = false;
+	let id: number,
+		result: TestResult,
+		paper: Paper,
+		sortedQuestions: Paper['questions'],
+		ncorrect: number,
+		nskipped: number,
+		nincorrect: number,
+		score: number;
 
-	onMount(() => {});
+	onMount(() => {
+		id = Number($page.params.id);
+		result = $results.find((r) => r.id === id);
+		$activeResult = result ?? null;
+		if (!result) {
+			loaded = true;
+			return;
+		}
+		paper = result && $allPapers.find((p) => p.id === result.paper);
+		if (!paper) {
+			loaded = true;
+			return;
+		}
+
+		sortedQuestions =
+			(paper.questions &&
+				[...paper.questions].sort((a, b) => {
+					if (a.subject > b.subject) return 1;
+					if (a.subject < b.subject) return -1;
+					return 0;
+				})) ||
+			[];
+		ncorrect = result.answers.filter((a, i) => a === sortedQuestions[i].answer).length;
+		nskipped = result.answers.filter((a) => a === null).length;
+		nincorrect = result.answers.filter(
+			(a, i) => a !== null && a !== sortedQuestions[i].answer
+		).length;
+		score = ncorrect * result.cmarks + nincorrect * result.imarks;
+		loaded = true;
+	});
 
 	/// METHODS
 	async function removeResult() {
@@ -42,53 +63,54 @@
 </script>
 
 <div class="container">
-	{#if result && paper}
-		<header>
-			<h1>{paper.name} (result id: {id})</h1>
-			<span class="spacer" />
-			<Button outlined on:click={removeResult}>
-				<IconDelete />
-				Delete
-			</Button>
-		</header>
-		<main>
-			<div class="bullets">
-				<div class="bullet">
-					<div class="circle" style:background-color="lime" />
-					<span>Correct: {correct.length}</span>
+	{#if loaded}
+		{#if result && paper}
+			<header>
+				<h1>{paper.name} (result id: {id})</h1>
+				<span class="spacer" />
+				<Button outlined on:click={removeResult}>
+					<IconDelete />
+					Delete
+				</Button>
+			</header>
+			<main>
+				<div class="bullets">
+					<div class="bullet">
+						<div class="circle" style:background-color="lime" />
+						<span>Correct: {ncorrect}</span>
+					</div>
+					<div class="bullet">
+						<div class="circle" style:background-color="red" />
+						<span>Incorrect: {nincorrect}</span>
+					</div>
+					<div class="bullet">
+						<div class="circle" style:background-color="gray" />
+						<span>Skipped: {nskipped}</span>
+					</div>
+					<!-- <div class="bullet"> -->
+					<!-- 	<div class="circle" style:background-color="black" /> -->
+					<!-- 	<span>Score: {score}</span> -->
+					<!-- </div> -->
 				</div>
-				<div class="bullet">
-					<div class="circle" style:background-color="red" />
-					<span>Incorrect: {incorrect.length}</span>
+				<div class="score--card">
+					<h3>Score 🏆</h3>
+					<p>{score}</p>
 				</div>
-				<div class="bullet">
-					<div class="circle" style:background-color="gray" />
-					<span>Skipped: {skipped.length}</span>
-				</div>
-				<!-- <div class="bullet"> -->
-				<!-- 	<div class="circle" style:background-color="black" /> -->
-				<!-- 	<span>Score: {score}</span> -->
-				<!-- </div> -->
-			</div>
-			<div class="score--card">
-				<h3>Score 🏆</h3>
-				<p>{score}</p>
-			</div>
-		</main>
-		<footer>
-			{#each questions as question}
-				<!-- <VirtualList items={questions} let:item={question} height="800px"> -->
-				{@const { answer, options } = question}
-				{@const index = questions.findIndex((q) => q === question)}
-				{@const isCorrect = result.answers[index] === answer}
-				{@const isSkipped = result.answers[index] === null}
-				{@const chosenOption = options.find((o) => o['id'] === result.answers[index])}
-				{@const correctOption = options.find((o) => o['id'] === answer)}
-				<ResultCard {question} {index} {isCorrect} {isSkipped} />
-			{/each}
-		</footer>
+			</main>
+			<footer>
+				{#each sortedQuestions as question, index}
+					<!-- <VirtualList items={questions} let:item={question} height="800px"> -->
+					{@const { answer } = question}
+					{@const isCorrect = result.answers[index] === answer}
+					{@const isSkipped = result.answers[index] === null}
+					<ResultCard {question} {index} {isCorrect} {isSkipped} />
+				{/each}
+			</footer>
+		{:else}
+			<p>No result with id {id} found :(</p>
+		{/if}
 	{:else}
-		<p>No result with id {id} found :(</p>
+		<Spinner />
 	{/if}
 </div>
 

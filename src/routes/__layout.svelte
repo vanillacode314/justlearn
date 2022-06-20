@@ -1,4 +1,6 @@
 <script lang="ts">
+	import Spinner from '$lib/components/Spinner.svelte';
+
 	/// COMPONENTS
 	import Navbar from '$lib/layouts/Navbar.svelte';
 	import Sidebar from '$lib/layouts/Sidebar.svelte';
