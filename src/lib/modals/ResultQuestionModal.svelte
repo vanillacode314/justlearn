@@ -116,6 +116,7 @@
 	}
 	img {
 		width: 100%;
+		max-width: 720px;
 	}
 	.options {
 		margin-top: 0.5rem;
