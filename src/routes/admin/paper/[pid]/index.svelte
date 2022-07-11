@@ -12,6 +12,8 @@
 	import List from '$lib/components/List.svelte';
 	import { activePaper, addQuestionModal, deletePaperModal } from '$lib/stores/app';
 	import { exportToJsonFile } from '$lib/utils';
+	import Toolbar from '$lib/components/Toolbar.svelte';
+	import Tile from '$lib/components/Tile.svelte';
 	$: id = $page.params.pid;
 	$: paper = $papers.find((p) => p.id === Number(id));
 	$: $activePaper = paper;
@@ -28,12 +30,32 @@
 </script>
 
 <div class="container">
-	<div class="toolbar">
-		<Button inverted on:click={addQuestionModal.open}><IconAdd /> Add Question</Button>
-		<Button inverted on:click={renamePaper}><IconPencil /> Rename Paper</Button>
-		<Button inverted on:click={deletePaperModal.open}><IconTrash /> Delete Paper</Button>
-		<Button inverted on:click={_export}><IconExport /> Export Paper</Button>
-	</div>
+	<Toolbar style="grid-area: toolbar">
+		<Tile
+			title="add paper"
+			compact
+			sharp
+			center
+			kind="button"
+			inverted
+			on:click={addQuestionModal.open}><IconAdd /></Tile
+		>
+		<Tile title="edit paper" compact sharp center kind="button" inverted on:click={renamePaper}
+			><IconPencil /></Tile
+		>
+		<Tile
+			title="delete paper"
+			compact
+			sharp
+			center
+			kind="button"
+			inverted
+			on:click={deletePaperModal.open}><IconTrash /></Tile
+		>
+		<Tile title="export paper" compact sharp center kind="button" inverted on:click={_export}
+			><IconExport /></Tile
+		>
+	</Toolbar>
 	<main>
 		{#if paper}
 			<h1>{paper.name}</h1>
@@ -59,10 +81,11 @@
 
 <style lang="scss">
 	.container {
+		height: 100%;
 		display: grid;
-		grid-template-columns: minmax(200px, auto) 1fr;
+		grid-template-columns: 1fr auto;
 		grid-template-rows: 1fr;
-		grid-template-areas: 'toolbar main';
+		grid-template-areas: 'main toolbar';
 		overflow-y: auto;
 		@media (max-width: 768px) {
 			grid-template-rows: auto 1fr;
@@ -70,19 +93,8 @@
 			grid-template-areas: 'toolbar' 'main';
 		}
 	}
-	.toolbar {
-		grid-area: toolbar;
-		background-color: var(--foreground);
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		@media (max-width: 768px) {
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
-	}
 	main {
-		overflow-y: scroll;
+		overflow-y: auto;
 		grid-area: main;
 		padding: 1rem;
 		display: flex;

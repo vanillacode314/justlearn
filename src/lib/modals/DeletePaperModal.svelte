@@ -14,6 +14,7 @@
 	async function _delete() {
 		await goto('/admin');
 		$papers = $papers.filter((p) => p.id !== $activePaper.id);
+		$activePaper = undefined;
 		deletePaperModal.close();
 	}
 </script>

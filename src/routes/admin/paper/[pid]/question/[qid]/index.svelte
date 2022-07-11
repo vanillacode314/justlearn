@@ -1,7 +1,8 @@
 <script lang="ts">
 	/// COMPONENTS
 	import Question from '$lib/layouts/Question.svelte';
-	import Button from '$lib/components/Button.svelte';
+	import Tile from '$lib/components/Tile.svelte';
+	import Toolbar from '$lib/components/Toolbar.svelte';
 	import IconPencil from '~icons/mdi/pencil';
 	import IconTrash from '~icons/mdi/trash';
 
@@ -23,10 +24,14 @@
 </script>
 
 <div class="container">
-	<div class="toolbar">
-		<Button inverted on:click={editQuestionModal.open}><IconPencil /> Edit</Button>
-		<Button inverted on:click={deleteQuestionModal.open}><IconTrash /> Delete</Button>
-	</div>
+	<Toolbar style="grid-area: toolbar">
+		<Tile title="edit" compact sharp center kind="button" on:click={editQuestionModal.open}
+			><IconPencil />
+		</Tile>
+		<Tile title="delete" compact sharp kind="button" center on:click={deleteQuestionModal.open}
+			><IconTrash />
+		</Tile>
+	</Toolbar>
 	<main>
 		{#if paper}
 			<Question {question} answer={question.answer} />
@@ -39,25 +44,14 @@
 <style lang="scss">
 	.container {
 		display: grid;
-		grid-template-columns: minmax(200px, auto) 1fr;
+		grid-template-columns: 1fr auto;
 		grid-template-rows: 1fr;
-		grid-template-areas: 'toolbar main';
+		grid-template-areas: 'main toolbar';
+		height: 100%;
 		@media (max-width: 768px) {
 			grid-template-rows: auto 1fr;
 			grid-template-columns: 1fr;
 			grid-template-areas: 'toolbar' 'main';
-		}
-		height: 100%;
-	}
-	.toolbar {
-		grid-area: toolbar;
-		background-color: var(--foreground);
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		@media (max-width: 768px) {
-			flex-direction: row;
-			flex-wrap: wrap;
 		}
 	}
 	main {

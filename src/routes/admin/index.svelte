@@ -6,7 +6,8 @@
 	/// STATE
 	import { papers } from '$lib/stores/user';
 	import { genRandomNumber } from '$lib/utils';
-	import Button from '$lib/components/Button.svelte';
+	import Tile from '$lib/components/Tile.svelte';
+	import Toolbar from '$lib/components/Toolbar.svelte';
 
 	/// METHODS
 	function addPaper() {
@@ -20,7 +21,7 @@
 		$papers.push(paper);
 		$papers = $papers;
 	}
-	function _import() {
+	function importPaper() {
 		async function handleFiles() {
 			input.removeEventListener('change', handleFiles);
 			const file = this.files[0];
@@ -37,17 +38,22 @@
 </script>
 
 <div class="container">
-	<div class="toolbar">
-		<button title="Add Paper" on:click={addPaper}><IconAdd /></button>
-		<button title="Import Paper" on:click={_import}><IconImport /></button>
-	</div>
+	<Toolbar aria-label="admin-toolbar" style="grid-area: toolbar;">
+		<Tile sharp center compact kind="button" title="Add Paper" on:click={addPaper}><IconAdd /></Tile
+		>
+		<Tile sharp center compact kind="button" title="Import Paper" on:click={importPaper}
+			><IconImport /></Tile
+		>
+	</Toolbar>
 	<main>
 		<ul class="paper-grid">
 			{#each $papers as paper}
 				<li>
-					<a href="/admin/paper/{paper.id}">
-						{paper.name}
-					</a>
+					<Tile center kind="anchor" href="/admin/paper/{paper.id}">
+						<span class="paper">
+							{paper.name}
+						</span>
+					</Tile>
 				</li>
 			{/each}
 		</ul>
@@ -67,50 +73,18 @@
 		}
 		height: 100%;
 	}
-	.toolbar {
-		grid-area: toolbar;
-		background-color: var(--foreground);
-		height: 100%;
-		display: flex;
-		flex-direction: column;
-		@media (max-width: 768px) {
-			flex-direction: row;
-			flex-wrap: wrap;
-		}
-		button {
-			background-color: black;
-			color: white;
-			padding: 1rem 1.5rem;
-			outline: none;
-			border: none;
-			cursor: pointer;
-			&:hover {
-				background-color: #222;
-			}
-		}
-	}
 	main {
 		padding: 1rem;
 	}
 	ul.paper-grid {
 		list-style-type: none;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 		gap: 1rem;
 		li {
-			a {
-				display: block;
-				border: 2px solid var(--foreground);
-				padding: 1rem;
-				transition: all 0.3s ease-in-out;
-				text-decoration: none;
-				color: var(--foreground);
-				font-size: x-large;
-				&:hover {
-					font-weight: bold;
-					background-color: var(--foreground);
-					color: var(--background);
-				}
+			.paper {
+				font-size: xx-large;
+				font-weight: bold;
 			}
 		}
 	}

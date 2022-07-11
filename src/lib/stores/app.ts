@@ -15,7 +15,7 @@ export const deleteQuestionModal = modalStore();
 export const startPaperModal = modalStore();
 export const resultQuestionModal = modalStore();
 
-export const allPapers = derived([sharedPapers, userPapers], ([sharedPapers, userPapers]) => [
-	...sharedPapers,
-	...userPapers
+export const allPapers = derived([sharedPapers, userPapers], ([$sharedPapers, $userPapers]) => [
+	...$sharedPapers,
+	...$userPapers
 ]);

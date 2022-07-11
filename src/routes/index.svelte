@@ -4,6 +4,7 @@
 	import Button from '$lib/components/Button.svelte';
 	import { activePaper, sharedPapers, startPaperModal } from '$lib/stores/app';
 	import { onMount, tick } from 'svelte';
+	import Tile from '$lib/components/Tile.svelte';
 
 	onMount(async () => {
 		await tick();
@@ -25,11 +26,11 @@
 			<ul class="paper-grid">
 				{#each $papers as paper}
 					<li>
-						<button type="button" on:click={() => startPaper(paper)}>
+						<Tile center kind="button" on:click={() => startPaper(paper)}>
 							<span class="name">
 								{paper.name}
 							</span>
-						</button>
+						</Tile>
 					</li>
 				{/each}
 			</ul>
@@ -40,11 +41,11 @@
 		<ul class="paper-grid">
 			{#each $sharedPapers as paper}
 				<li>
-					<button type="button" on:click={() => startPaper(paper)}>
+					<Tile kind="button" center on:click={() => startPaper(paper)}>
 						<span class="name">
 							{paper.name}
 						</span>
-					</button>
+					</Tile>
 				</li>
 			{/each}
 		</ul>
@@ -53,7 +54,7 @@
 
 <style lang="scss">
 	main {
-		padding: 1rem 0;
+		padding: 0.5rem;
 		grid-area: main;
 		height: 100%;
 		display: flex;
@@ -65,27 +66,12 @@
 			padding: 1rem 0.5rem;
 			list-style-type: none;
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+			grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 			gap: 1rem;
 			li {
-				button {
-					background-color: black;
-					color: white;
-					padding: 2rem;
-					border-radius: 1rem;
-					cursor: pointer;
-					border: none;
-					outline: none;
-					transition: all 0.2s ease-in-out;
-					&:hover {
-						background-color: #222;
-					}
-					display: grid;
-					gap: 1rem;
-					.name {
-						font-weight: bold;
-						font-size: xx-large;
-					}
+				.name {
+					font-weight: bold;
+					font-size: xx-large;
 				}
 			}
 		}
