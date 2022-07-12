@@ -171,20 +171,21 @@
 <style lang="scss">
 	.container {
 		min-height: 100%;
+		max-height: 100%;
+		overflow-y: auto;
+		padding: 1rem;
 		display: grid;
-		grid-template-columns: 3fr 1fr;
+		gap: 1rem;
+		grid-template-columns: 2fr 1fr;
 		grid-template-rows: 1fr;
 		grid-template-areas: 'main sidebar';
-		padding: 1rem;
-		gap: 1rem;
-		@media (max-width: 768px) {
+		@media screen and (max-width: 768px) {
 			grid-template-columns: 1fr;
 			grid-template-rows: 100% auto;
 			grid-template-areas: 'main' 'sidebar';
 		}
 	}
 	main {
-		grid-area: main;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
