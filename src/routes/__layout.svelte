@@ -1,7 +1,6 @@
 <script lang="ts">
 	/// COMPONENTS
 	import Navbar from '$lib/layouts/Navbar.svelte';
-	import Spinner from '$lib/components/Spinner.svelte';
 	import Sidebar from '$lib/layouts/Sidebar.svelte';
 	import AddQuestionModal from '$lib/modals/AddQuestionModal.svelte';
 	import DeletePaperModal from '$lib/modals/DeletePaperModal.svelte';
@@ -13,6 +12,7 @@
 	/// STYLES
 	import 'normalize.css';
 	import '../app.scss';
+	import '../fonts.css';
 </script>
 
 <div class="wrapper">
