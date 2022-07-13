@@ -8,6 +8,7 @@
 	import Button from '$lib/components/Button.svelte';
 	import Question from '$lib/layouts/Question.svelte';
 	import Questions from '$lib/layouts/Questions.svelte';
+	import IconUp from '~icons/mdi/chevron-up';
 	import Accordion, { type AccordionItem } from '$lib/components/Accordion.svelte';
 
 	/// UTILS
@@ -19,7 +20,7 @@
 	import { results, subjects } from '$lib/stores/user';
 	import { allPapers } from '$lib/stores/app';
 	import timer from '$lib/stores/timer';
-	import StartPaperModal from '$lib/modals/StartPaperModal.svelte';
+	let container: HTMLDivElement;
 
 	const id = $page.params.id;
 	const countdown = timer({ interval: 100 });
@@ -124,7 +125,7 @@
 	}
 </script>
 
-<div class="container">
+<div class="container" bind:this={container}>
 	<main>
 		<div class="main">
 			{#if paper}
@@ -165,10 +166,28 @@
 		<Accordion items={accordionItems} let:item>
 			<Questions {...item.data} on:select={(e) => (currentQuestion = e.detail)} />
 		</Accordion>
+		<button on:click={() => container.scrollTo({ top: 0, behavior: 'smooth' })} class="goto--top"
+			><IconUp style="font-size: 2em;" /></button
+		>
 	</aside>
 </div>
 
 <style lang="scss">
+	.goto--top {
+		display: none;
+		cursor: pointer;
+		outline: none;
+		border: none;
+		background-color: black;
+		aspect-ratio: 1;
+		color: white;
+		border-radius: 50%;
+		margin-top: 1rem;
+		float: right;
+		@media screen and (max-width: 768px) {
+			display: block;
+		}
+	}
 	.container {
 		min-height: 100%;
 		max-height: 100%;
