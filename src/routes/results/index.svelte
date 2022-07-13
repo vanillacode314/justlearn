@@ -1,17 +1,8 @@
 <script lang="ts">
-	/// COMPONENTS
-	import IconAdd from '~icons/mdi/add';
-
 	/// STATE
 	import { results } from '$lib/stores/user';
-	import Button from '$lib/components/Button.svelte';
-	import { goto } from '$app/navigation';
 	import { allPapers } from '$lib/stores/app';
 	import Tile from '$lib/components/Tile.svelte';
-
-	function gotoResult(result: TestResult) {
-		goto('/result/' + result.id);
-	}
 
 	function formatDate(result: TestResult) {
 		return new Date(result.date_given).toLocaleString(undefined, {
@@ -27,7 +18,7 @@
 			{#each $results as result}
 				{@const paper = $allPapers.find((p) => p.id === result.paper)}
 				<li>
-					<Tile center kind="button" on:click={() => gotoResult(result)}>
+					<Tile center kind="anchor" href="/result/{result.id}">
 						<div class="result-tile">
 							<span class="name">
 								{paper.name}
