@@ -105,6 +105,10 @@
 		}
 	}
 
+	function clear() {
+		answers[currentQuestion] = null;
+	}
+
 	function submit() {
 		let c = false;
 		if (!(($countdown.getTime() - start_time) / 1000 >= result?.total_time_available * 60)) {
@@ -147,6 +151,7 @@
 			<div class="buttons">
 				<Button type="button" on:click={prev}>Prev</Button>
 				<Button type="button" on:click={next} inverted>Next</Button>
+				<Button type="button" on:click={clear} danger>Clear</Button>
 				<Button
 					type="button"
 					on:click={toggleMark}
