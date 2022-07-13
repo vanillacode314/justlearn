@@ -1,9 +1,12 @@
 <script lang="ts">
-	/// STATE
+	/// STATE ///
 	import { results } from '$lib/stores/user';
 	import { allPapers } from '$lib/stores/app';
+
+	/// COMPONENTS ///
 	import Tile from '$lib/components/Tile.svelte';
 
+	/// METHODS ///
 	function formatDate(result: TestResult) {
 		return new Date(result.date_given).toLocaleString(undefined, {
 			dateStyle: 'long',

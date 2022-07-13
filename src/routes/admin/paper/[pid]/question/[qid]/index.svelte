@@ -1,12 +1,12 @@
 <script lang="ts">
-	/// COMPONENTS
+	/// COMPONENTS ///
 	import Question from '$lib/layouts/Question.svelte';
 	import Tile from '$lib/components/Tile.svelte';
 	import Toolbar from '$lib/components/Toolbar.svelte';
 	import IconPencil from '~icons/mdi/pencil';
 	import IconTrash from '~icons/mdi/trash';
 
-	/// STATE
+	/// STATE ///
 	import { page } from '$app/stores';
 	import { papers } from '$lib/stores/user';
 	import {

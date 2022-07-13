@@ -1,16 +1,21 @@
 <script lang="ts">
-	/// STATE
-	import { papers, results } from '$lib/stores/user';
-	import Button from '$lib/components/Button.svelte';
-	import { activePaper, sharedPapers, startPaperModal } from '$lib/stores/app';
 	import { onMount, tick } from 'svelte';
+
+	/// STATE ///
+	import { papers, results } from '$lib/stores/user';
+	import { activePaper, sharedPapers, startPaperModal } from '$lib/stores/app';
+
+	/// COMPONENTS ///
 	import Tile from '$lib/components/Tile.svelte';
 
+	/// LIFECYCLE HOOKS ///
 	onMount(async () => {
+		// Filter Incomplete Papers
 		await tick();
 		$results = $results.filter((r) => r.done);
 	});
 
+	/// METHODS ///
 	function startPaper(paper: Paper) {
 		$activePaper = paper;
 		startPaperModal.open();

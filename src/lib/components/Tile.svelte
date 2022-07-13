@@ -4,6 +4,7 @@
 	export let center: boolean = false;
 	export let sharp: boolean = false;
 	export let compact: boolean = false;
+	export let href: string;
 </script>
 
 <div style="display:contents" class:center class:sharp class:compact>
@@ -12,7 +13,7 @@
 			<slot />
 		</button>
 	{:else if kind === 'anchor'}
-		<a class="tile" on:click {...$$restProps}>
+		<a class="tile" on:click {...$$restProps} {href}>
 			<slot />
 		</a>
 	{:else}

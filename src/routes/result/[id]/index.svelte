@@ -1,18 +1,17 @@
 <script lang="ts">
-	/// COMPONENTS
-	import Button from '$lib/components/Button.svelte';
-	import VirtualList from '@sveltejs/svelte-virtual-list';
-	import IconDelete from '~icons/mdi/delete';
+	import { onMount } from 'svelte';
+	import { goto } from '$app/navigation';
 
-	/// STATE
+	/// COMPONENTS ///
+	import Button from '$lib/components/Button.svelte';
+	import IconDelete from '~icons/mdi/delete';
+	import ResultCard from '$lib/layouts/ResultCard.svelte';
+	import Spinner from '$lib/components/Spinner.svelte';
+
+	/// STATE ///
 	import { page } from '$app/stores';
 	import { activeResult, allPapers } from '$lib/stores/app';
 	import { results } from '$lib/stores/user';
-	import { afterUpdate, onMount } from 'svelte';
-	import ResultQuestion from '$lib/layouts/ResultQuestion.svelte';
-	import { goto } from '$app/navigation';
-	import ResultCard from '$lib/layouts/ResultCard.svelte';
-	import Spinner from '$lib/components/Spinner.svelte';
 
 	let loaded: boolean = false;
 	let id: number,
@@ -24,6 +23,7 @@
 		nincorrect: number,
 		score: number;
 
+	/// LIFECYCLE HOOKS ///
 	onMount(() => {
 		id = Number($page.params.id);
 		result = $results.find((r) => r.id === id);
@@ -55,7 +55,7 @@
 		loaded = true;
 	});
 
-	/// METHODS
+	/// METHODS ///
 	async function removeResult() {
 		await goto('/results');
 		$results = $results.filter((r) => r.id !== result.id);

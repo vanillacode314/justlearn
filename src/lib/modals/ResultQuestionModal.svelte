@@ -99,19 +99,11 @@
 			padding: 1rem;
 			display: grid;
 			gap: 1rem;
-			& > label {
-				display: flex;
-				gap: 0.5rem;
-				flex-direction: column;
-			}
 		}
 		div.actions {
 			display: grid;
 			grid-template-columns: 1fr;
 			width: 100%;
-		}
-		input[type='number'] {
-			padding: 0.3rem;
 		}
 	}
 	img {

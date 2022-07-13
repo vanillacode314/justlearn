@@ -1,8 +1,7 @@
 <script lang="ts">
-	import Spinner from '$lib/components/Spinner.svelte';
-
 	/// COMPONENTS
 	import Navbar from '$lib/layouts/Navbar.svelte';
+	import Spinner from '$lib/components/Spinner.svelte';
 	import Sidebar from '$lib/layouts/Sidebar.svelte';
 	import AddQuestionModal from '$lib/modals/AddQuestionModal.svelte';
 	import DeletePaperModal from '$lib/modals/DeletePaperModal.svelte';

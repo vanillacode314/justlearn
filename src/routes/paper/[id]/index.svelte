@@ -1,10 +1,5 @@
 <script lang="ts">
-	import DurationUnitFormat from 'intl-unofficial-duration-unit-format';
-	const duration = new DurationUnitFormat(undefined, {
-		style: DurationUnitFormat.styles.TIMER,
-		format: '{hour}:{minutes}:{seconds}'
-	});
-	/// COMPONENTS
+	/// COMPONENTS ///
 	import Button from '$lib/components/Button.svelte';
 	import Question from '$lib/layouts/Question.svelte';
 	import Questions from '$lib/layouts/Questions.svelte';
@@ -14,6 +9,11 @@
 	/// UTILS
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import DurationUnitFormat from 'intl-unofficial-duration-unit-format';
+	const duration = new DurationUnitFormat(undefined, {
+		style: DurationUnitFormat.styles.TIMER,
+		format: '{hour}:{minutes}:{seconds}'
+	});
 
 	/// STATE
 	import { page } from '$app/stores';
@@ -32,28 +32,34 @@
 	let currentQuestion: number = 0;
 	let start_time: number = Date.now();
 	let accordionItems: AccordionItem[] = [];
+
+	// auto submit on time up
 	$: if (($countdown.getTime() - start_time) / 1000 >= result?.total_time_available * 60) {
 		submit();
 	}
 
-	$: {
-		for (const item of accordionItems) {
-			const offset = item.data.offset;
-			const questions = item.data.questions;
-			item.data.answers = answers.slice(offset, questions.length + offset);
-			item.data.marks = marks.slice(offset, questions.length + offset);
-		}
-		accordionItems = accordionItems;
+	// update accordion
+	$: for (const item of accordionItems) {
+		const offset = item.data.offset;
+		const questions = item.data.questions;
+		item.data.answers = answers.slice(offset, questions.length + offset);
+		item.data.marks = marks.slice(offset, questions.length + offset);
 	}
+	accordionItems = accordionItems;
 
-	/// LIFECYCLE HOOKS
+	/// LIFECYCLE HOOKS ///
 	onMount(() => {
+		// get result
 		result = $results.find((r) => r.id === Number(id));
+
+		// if already done redirect to result
 		if (result.done) {
 			goto('/result/' + result.id);
 		}
 
+		// get paper
 		paper = $allPapers.find((p) => p.id === result.paper);
+		// sort subjects
 		paper.questions.sort((a, b) => {
 			if (a.subject > b.subject) {
 				return 1;
@@ -62,8 +68,12 @@
 			}
 			return 0;
 		});
+
+		// setup answers and marks array
 		answers = new Array(paper?.questions?.length ?? 0).fill(null);
 		marks = new Array(paper?.questions?.length ?? 0).fill(false);
+
+		// filter and sort subjects for accordion
 		const filteredSubjects = $subjects.filter((s) =>
 			paper?.questions.some((p) => p.subject === s.name)
 		);
@@ -76,6 +86,8 @@
 			return 0;
 		});
 		let offset: number = 0;
+
+		// setup accordion
 		filteredSubjects.forEach((s) => {
 			const questions = paper.questions.filter((p) => p.subject === s.name);
 			const item = {
@@ -93,7 +105,7 @@
 		accordionItems = accordionItems;
 	});
 
-	/// METHODS
+	/// METHODS ///
 	function next() {
 		if (currentQuestion < paper.questions.length - 1) {
 			currentQuestion++;

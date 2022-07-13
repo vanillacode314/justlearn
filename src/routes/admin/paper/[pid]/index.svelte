@@ -1,23 +1,23 @@
 <script lang="ts">
-	/// COMPONENTS
-	import Button from '$lib/components/Button.svelte';
+	/// COMPONENTS ///
 	import IconAdd from '~icons/mdi/add';
 	import IconTrash from '~icons/mdi/trash';
 	import IconExport from '~icons/mdi/export';
 	import IconPencil from '~icons/mdi/pencil';
-
-	/// STATE
-	import { page } from '$app/stores';
-	import { papers } from '$lib/stores/user';
 	import List from '$lib/components/List.svelte';
-	import { activePaper, addQuestionModal, deletePaperModal } from '$lib/stores/app';
-	import { exportToJsonFile } from '$lib/utils';
 	import Toolbar from '$lib/components/Toolbar.svelte';
 	import Tile from '$lib/components/Tile.svelte';
+
+	/// STATE ///
+	import { page } from '$app/stores';
+	import { papers } from '$lib/stores/user';
+	import { activePaper, addQuestionModal, deletePaperModal } from '$lib/stores/app';
+	import { exportToJsonFile } from '$lib/utils';
 	$: id = $page.params.pid;
 	$: paper = $papers.find((p) => p.id === Number(id));
 	$: $activePaper = paper;
 
+	/// METHODS ///
 	function renamePaper() {
 		const name = prompt('Enter a new name');
 		paper.name = name;

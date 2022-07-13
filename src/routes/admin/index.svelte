@@ -1,15 +1,15 @@
 <script lang="ts">
-	/// COMPONENTS
+	/// COMPONENTS ///
 	import IconAdd from '~icons/mdi/add';
 	import IconImport from '~icons/mdi/import';
-
-	/// STATE
-	import { papers } from '$lib/stores/user';
-	import { genRandomNumber } from '$lib/utils';
 	import Tile from '$lib/components/Tile.svelte';
 	import Toolbar from '$lib/components/Toolbar.svelte';
 
-	/// METHODS
+	/// STATE ///
+	import { papers } from '$lib/stores/user';
+	import { genRandomNumber } from '$lib/utils';
+
+	/// METHODS ///
 	function addPaper() {
 		const name = prompt('Enter a name for the paper.');
 		if (!name) return;
@@ -21,6 +21,7 @@
 		$papers.push(paper);
 		$papers = $papers;
 	}
+
 	function importPaper() {
 		async function handleFiles() {
 			input.removeEventListener('change', handleFiles);
