@@ -8,7 +8,8 @@ const config = {
 		Icons({
 			compiler: 'svelte'
 		})
-	]
+	],
+	css: ['normalize.css']
 };
 
 export default config;

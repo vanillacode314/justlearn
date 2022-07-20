@@ -10,7 +10,6 @@
 	import StartPaperModal from '$lib/modals/StartPaperModal.svelte';
 
 	/// STYLES
-	import 'normalize.css';
 	import '../app.scss';
 </script>
 
