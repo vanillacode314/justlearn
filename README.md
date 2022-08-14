@@ -1,20 +1,8 @@
-# create-svelte
+# JustLearn
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+> A Free and Open source application where students can create and give tests and share them with the world.
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
+[https://justlearn.netlify.app/](https://justlearn.netlify.app/)
 
 ## Developing
 
