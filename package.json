@@ -36,7 +36,7 @@
 		"intl-unofficial-duration-unit-format": "^3.1.0",
 		"normalize.css": "^8.0.1",
 		"svelte-frappe-charts": "^1.9.2",
-		"svelte-local-storage-store": "^0.2.6",
+		"svelte-local-storage-store": "^0.3.0",
 		"svelte-tiny-virtual-list": "^2.0.5"
 	}
 }
